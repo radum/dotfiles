@@ -96,6 +96,23 @@ Dev software that I install and keep updated manually on every machine
 * **ShareX** Screen grabs beyond everything you can imagine - https://getsharex.com/
 * **Psget** Search and install PowerShell modules easy - http://psget.net/
 * **Chocolatey** The package manager for Windows - https://chocolatey.org/
-* **Visual Studio 2015 Community Edition** - https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx
 
+#### Visual C++ Build Tools
+* **Visual C++ Build Tools** - http://landinghub.visualstudio.com/visual-cpp-build-tools
+
+or
+
+* **Visual Studio 2015 Community Edition** - https://www.visualstudio.com/products/visual-studio-community-vs
+
+#### PowerShell
 * posh-git via PsGet - http://psget.net/directory/posh-git/
+
+#### Windows ENV variables
+
+```
+GOPATH = d:\dev\Projects\go\
+GOROOT = D:\dev\Go\
+GYP_MSVS_VERSION = 2015
+MSVS_VERSION = 2015
+PYTHON = c:\Python27\python.exe
+```
