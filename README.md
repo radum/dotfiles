@@ -18,7 +18,7 @@ Dev software that I install and keep updated manually on every machine
 * Pandoc a universal document converter - http://pandoc.org/
 * CSV Toolkit - http://csvkit.readthedocs.org/en/0.9.1/
 * Charlesproxy - https://www.charlesproxy.com/
-* Licecap Make GIFs - http://www.cockos.com/licecap/ 
+* Licecap Make GIFs - http://www.cockos.com/licecap/
 
 ### Code editors
 
@@ -76,15 +76,15 @@ Dev software that I install and keep updated manually on every machine
 
 #### Via Homebrew
 
-* Git - brew install git
-* phantomjs - brew install phantomjs
-* Flow - brew install flow
-* ios-webkit-debug-proxy (https://github.com/google/ios-webkit-debug-proxy)
-* fortune
-* jq
-* imagemagick
-* youtube-dl
-* autojump (https://github.com/wting/autojump) (Mac, Windows, Linux)
+* Git - `brew install git`
+* phantomjs - `brew install phantomjs`
+* Flow - `brew install flow`
+* ios-webkit-debug-proxy - https://github.com/google/ios-webkit-debug-proxy
+* fortune - `brew install fortune`
+* jq - `brew install jq`
+* imagemagick - `brew install imagemagick`
+* youtube-dl - `brew install youtube-dl`
+* autojump - https://github.com/wting/autojump (Mac, Windows, Linux)
 
 ### Windows
 
@@ -95,7 +95,7 @@ Dev software that I install and keep updated manually on every machine
 * **Rapidee** Rapid Environment Editor - http://www.rapidee.com/en/download
 * **ShareX** Screen grabs beyond everything you can imagine - https://getsharex.com/
 * **Psget** Search and install PowerShell modules easy - http://psget.net/
-* **Chocolatey** The package manager for Windows https://chocolatey.org/
+* **Chocolatey** The package manager for Windows - https://chocolatey.org/
 * **Visual Studio 2015 Community Edition** - https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx
 
 * posh-git via PsGet - http://psget.net/directory/posh-git/
