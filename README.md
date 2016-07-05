@@ -103,14 +103,9 @@ Dev software that I install and keep updated manually on every machine
 
 #### Via Homebrew
 
-* Git - `brew install git`
-* phantomjs - `brew install phantomjs`
-* Flow - `brew install flow`
+Complete list in [brew.sh](brew.sh)
+
 * ios-webkit-debug-proxy - https://github.com/google/ios-webkit-debug-proxy
-* fortune - `brew install fortune`
-* jq - `brew install jq`
-* imagemagick - `brew install imagemagick`
-* youtube-dl - `brew install youtube-dl`
 * autojump - https://github.com/wting/autojump (Mac, Windows, Linux)
 
 #### Shell
