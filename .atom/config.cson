@@ -1,0 +1,123 @@
+"*":
+  Zen: {}
+  "atom-material-ui":
+    fonts: {}
+    tabs: {}
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "autocomplete-plus": {}
+  "color-picker":
+    preferredFormat: "HEX"
+  core:
+    disabledPackages: [
+      "emmet"
+      "asciidoc-preview"
+      "linter-csslint"
+      "linter-jshint"
+      "linter-scss-lint"
+      "linter-jscs"
+      "stylefmt"
+    ]
+    packagesWithKeymapsDisabled: [
+      "git-blame"
+    ]
+    themes: [
+      "atom-material-ui"
+      "oceanic-next"
+    ]
+  "custom-title":
+    template: "<%= projectName %> <% if (relativeFilePath) { %>- <%= relativeFilePath %> <% } %> - <%= gitHead %>"
+  docblockr: {}
+  editor:
+    fontFamily: "Hack"
+    fontSize: 12
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    softTabs: false
+    tabLength: 4
+    tabType: "hard"
+  emmet: {}
+  "exception-reporting":
+    userId: "86827e6b-b8fb-40a1-fe12-2983ee30840b"
+  "git-blame":
+    columnWidth: 310
+    customCommitUrlTemplateString: "https://stash.lbi.co.uk/projects/<%- project %>/repos/<%- repo %>/commits/<%- revision %>"
+    dateFormatString: "YYYY-MM-DD HH:MM"
+    showOnlyLastNames: false
+    useCustomUrlTemplateIfStandardRemotesFail: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  "glowing-cursor":
+    innerColor:
+      red: 75
+      green: 213
+      blue: 255
+      alpha: 1
+  "highlight-selected":
+    lightTheme: true
+  linter:
+    lintOnFlyInterval: 600
+    showErrorPanel: false
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "/Volumes/Data/Users/radmicu/Projects/linters/.eslintrc.json"
+    globalNodePath: "/Volumes/Data/Users/radmicu/.npm-packages"
+    useGlobalEslint: true
+  "linter-jscs": {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
+    executablePath: "/Volumes/Data/Users/radmicu/.rvm/bin/atom_scss-lint"
+  "linter-stylelint": {}
+  minimap:
+    plugins:
+      bookmarks: false
+      bookmarksDecorationsZIndex: 0
+      codeglance: true
+      codeglanceDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      pigments: false
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+      "split-diff": false
+      "split-diffDecorationsZIndex": 0
+    scrollAnimation: true
+    scrollAnimationDuration: 250
+  "minimap-selection":
+    highlightCursorsLines: true
+  "one-dark-ui":
+    layoutMode: "Compact"
+  pigments: {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+".css.scss.source":
+  editor:
+    tabLength: 4
+".hyperlink.text":
+  editor:
+    tabLength: 4
+".sass.source":
+  editor:
+    tabLength: 4

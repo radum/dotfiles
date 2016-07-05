@@ -1,3 +1,29 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Radu's dotfiles](#radus-dotfiles)
+	- [Dev](#dev)
+		- [All platforms](#all-platforms)
+		- [Code editors](#code-editors)
+		- [DB Tools, Editors, Viewers](#db-tools-editors-viewers)
+		- [GIT GUI](#git-gui)
+		- [Font Management](#font-management)
+		- [Mac](#mac)
+			- [Paid apps](#paid-apps)
+			- [Via Homebrew](#via-homebrew)
+			- [Shell](#shell)
+				- [Themes and skins](#themes-and-skins)
+					- [ZSH](#zsh)
+					- [# TMUX](#-tmux)
+					- [iTerm2 Color Scheme](#iterm2-color-scheme)
+				- [Plugins](#plugins)
+				- [Dependencies](#dependencies)
+		- [Windows](#windows)
+			- [Visual C++ Build Tools](#visual-c-build-tools)
+			- [PowerShell](#powershell)
+			- [Windows ENV variables](#windows-env-variables)
+
+<!-- /TOC -->
+
 # Radu's dotfiles
 
 Global apps, modules, packages, .files, sensible hacker defaults for macOS and Windows
@@ -23,7 +49,8 @@ Dev software that I install and keep updated manually on every machine
 ### Code editors
 
 * Atom - https://atom.io/
-* Sublimetext - http://www.sublimetext.com/3
+	* [Configuration, themes, plugins](.atom/README.md)
+* Sublime Text 3 - http://www.sublimetext.com/3
 * Notepad++ - https://notepad-plus-plus.org/
 
 ### DB Tools, Editors, Viewers
