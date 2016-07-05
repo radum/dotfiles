@@ -86,6 +86,35 @@ Dev software that I install and keep updated manually on every machine
 * youtube-dl - `brew install youtube-dl`
 * autojump - https://github.com/wting/autojump (Mac, Windows, Linux)
 
+#### Shell
+
+- https://github.com/robbyrussell/oh-my-zsh
+
+##### Themes and skins
+
+###### ZSH
+
+- Bullet Train - https://github.com/caiogondim/bullet-train-oh-my-zsh-theme
+
+####### TMUX
+
+- https://github.com/caiogondim/maglev
+
+###### iTerm2 Color Scheme
+
+- https://github.com/YabataDesign/afterglow-itermcolors
+- https://github.com/mhartington/oceanic-next-iterm
+
+##### Plugins
+
+- https://github.com/zsh-users/zsh-syntax-highlighting/
+- https://github.com/zsh-users/zsh-autosuggestions
+- https://github.com/felixr/docker-zsh-completion
+
+##### Dependencies
+
+- https://github.com/Lokaltog/vim-powerline
+
 ### Windows
 
 * **Ruby** - http://rubyinstaller.org/
