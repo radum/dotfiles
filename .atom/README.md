@@ -49,6 +49,7 @@ apm install oceanic-next;
 
 apm install atom-autocomplete-modules
 apm install asciidoc-preview
+apm install atom-beautify
 apm install atom-handlebars
 apm install atom-pair
 apm install atom-ternjs
