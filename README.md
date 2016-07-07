@@ -3,6 +3,7 @@
 - [Radu's dotfiles](#radus-dotfiles)
 	- [Dev](#dev)
 		- [All platforms](#all-platforms)
+		- [Browsers](#browsers)
 		- [Code editors](#code-editors)
 		- [DB Tools, Editors, Viewers](#db-tools-editors-viewers)
 		- [GIT GUI](#git-gui)
@@ -41,10 +42,14 @@ Dev software that I install and keep updated manually on every machine
 * Docker - https://www.docker.com/products/docker-toolbox
 * Vagrant - https://www.vagrantup.com/ (will be replaced by https://ottoproject.io/)
 
-* Pandoc a universal document converter - http://pandoc.org/
-* CSV Toolkit - http://csvkit.readthedocs.org/en/0.9.1/
-* Charlesproxy - https://www.charlesproxy.com/
-* Licecap Make GIFs - http://www.cockos.com/licecap/
+* **Pandoc** A universal document converter - http://pandoc.org/
+* **CSV Toolkit** - http://csvkit.readthedocs.org/en/0.9.1/
+* **Charlesproxy** - https://www.charlesproxy.com/
+* **Licecap** Make GIFs - http://www.cockos.com/licecap/
+
+### Browsers
+
+* **Blisk** Chromium-based browser - https://blisk.io/
 
 ### Code editors
 
