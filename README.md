@@ -5,7 +5,7 @@
 		- [All platforms](#all-platforms)
 		- [Browsers](#browsers)
 		- [Code editors](#code-editors)
-		- [DB Tools, Editors, Viewers](#db-tools-editors-viewers)
+		- [DB Tools, Editors, Viewers, Etc](#db-tools-editors-viewers-etc)
 		- [GIT GUI](#git-gui)
 		- [Font Management](#font-management)
 		- [Mac](#mac)
@@ -58,11 +58,12 @@ Dev software that I install and keep updated manually on every machine
 * Sublime Text 3 - http://www.sublimetext.com/3
 * Notepad++ - https://notepad-plus-plus.org/
 
-### DB Tools, Editors, Viewers
+### DB Tools, Editors, Viewers, Etc
 
-* Robomongo - http://robomongo.org/
-* Redisdesktop - http://redisdesktop.com/
-* SQLite Browser - http://sqlitebrowser.org/
+* **Robomongo** - http://robomongo.org/
+* **Redisdesktop** - http://redisdesktop.com/
+* **SQLite Browser** - http://sqlitebrowser.org/
+* **Cyberduck** Cyberduck is a libre FTP, SFTP, etc browser - https://cyberduck.io/
 
 ### GIT GUI
 
