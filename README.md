@@ -46,6 +46,7 @@ Dev software that I install and keep updated manually on every machine
 * **CSV Toolkit** - http://csvkit.readthedocs.org/en/0.9.1/
 * **Charlesproxy** - https://www.charlesproxy.com/
 * **Licecap** Make GIFs - http://www.cockos.com/licecap/
+* **Glances** Glances an Eye on your system - https://github.com/nicolargo/glances
 
 ### Browsers
 
@@ -76,14 +77,15 @@ Dev software that I install and keep updated manually on every machine
 
 ### Mac
 
-* Node.js Mac settings - https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
-* Homebrew - http://brew.sh/
-* Brew Cask - http://caskroom.io/
-* Ruby via Ruby version manager - https://rvm.io/
-* iTerm2 - https://www.iterm2.com/
-* Alfred App 2 - https://www.alfredapp.com/
-* Spectacle App - https://www.spectacleapp.com/
-* Mac-cli - https://github.com/guarinogabriel/mac-cli
+* *Node.js Mac settings* - https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+* *Homebrew* - http://brew.sh/
+* *Brew Cask* - http://caskroom.io/
+* *Ruby *via Ruby version manager - https://rvm.io/
+* *iTerm2* - https://www.iterm2.com/
+* *Alfred App 2* - https://www.alfredapp.com/
+* *Spectacle App* - https://www.spectacleapp.com/
+* *Mac-cli* - https://github.com/guarinogabriel/mac-cli
+* *Gas Mask* Gas Mask is simple hosts file manager for Mac OS X - https://github.com/2ndalpha/gasmask
 
 * Commander One - http://mac.eltima.com/pro-file-manager.html
 * Amphetamine - https://itunes.apple.com/gb/app/amphetamine/id937984704?mt=12
