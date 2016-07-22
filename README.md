@@ -79,6 +79,7 @@ Dev software that I install and keep updated manually on every machine
 
 * *Node.js Mac settings* - https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 * *Homebrew* - http://brew.sh/
+* *Cakebrew* The Mac App for Homebrew - https://www.cakebrew.com/
 * *Brew Cask* - http://caskroom.io/
 * *Ruby *via Ruby version manager - https://rvm.io/
 * *iTerm2* - https://www.iterm2.com/
