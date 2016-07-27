@@ -20,6 +20,7 @@ packages: [
   "git-log"
   "git-time-machine"
   "glowing-cursor"
+  "go-plus"
   "highlight-selected"
   "hyperclick"
   "js-hyperclick"
