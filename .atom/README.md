@@ -64,6 +64,7 @@ apm install file-icons
 apm install git-blame
 apm install git-log
 apm install git-time-machine (depends on split-diff)
+apm install go-plus
 apm install highlight-selected
 apm install language-asciidoc
 apm install language-powershell
