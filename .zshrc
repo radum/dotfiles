@@ -83,6 +83,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Set GO Lang GOPATH
+export GOPATH="${HOME}/go"
+export PATH=$GOPATH/bin:$PATH
+
 # bullet-train-oh-my-zsh-theme options
 BULLETTRAIN_PROMPT_ORDER=(
   time
