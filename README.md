@@ -36,6 +36,7 @@ Dev software that I install and keep updated manually on every machine
 ### All platforms
 
 * Node.js - https://nodejs.org/
+* Go lang - https://golang.org/
 * Python - https://www.python.org/ (2.7.x)
 * Composer for PHP - https://getcomposer.org/
 * Virtualbox - https://www.virtualbox.org/
