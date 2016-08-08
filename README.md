@@ -142,6 +142,7 @@ Complete list in [brew.sh](brew.sh)
 - https://github.com/zsh-users/zsh-syntax-highlighting/
 - https://github.com/zsh-users/zsh-autosuggestions
 - https://github.com/felixr/docker-zsh-completion
+- https://github.com/paulirish/git-open
 
 ##### Dependencies
 
