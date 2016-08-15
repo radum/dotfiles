@@ -40,7 +40,7 @@ brew install fortune
 brew install jq
 brew install imagemagick
 brew install youtube-dl
-
+brew install httpie
 
 # Remove outdated versions from the cellar.
 brew cleanup
