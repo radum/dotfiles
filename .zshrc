@@ -49,7 +49,7 @@ ZSH_CUSTOM=~/personal/oh-my-zsh-custom/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew docker gem git-extras knife vagrant osx autojump chucknorris git-open)
+plugins=(git brew docker gem git-extras knife vagrant osx autojump chucknorris git-open colored-man-pages)
 
 # User configuration
 
