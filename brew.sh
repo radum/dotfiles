@@ -41,6 +41,7 @@ brew install jq
 brew install imagemagick
 brew install youtube-dl
 brew install httpie
+brew install noti
 
 # Remove outdated versions from the cellar.
 brew cleanup
