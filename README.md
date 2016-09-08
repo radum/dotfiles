@@ -95,7 +95,6 @@ Dev software that I install and keep updated manually on every machine
 * Helium - http://jadengeller.github.io/Helium/
 * The unarchiver - http://unarchiver.c3.cx/
 * Sip - http://theolabrothers.com/
-* Caffeine - http://lightheadsw.com/caffeine/
 * Dash - https://kapeli.com/dash
 * Gifgrabber - http://www.gifgrabber.com/
 * GIPHY CAPTURE. The GIF Maker - https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12
