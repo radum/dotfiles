@@ -105,6 +105,7 @@ Dev software that I install and keep updated manually on every machine
 * GitUp (git client) - http://gitup.co/
 * Funter (show hide hidden files in Finder) - https://nektony.com/products/funter
 * Mac-cli - https://github.com/guarinogabriel/mac-cli
+* smartapp (keep track of 3G/4G, Wi-Fi, Roaming & Calling usages) - https://getsmartapp.com/
 
 #### Paid apps
 
