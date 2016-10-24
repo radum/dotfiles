@@ -20,8 +20,6 @@ npm install -g colorguard
 npm install -g csslint
 npm install -g diffchecker
 npm install -g doiuse
-npm install -g dploy
-npm install -g doiuse
 npm install -g electron-prebuilt
 npm install -g ember-cli
 npm install -g emoj
@@ -35,8 +33,6 @@ npm install -g eslint-plugin-react
 npm install -g express-generator
 npm install -g fast-cli
 npm install -g firebase-tools
-npm install -g generator-electrode
-npm install -g generator-react-static
 npm install -g generator-webapp
 npm install -g git-stats
 npm install -g grunt-cli
@@ -62,7 +58,6 @@ npm install -g nodemon
 npm install -g now
 npm install -g now-serve
 npm install -g np
-npm install -g npm
 npm install -g optimize-js
 npm install -g pa11y
 npm install -g parker
@@ -80,15 +75,12 @@ npm install -g sitespeed.io
 npm install -g stylelint
 npm install -g textlint
 npm install -g taunus
-npm install -g testem
 npm install -g timee
 npm install -g tmi
 npm install -g uglify-js
 npm install -g uncss
-npm install -g uglify-js
 npm install -g vorlon
 npm install -g vue-cli
-npm install -g webapp-boilerplate
 npm install -g webcoach
 npm install -g webpack
 npm install -g xo
