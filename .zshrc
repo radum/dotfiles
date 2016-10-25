@@ -192,16 +192,25 @@ compctl -K _yo_completion yo
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-NPM_PACKAGES="${HOME}/.npm-packages"
+# 1NPM
+# NPM global packages path in case you use the installer
+# NPM_PACKAGES="${HOME}/.npm-packages"
 
-PATH="$NPM_PACKAGES/bin:$PATH"
+# PATH="$NPM_PACKAGES/bin:$PATH"
 
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+# unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+# export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# 2 NPM
+# NPM global packages path in case you use NVM
+# Load Node global modules from NVM instance
+export NVM_DIR="/Volumes/Data/Users/radmicu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Syntax highlight for command you type, like fish shell has
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # Load zsh-autosuggestions.
 source ~/personal/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
