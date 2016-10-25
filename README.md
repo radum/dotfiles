@@ -35,7 +35,7 @@ Dev software that I install and keep updated manually on every machine
 
 ### All platforms
 
-* Node.js - https://nodejs.org/
+* Node.js - https://nodejs.org/ (Install via https://github.com/creationix/nvm for Mac)
 * Go lang - https://golang.org/
 * Python - https://www.python.org/ (2.7.x)
 * Composer for PHP - https://getcomposer.org/
