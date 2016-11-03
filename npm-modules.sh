@@ -36,7 +36,7 @@ npm install -g firebase-tools
 npm install -g generator-webapp
 npm install -g git-stats
 npm install -g grunt-cli
-npm install -g gulp
+npm install -g gulp-cli
 npm install -g GoogleChrome/lighthouse
 npm install -g handlebars
 npm install -g hotel
