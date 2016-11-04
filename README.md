@@ -41,6 +41,7 @@ Dev software that I install and keep updated manually on every machine
 * Composer for PHP - https://getcomposer.org/
 * Virtualbox - https://www.virtualbox.org/
 * Docker - https://www.docker.com/products/docker-toolbox
+	* Docker management UI - http://portainer.io/
 * Vagrant - https://www.vagrantup.com/
 
 * **Pandoc** A universal document converter - http://pandoc.org/
