@@ -50,10 +50,8 @@ npm install -g jsfmt
 npm install -g jshint
 npm install -g karma-cli
 npm install -g keybase-installer
-npm install -g lasso-cli
 npm install -g lodash-cli
 npm install -g mocha
-npm install -g nativefier
 npm install -g nodemon
 npm install -g now
 npm install -g np
