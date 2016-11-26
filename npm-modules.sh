@@ -56,7 +56,6 @@ npm install -g mocha
 npm install -g nativefier
 npm install -g nodemon
 npm install -g now
-npm install -g now-serve
 npm install -g np
 npm install -g optimize-js
 npm install -g pa11y
