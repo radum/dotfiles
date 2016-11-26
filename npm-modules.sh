@@ -20,7 +20,7 @@ npm install -g colorguard
 npm install -g csslint
 npm install -g diffchecker
 npm install -g doiuse
-npm install -g electron-prebuilt
+npm install -g electron
 npm install -g ember-cli
 npm install -g emoj
 npm install -g empty-trash
