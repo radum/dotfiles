@@ -39,6 +39,7 @@ packages: [
   "language-babel"
   "language-docker"
   "language-powershell"
+  "language-vue"
   "linter"
   "linter-bootlint"
   "linter-csslint"
