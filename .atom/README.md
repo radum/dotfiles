@@ -68,6 +68,7 @@ apm install go-plus
 apm install highlight-selected
 apm install language-asciidoc
 apm install language-powershell
+apm install language-vue
 apm install linter
 apm install linter-bootlint
 apm install linter-eslint
