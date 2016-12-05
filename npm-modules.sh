@@ -16,6 +16,7 @@ npm install -g bower
 npm install -g browserify
 npm install -g caniuse-cmd
 npm install -g clean-css
+npm install -g clipboard-cli
 npm install -g colorguard
 npm install -g csslint
 npm install -g diffchecker
