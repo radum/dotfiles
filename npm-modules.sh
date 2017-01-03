@@ -66,6 +66,7 @@ npm install -g postcss
 npm install -g psi
 npm install -g pwmetrics
 npm install -g recess
+npm install -g release
 npm install -g sassdoc
 npm install -g shots
 npm install -g sitespeed.io
