@@ -28,6 +28,7 @@ brew install woff2
 brew install ccat
 brew install git
 brew install git-lfs
+brew install diff-so-fancy
 brew install flow
 brew install imagemagick --with-webp
 brew install lua
