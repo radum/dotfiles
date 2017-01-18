@@ -87,6 +87,7 @@ apm install minimap-pigments
 apm install monokai
 apm install package-sync
 apm install pigments
+apm install prettier-atom
 apm install project-manager
 apm install react
 apm install seti-syntax
@@ -97,6 +98,7 @@ apm install split-diff
 apm install symbols-tree-view
 apm install tabs-to-spaces
 apm install travis-ci-status
+apm install atom-typescript
 apm install visual-bell
 apm install Zen
 ```
