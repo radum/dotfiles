@@ -109,6 +109,7 @@ Dev software that I install and keep updated manually on every machine
 * smartapp (keep track of 3G/4G, Wi-Fi, Roaming & Calling usages) - https://getsmartapp.com/
 * nvALT (Epic note taking app) - http://brettterpstra.com/projects/nvalt/
 * Fluor (Auto change the behaviour of the keyboard's fn keys depending on the active application) - https://github.com/Pyroh/Fluor
+* HandBrake (HandBrake is a tool for converting videos) - https://handbrake.fr/
 
 #### Paid apps
 
