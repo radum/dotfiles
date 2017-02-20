@@ -85,7 +85,6 @@ apm install minimap-selection
 apm install minimap-split-diff
 apm install minimap-pigments
 apm install monokai
-apm install package-sync
 apm install pigments
 apm install prettier-atom
 apm install project-manager
