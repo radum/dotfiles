@@ -35,3 +35,12 @@ atom-text-editor::shadow .cursor {
 .minimap .highlight-selected {
   background: whitesmoke;
 }
+
+atom-text-editor {
+  text-rendering: optimizeLegibility;
+}
+
+atom-text-editor::shadow .string.quoted,
+atom-text-editor::shadow .string.regexp {
+  -webkit-font-feature-settings: "liga" off, "calt" off;
+}
