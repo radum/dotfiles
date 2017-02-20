@@ -2,11 +2,11 @@
 
 ##Font
 
-I use [Hack](https://github.com/chrissimpkins/Hack)
+I use [FiraCode](https://github.com/tonsky/FiraCode)
 
 Alternative:
  - Source Code Pro Light from Adobe Source Code Pro.
- - FiraCode - https://github.com/tonsky/FiraCode
+ - Hack - (https://github.com/chrissimpkins/Hack)
  - Operator SSM - http://www.typography.com/blog/introducing-operator
 
 Default is "Menlo Regular" for Mac.
@@ -30,6 +30,12 @@ Alternatives:
 - Yoceanic Next Syntax Theme (https://atom.io/themes/yoceanic-next-syntax)
 
 ## Installed Packages
+
+** Using [Sync Settings for Atom](https://atom.io/packages/sync-settings). **
+
+This saves all my settings in secret Gist.
+
+Deprecated:
 
 The installation can be automated by groupping the `apm install`'s
 
