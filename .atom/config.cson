@@ -26,9 +26,11 @@
       "linter-shellcheck"
       "react"
       "glowing-cursor"
+      "atom-pair"
     ]
     packagesWithKeymapsDisabled: [
       "git-blame"
+      "emmet"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -113,6 +115,10 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
+  "sync-settings":
+    _lastBackupHash: "<add your own>"
+    gistId: "<add your own>"
+    personalAccessToken: "<add your own>"
   "tree-view": {}
   welcome:
     showOnStartup: false
