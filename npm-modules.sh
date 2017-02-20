@@ -8,7 +8,7 @@ npm install -g node-gyp
 npm install -g node-gyp-install
 
 npm install -g npm-check
-npm install -g updtr;
+npm install -g updtr
 
 npm install -g angular-cli;
 npm install -g asar;
