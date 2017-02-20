@@ -71,8 +71,8 @@
     # Prevent showing files whose names contain non-ASCII symbols as unversioned.
     # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
     precomposeunicode = false
-
     editor = subl -n -w
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 
@@ -105,7 +105,6 @@
     renames = copies
 
 [diff "bin"]
-
     # Use `hexdump` to diff binary files
     textconv = hexdump -v -C
 
@@ -120,30 +119,27 @@
     log = true
 
 [push]
-
     default = simple
     # Make `git push` push relevant annotated tags when pushing branches out.
     followTags = true
 
 [credential]
-
     helper = osxkeychain
 
 [user]
-
     name = RaduM
     email = radu.micu@gmail.com
 
 [difftool "sourcetree"]
-
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
     path =
 
 [mergetool "sourcetree"]
-
     cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
     trustExitCode = true
-
 [init]
-
 	templatedir = /Volumes/Data/Users/radmicu/.git-templates
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
