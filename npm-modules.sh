@@ -62,7 +62,6 @@ npm install -g nodemon;
 npm install -g now;
 npm install -g now-serve;
 npm install -g np;
-npm install -g npm;
 npm install -g optimize-js;
 npm install -g pa11y;
 npm install -g parker;
