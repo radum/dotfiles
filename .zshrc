@@ -5,7 +5,12 @@ export ZSH=/Volumes/Data/Users/radmicu/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+# ZSH_THEME="bullet-train"
+
+# Install instructions: https://github.com/sindresorhus/pure#oh-my-zsh
+# ln -s "$PWD/pure.zsh" ~/personal/oh-my-zsh-custom/pure.zsh-theme
+# ln -s "$PWD/async.zsh" ~/personal/oh-my-zsh-custom/async.zsh
+ZSH_THEME="pure"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +54,10 @@ ZSH_CUSTOM=~/personal/oh-my-zsh-custom/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew docker gem git-extras knife vagrant osx autojump chucknorris git-open colored-man-pages)
+plugins=(git brew docker gem git-extras knife vagrant osx autojump chucknorris git-open colored-man-pages nvm jira)
+
+# Plugins config
+JIRA_URL="https://jira.lbi.co.uk"
 
 # User configuration
 
@@ -88,17 +96,14 @@ export GOPATH="${HOME}/go"
 export PATH=$GOPATH/bin:$PATH
 
 # bullet-train-oh-my-zsh-theme options
-BULLETTRAIN_PROMPT_ORDER=(
-  time
-  context
-  dir
-  git
-)
-BULLETTRAIN_DIR_EXTENDED=2
-BULLETTRAIN_GIT_COLORIZE_DIRTY=true
-BULLETTRAIN_EXEC_TIME_SHOW=true
-# BULLETTRAIN_CONTEXT_SHOW=true
-BULLETTRAIN_RUBY_SHOW=false
+# BULLETTRAIN_PROMPT_ORDER=(
+#   time
+#   context
+#   dir
+#   git
+# )
+# BULLETTRAIN_DIR_EXTENDED=2
+# BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 
 # Alias settings
 # alias 'rm=rm -i'
@@ -114,8 +119,13 @@ preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/bash-histor
 setopt inc_append_history
 setopt share_history
 
-###-begin-npm-completion-###
+# Use homebrew PHP version
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 
+# Add global composer to the PATH
+export PATH=~/.composer/vendor/bin:$PATH
+
+###-begin-npm-completion-###
 #
 # npm command completion script
 #
@@ -173,48 +183,16 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
-###-begin-yo-completion-###
-_yo_completion () {
-  local cword line point words si
-  read -Ac words
-  read -cn cword
-  let cword-=1
-  read -l line
-  read -ln point
-  si="$IFS"
-  IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                     COMP_LINE="$line" \
-                     COMP_POINT="$point" \
-                     yo-complete completion -- "${words[@]}" \
-                     2>/dev/null)) || return $?
-  IFS="$si"
-}
-compctl -K _yo_completion yo
-###-end-yo-completion-###
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# 1NPM
-# NPM global packages path in case you use the installer
-# NPM_PACKAGES="${HOME}/.npm-packages"
-
-# PATH="$NPM_PACKAGES/bin:$PATH"
-
-# # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-# unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-# export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-# 2 NPM
-# NPM global packages path in case you use NVM
-# Load Node global modules from NVM instance
-export NVM_DIR="/Volumes/Data/Users/radmicu/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Syntax highlight for command you type, like fish shell has
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 # Load zsh-autosuggestions.
 source ~/personal/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Load Node global modules from NVM instance
+export NVM_DIR="/Volumes/Data/Users/radmicu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
