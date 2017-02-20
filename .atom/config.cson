@@ -1,5 +1,8 @@
 "*":
   Zen: {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "e5eb544a-559d-4547-be1d-9f6317d07ac6"
   "atom-material-ui":
     fonts: {}
     tabs: {}
@@ -8,41 +11,43 @@
     ui:
       panelContrast: true
       panelShadows: true
+  "atom-typescript": {}
   "autocomplete-plus": {}
   "color-picker":
     preferredFormat: "HEX"
   core:
     disabledPackages: [
-      "emmet"
       "asciidoc-preview"
+      "linter-bootlint"
       "linter-csslint"
+      "linter-jscs"
       "linter-jshint"
       "linter-scss-lint"
-      "linter-jscs"
-      "stylefmt"
+      "linter-shellcheck"
+      "react"
+      "glowing-cursor"
     ]
     packagesWithKeymapsDisabled: [
       "git-blame"
     ]
+    telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
-      "oceanic-next"
+      "atom-material-syntax"
     ]
   "custom-title":
     template: "<%= projectName %> <% if (relativeFilePath) { %>- <%= relativeFilePath %> <% } %> - <%= gitHead %>"
   docblockr: {}
   editor:
-    fontFamily: "Hack"
-    fontSize: 12
+    fontFamily: "Fira Code"
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
     softTabs: false
     tabLength: 4
-    tabType: "hard"
   emmet: {}
   "exception-reporting":
-    userId: "86827e6b-b8fb-40a1-fe12-2983ee30840b"
+    userId: "4f1c242c-dc54-dda0-7bc1-a9ea6fc9ed6d"
   "git-blame":
     columnWidth: 310
     customCommitUrlTemplateString: "https://stash.lbi.co.uk/projects/<%- project %>/repos/<%- repo %>/commits/<%- revision %>"
@@ -52,11 +57,9 @@
   "git-diff":
     showIconsInEditorGutter: true
   "glowing-cursor":
-    innerColor:
-      red: 75
-      green: 213
-      blue: 255
-      alpha: 1
+    innerColor: "#4bd5ff"
+  "go-plus":
+    currentPanelHeight: "35.93890386343217vh"
   "highlight-selected":
     lightTheme: true
   linter:
@@ -65,7 +68,6 @@
   "linter-eslint":
     disableWhenNoEslintConfig: false
     eslintrcPath: "/Volumes/Data/Users/radmicu/Projects/linters/.eslintrc.json"
-    globalNodePath: "/Volumes/Data/Users/radmicu/.npm-packages"
     useGlobalEslint: true
   "linter-jscs": {}
   "linter-jshint":
@@ -76,7 +78,7 @@
   "linter-stylelint": {}
   minimap:
     plugins:
-      bookmarks: false
+      bookmarks: true
       bookmarksDecorationsZIndex: 0
       codeglance: true
       codeglanceDecorationsZIndex: 0
@@ -88,7 +90,7 @@
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-      linter: true
+      linter: false
       linterDecorationsZIndex: 0
       pigments: false
       pigmentsDecorationsZIndex: 0
@@ -103,6 +105,8 @@
   "one-dark-ui":
     layoutMode: "Compact"
   pigments: {}
+  "prettier-atom":
+    tabWidth: 4
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -118,6 +122,15 @@
 ".hyperlink.text":
   editor:
     tabLength: 4
+".ini.source":
+  editor:
+    tabLength: 4
 ".sass.source":
+  editor:
+    tabLength: 4
+".source.ts":
+  editor:
+    tabLength: 4
+".source.tsx":
   editor:
     tabLength: 4
