@@ -17,7 +17,7 @@ npm install -g babel-cli;
 npm install -g bootlint;
 npm install -g bower;
 npm install -g browserify;
-npm install -g clean-css;
+npm install -g clean-css-cli;
 npm install -g clipboard-cli;
 npm install -g colorguard;
 npm install -g cross-env;
