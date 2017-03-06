@@ -108,7 +108,7 @@ export PATH=$GOPATH/bin:$PATH
 # Alias settings
 # alias 'rm=rm -i'
 alias 'helios-go-compiled-folder=cd ~/Projects/helios/application/helios-id/helios/deploy/renault_v2/common-assets'
-alias 'helios-run-local-server=http-server -a localhost -p 4243 -S -K ~/personal/ssl/localhost.key -C ~/personal/ssl/localhost.crt'
+alias 'helios-run-local-server=ws -p 4243 -c --key ~/personal/ssl/localhost.key --cert ~/personal/ssl/localhost.crt'
 alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
 alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
 
