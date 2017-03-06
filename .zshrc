@@ -111,6 +111,7 @@ alias 'helios-go-compiled-folder=cd ~/Projects/helios/application/helios-id/heli
 alias 'helios-run-local-server=ws -p 4243 -c --key ~/personal/ssl/localhost.key --cert ~/personal/ssl/localhost.crt'
 alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
 alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
+alias 'prettyjson=python -m json.tool'
 
 # Log bash history
 # Save commands run in a file for posterity
