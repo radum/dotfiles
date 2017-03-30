@@ -82,6 +82,23 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Set GO Lang GOPATH
+export GOPATH="${HOME}/go"
+export PATH=$GOPATH/bin:$PATH
+
+# Use homebrew PHP version
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+
+# Add global composer to the PATH
+export PATH=~/.composer/vendor/bin:$PATH
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Set caddyserver PATH
+export CADDYSERVER="${HOME}/personal/local-server/caddy"
+export PATH=$CADDYSERVER:$PATH
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -91,11 +108,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set GO Lang GOPATH
-export GOPATH="${HOME}/go"
-export PATH=$GOPATH/bin:$PATH
+# Alias settings
+# alias 'rm=rm -i'
+alias 'helios-go-compiled-folder=cd ~/Projects/helios/application/helios-id/helios/deploy'
+alias 'helios-run-local-server=ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
 
-# bullet-train-oh-my-zsh-theme options
+alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
+alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
+
+alias 'prettyjson=python -m json.tool'
+
+# # bullet-train-oh-my-zsh-theme options
 # BULLETTRAIN_PROMPT_ORDER=(
 #   time
 #   context
@@ -105,14 +128,6 @@ export PATH=$GOPATH/bin:$PATH
 # BULLETTRAIN_DIR_EXTENDED=2
 # BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 
-# Alias settings
-# alias 'rm=rm -i'
-alias 'helios-go-compiled-folder=cd ~/Projects/helios/application/helios-id/helios/deploy/renault_v2/common-assets'
-alias 'helios-run-local-server=ws -p 4243 -c --key ~/personal/ssl/localhost.key --cert ~/personal/ssl/localhost.crt'
-alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
-alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
-alias 'prettyjson=python -m json.tool'
-
 # Log bash history
 # Save commands run in a file for posterity
 preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; }
@@ -120,11 +135,15 @@ preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/bash-histor
 setopt inc_append_history
 setopt share_history
 
-# Use homebrew PHP version
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+# Syntax highlight for command you type, like fish shell has
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Add global composer to the PATH
-export PATH=~/.composer/vendor/bin:$PATH
+# Load zsh-autosuggestions.
+source ~/personal/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Load Node global modules from NVM instance
+export NVM_DIR="/Volumes/Data/Users/radmicu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ###-begin-npm-completion-###
 #
@@ -138,7 +157,7 @@ if type complete &>/dev/null; then
   _npm_completion () {
     local words cword
     if type _get_comp_words_by_ref &>/dev/null; then
-      _get_comp_words_by_ref -n = -n @ -w words -i cword
+      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
     else
       cword="$COMP_CWORD"
       words=("${COMP_WORDS[@]}")
@@ -151,6 +170,9 @@ if type complete &>/dev/null; then
                            npm completion -- "${words[@]}" \
                            2>/dev/null)) || return $?
     IFS="$si"
+    if type __ltrim_colon_completions &>/dev/null; then
+      __ltrim_colon_completions "${words[cword]}"
+    fi
   }
   complete -o default -F _npm_completion npm
 elif type compdef &>/dev/null; then
@@ -184,16 +206,4 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Syntax highlight for command you type, like fish shell has
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Load zsh-autosuggestions.
-source ~/personal/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# Load Node global modules from NVM instance
-export NVM_DIR="/Volumes/Data/Users/radmicu/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
