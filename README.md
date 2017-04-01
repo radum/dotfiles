@@ -132,7 +132,7 @@ Complete list in [brew.sh](brew.sh)
 
 - Bullet Train - https://github.com/caiogondim/bullet-train-oh-my-zsh-theme
 
-####### TMUX
+###### TMUX
 
 - https://github.com/caiogondim/maglev
 
@@ -162,6 +162,7 @@ Complete list in [brew.sh](brew.sh)
 * **ShareX** Screen grabs beyond everything you can imagine - https://getsharex.com/
 * **Psget** Search and install PowerShell modules easy - http://psget.net/
 * **Chocolatey** The package manager for Windows - https://chocolatey.org/
+ * Complete list of choco packages in [choco.ps1](choco.ps1)
 
 #### Visual C++ Build Tools
 * **Visual C++ Build Tools** - http://landinghub.visualstudio.com/visual-cpp-build-tools
