@@ -83,7 +83,7 @@ Dev software that I install and keep updated manually on every machine
 * *Homebrew* - http://brew.sh/
 * *Cakebrew* The Mac App for Homebrew - https://www.cakebrew.com/
 * *Brew Cask* - http://caskroom.io/
-* *Ruby *via Ruby version manager - https://rvm.io/
+* *Ruby* via Ruby version manager - https://rvm.io/ (Ruby gems [ruby-gems.sh](ruby-gems.sh))
 * *iTerm2* - https://www.iterm2.com/
 * *Alfred App 2* - https://www.alfredapp.com/
 * *Spectacle App* - https://www.spectacleapp.com/
@@ -154,7 +154,7 @@ Complete list in [brew.sh](brew.sh)
 
 ### Windows
 
-* **Ruby** - http://rubyinstaller.org/
+* **Ruby** - http://rubyinstaller.org/ (Ruby gems [ruby-gems.sh](ruby-gems.sh))
 * **Git** - https://git-scm.com/ / https://github.com/git-for-windows/git
 * **Conemu** - http://conemu.github.io/
 * **Clink** - http://mridgers.github.io/clink/
