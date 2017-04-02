@@ -2,6 +2,7 @@
 
 npm install -g npm-windows-upgrade
 
+# For windows read the readme after you install this
 npm install -g node-gyp
 
 # Run this after installing node-gyp
