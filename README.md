@@ -185,6 +185,7 @@ For Node.js - https://github.com/Microsoft/nodejs-guidelines
 
 #### PowerShell
 * posh-git via PsGet - http://psget.net/directory/posh-git/
+- PSReadLine - https://github.com/lzybkr/PSReadLine
 
 #### Windows ENV variables
 
