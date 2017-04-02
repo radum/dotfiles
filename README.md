@@ -39,10 +39,12 @@ Dev software that I install and keep updated manually on every machine
 * Go lang - https://golang.org/
 * Python - https://www.python.org/ (2.7.x)
 * Composer for PHP - https://getcomposer.org/
-* Virtualbox - https://www.virtualbox.org/
 * Docker - https://www.docker.com/products/docker-toolbox
 	* Docker management UI - http://portainer.io/
 * Vagrant - https://www.vagrantup.com/
+
+* Virtualbox - https://www.virtualbox.org/
+* Hyper - https://hyper.is/
 
 * **Pandoc** A universal document converter - http://pandoc.org/
 * **CSV Toolkit** - http://csvkit.readthedocs.org/en/0.9.1/
@@ -156,13 +158,21 @@ Complete list in [brew.sh](brew.sh)
 
 * **Ruby** - http://rubyinstaller.org/ (Ruby gems [ruby-gems.sh](ruby-gems.sh))
 * **Git** - https://git-scm.com/ / https://github.com/git-for-windows/git
-* **Conemu** - http://conemu.github.io/
+* **Conemu** - http://conemu.github.io/ or Cmder http://cmder.net/
 * **Clink** - http://mridgers.github.io/clink/
 * **Rapidee** Rapid Environment Editor - http://www.rapidee.com/en/download
 * **ShareX** Screen grabs beyond everything you can imagine - https://getsharex.com/
 * **Psget** Search and install PowerShell modules easy - http://psget.net/
 * **Chocolatey** The package manager for Windows - https://chocolatey.org/
  * Complete list of choco packages in [choco.ps1](choco.ps1)
+
+### Bash on Ubuntu on Windows
+
+How to install and use - https://msdn.microsoft.com/en-us/commandline/wsl/about
+
+Articles:
+
+- http://daverupert.com/2017/03/my-bash-on-windows-developer-environment/
 
 #### Visual C++ Build Tools
 * **Visual C++ Build Tools** - http://landinghub.visualstudio.com/visual-cpp-build-tools
