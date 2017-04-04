@@ -11,6 +11,7 @@ npm install -g node-gyp-install
 npm install -g npm-check
 npm install -g updtr
 
+npm install -g frctl/fractal;
 npm install -g angular-cli;
 npm install -g asar;
 npm install -g ava;
@@ -21,6 +22,7 @@ npm install -g browserify;
 npm install -g clean-css-cli;
 npm install -g clipboard-cli;
 npm install -g colorguard;
+npm install -g critical;
 npm install -g cross-env;
 npm install -g csslint;
 npm install -g diffchecker;
@@ -45,6 +47,7 @@ npm install -g grunt-cli;
 npm install -g gulp-cli;
 npm install -g hotel;
 npm install -g hpm-cli;
+npm install -g http-server;
 npm install -g ipify;
 npm install -g is-http2-cli;
 npm install -g istanbul;
@@ -74,7 +77,9 @@ npm install -g pwmetrics;
 npm install -g react-tools;
 npm install -g recess;
 npm install -g release;
+npm install -g rxjs;
 npm install -g sassdoc;
+npm install -g serve;
 npm install -g sitespeed.io;
 npm install -g stylelint;
 npm install -g taunus;
@@ -83,6 +88,7 @@ npm install -g timee;
 npm install -g tmi;
 npm install -g tslint;
 npm install -g typescript;
+npm install -g typings;
 npm install -g uncss;
 npm install -g vorlon;
 npm install -g vue-cli;
