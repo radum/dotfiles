@@ -69,6 +69,7 @@ npm install -g now-serve;
 npm install -g np;
 npm install -g optimize-js;
 npm install -g pa11y;
+npm install -g pagexray;
 npm install -g parker;
 npm install -g plato;
 npm install -g pm2;
