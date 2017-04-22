@@ -54,7 +54,7 @@ ZSH_CUSTOM=~/personal/oh-my-zsh-custom/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew docker gem git-extras knife vagrant osx autojump chucknorris git-open colored-man-pages nvm jira)
+plugins=(git docker gem git-extras knife vagrant osx autojump chucknorris git-open colored-man-pages nvm jira)
 
 # Plugins config
 JIRA_URL="https://jira.lbi.co.uk"
