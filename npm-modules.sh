@@ -15,7 +15,6 @@ npm install -g frctl/fractal;
 npm install -g angular-cli;
 npm install -g asar;
 npm install -g ava;
-npm install -g babel-cli;
 npm install -g bootlint;
 npm install -g bower;
 npm install -g browserify;
