@@ -127,6 +127,7 @@ Complete list in [brew.sh](brew.sh)
 #### Shell
 
 - https://github.com/robbyrussell/oh-my-zsh
+- https://github.com/sorin-ionescu/prezto (Consider using this)
 
 ##### Themes and skins
 
