@@ -1,3 +1,4 @@
+```
 VISUAL STUDIO CODE SETTINGS SYNC 
 Version: 2.6.2
 
@@ -59,3 +60,4 @@ vscode-eslint - Version :1.2.8
 vscode-icons - Version :7.5.1
 vscode-theme-onedark - Version :1.3.2
 vue - Version :0.1.5
+```
