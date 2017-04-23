@@ -173,6 +173,7 @@ How to install and use - https://msdn.microsoft.com/en-us/commandline/wsl/about
 Articles:
 
 - http://daverupert.com/2017/03/my-bash-on-windows-developer-environment/
+- https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/
 
 #### Visual C++ Build Tools
 * **Visual C++ Build Tools** - http://landinghub.visualstudio.com/visual-cpp-build-tools
