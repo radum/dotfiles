@@ -96,5 +96,6 @@ npm install -g vue-cli;
 npm install -g webcoach;
 npm install -g webpack;
 npm install -g webpack-dev-server;
+npm install -g webpagetest;
 npm install -g xo;
 npm install -g yo;
