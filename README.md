@@ -78,6 +78,7 @@ Dev software that I install and keep updated manually on every machine
 ### Font Management
 
 * FontBase - http://fontba.se/
+* FontForge - https://github.com/fontforge/fontforge
 
 ### Mac
 
