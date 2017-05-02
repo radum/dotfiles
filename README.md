@@ -51,6 +51,7 @@ Dev software that I install and keep updated manually on every machine
 * **Charlesproxy** - https://www.charlesproxy.com/
 * **Licecap** Make GIFs - http://www.cockos.com/licecap/
 * **Glances** Glances an Eye on your system - https://github.com/nicolargo/glances
+* **Highlight** Highlight converts sourcecode to HTML, RTF, LaTeX, etc - http://www.andre-simon.de/doku/highlight/en/highlight.php
 
 ### Browsers
 
