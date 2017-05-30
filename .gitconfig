@@ -49,6 +49,27 @@
 
     # List all your Aliases (la)
     la = "!git config -l | grep alias | cut -c 7-"
+    
+    # Useful commands
+    
+    # Leaderboards
+    # git shortlog -sn
+    # git shortlog -sn --since='10 weeks' --until='2 weeks'
+    
+    # See Which Branches You Recently Worked On
+    # git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+    
+    # Remind Yourself What You’ve Been Up To
+    # git log --all --oneline --no-merges --author=<your email address>
+    
+    # Generate a Changelog
+    # git log --oneline --no-merges <last tag>..HEAD
+    
+    # View Complex Logs
+    # git log --graph --all --decorate --stat --date=iso
+
+    # Review What You’re About to Push
+    # git log --oneline --no-merges <remote>/<branch>..HEAD
 
 [core]
 
