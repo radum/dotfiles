@@ -48,6 +48,7 @@ brew install httpie
 brew install noti
 brew install android-platform-tools
 brew install yarn
+brew install hub
 
 # Remove outdated versions from the cellar.
 brew cleanup
