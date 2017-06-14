@@ -54,6 +54,7 @@ Dev software that I install and keep updated manually on every machine
 * **Licecap** Make GIFs - http://www.cockos.com/licecap/
 * **Glances** Glances an Eye on your system - https://github.com/nicolargo/glances
 * **Highlight** Highlight converts sourcecode to HTML, RTF, LaTeX, etc - http://www.andre-simon.de/doku/highlight/en/highlight.php
+* **httpie** - https://github.com/jakubroztocil/httpie
 * **Remotedebug iOS** - https://github.com/RemoteDebug/remotedebug-ios-webkit-adapter
 
 ### Browsers
