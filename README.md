@@ -50,6 +50,7 @@ Dev software that I install and keep updated manually on every machine
 * **CSV Toolkit** - http://csvkit.readthedocs.org/en/0.9.1/
 * **Charlesproxy** - https://www.charlesproxy.com/
 * **Fiddler** - https://www.telerik.com/download/fiddler/fiddler-osx-beta
+* **Postman** - https://www.getpostman.com/
 * **Licecap** Make GIFs - http://www.cockos.com/licecap/
 * **Glances** Glances an Eye on your system - https://github.com/nicolargo/glances
 * **Highlight** Highlight converts sourcecode to HTML, RTF, LaTeX, etc - http://www.andre-simon.de/doku/highlight/en/highlight.php
