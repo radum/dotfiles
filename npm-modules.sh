@@ -74,7 +74,6 @@ npm install -g pm2;
 npm install -g protractor;
 npm install -g psi;
 npm install -g pwmetrics;
-npm install -g react-tools;
 npm install -g recess;
 npm install -g release;
 npm install -g rxjs;
