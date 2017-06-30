@@ -12,11 +12,10 @@ npm install -g npm-check
 npm install -g updtr
 
 npm install -g frctl/fractal;
-npm install -g angular-cli;
+npm install -g @angular/cli
 npm install -g asar;
 npm install -g ava;
 npm install -g bootlint;
-npm install -g bower;
 npm install -g browserify;
 npm install -g clean-css-cli;
 npm install -g clipboard-cli;
