@@ -163,6 +163,7 @@ Complete list in [brew.sh](brew.sh)
 
 ### Windows
 
+* **Microsoft Visual C++ Compiler for Python 2.7** - http://aka.ms/vcpython27
 * **Ruby** - http://rubyinstaller.org/ (Ruby gems [ruby-gems.sh](ruby-gems.sh))
 * **Git** - https://git-scm.com/ / https://github.com/git-for-windows/git
 * **Conemu** - http://conemu.github.io/ or Cmder http://cmder.net/
