@@ -105,8 +105,10 @@ Dev software that I install and keep updated manually on every machine
 * The unarchiver - http://unarchiver.c3.cx/
 * Sip - http://theolabrothers.com/
 * Dash - https://kapeli.com/dash
+* GIF Brewery - http://gifbrewery.com/
 * Gifgrabber - http://www.gifgrabber.com/
-* GIPHY CAPTURE. The GIF Maker - https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12
+* GIPHY CAPTURE. The GIF Maker - https://giphy.com/apps/giphycapture
+* gifrocket - http://www.gifrocket.com/
 * Bettersnaptool - http://www.boastr.net/bettersnaptool/
 * Android File transfer - https://www.android.com/filetransfer/
 * Smart calculator - http://numi.io/
