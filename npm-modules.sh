@@ -24,6 +24,7 @@ npm install -g critical;
 npm install -g cross-env;
 npm install -g csslint;
 npm install -g diffchecker;
+npm install -g dist-size;
 npm install -g doiuse;
 npm install -g electron;
 npm install -g ember-cli;
