@@ -50,6 +50,8 @@ brew install android-platform-tools
 brew install yarn
 brew install hub
 brew install nvim
+# https://the.exa.website/
+brew install exa
 
 # Remove outdated versions from the cellar.
 brew cleanup
