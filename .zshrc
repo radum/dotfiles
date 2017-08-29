@@ -29,7 +29,7 @@ antigen bundles <<EOBUNDLES
     common-aliases
 
     # An oh-my-zsh plugin to help remembering those aliases you defined once
-    antigen bundle djui/alias-tips
+    djui/alias-tips
 
     # Tracks your most used directories, based on 'frecency'.
     rupa/z
@@ -49,10 +49,15 @@ antigen bundles <<EOBUNDLES
 
     # Extra zsh completions
     zsh-users/zsh-completions
+
+    # https://github.com/sindresorhus/pure
+    # Comment theme bellow if this is used
+    mafredri/zsh-async
+    sindresorhus/pure
 EOBUNDLES
 
 # Load the theme.
-antigen theme ys
+# antigen theme ys
 
 # Tell antigen that you're done
 antigen apply
@@ -76,5 +81,7 @@ setopt inc_append_history
 setopt share_history
 
 # Anything bellow this line is most likely appended automatically by some script.
-# Ex: NVM, NPM exports or others.
 # ---------------------------
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
