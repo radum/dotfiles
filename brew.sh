@@ -73,7 +73,6 @@ brew install youtube-dl
 brew install httpie
 brew install shellcheck
 brew install noti
-brew install android-platform-tools
 brew install yarn
 brew install hub
 brew install nvim
@@ -84,6 +83,11 @@ brew install exa
 # Install fun stuff
 brew install cowsay
 brew install gource
+
+# Brew CASK
+# brew tap caskroom/cask
+# brew cask install android-sdk
+brew cask install android-platform-tools
 
 # Remove outdated versions from the cellar.
 brew cleanup
