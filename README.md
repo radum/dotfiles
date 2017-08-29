@@ -80,10 +80,14 @@ Dev software that I install and keep updated manually on every machine
 * Github - https://desktop.github.com/
 * Sourcetree - https://www.sourcetreeapp.com/
 
-### Font Management
+### Font Management, Fonts
 
 * FontBase - http://fontba.se/
 * FontForge - https://github.com/fontforge/fontforge
+
+* https://github.com/tonsky/FiraCode
+* https://github.com/source-foundry/Hack
+* https://github.com/adobe-fonts/source-code-pro
 
 ### Mac
 
