@@ -74,3 +74,7 @@ preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >> ~/.logs/bash-histor
 
 setopt inc_append_history
 setopt share_history
+
+# Anything bellow this line is most likely appended automatically by some script.
+# Ex: NVM, NPM exports or others.
+# ---------------------------
