@@ -1,0 +1,12 @@
+# Work - DLBi go to specific folders.
+alias 'helios-go-compiled-folder=cd ~/Projects/helios/application/helios-id/helios/deploy'
+alias 'helios-run-local-server=ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
+
+# Open chrome with files access for testing purposes
+alias 'chrome=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias 'chrome-canary=/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
+alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
+alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
+
+# Pretty json files
+alias 'prettyjson=python -m json.tool'
