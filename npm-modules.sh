@@ -3,6 +3,13 @@
 npm install -g npm-windows-upgrade;
 
 # For windows read the readme after you install this
+# For mac make sure you have XCode installed and check the tools:
+# ~/ xcode-select -p
+#
+# And you should see: /Applications/Xcode.app/Contents/Developer
+# if you don't run this:
+#
+# ~/ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 npm install -g node-gyp;
 
 # Run this after installing node-gyp
