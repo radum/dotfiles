@@ -75,7 +75,6 @@ brew install shellcheck
 brew install noti
 brew install yarn
 brew install hub
-brew install nvim
 
 # Replaces LS - https://the.exa.website/
 brew install exa
