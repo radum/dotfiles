@@ -26,15 +26,27 @@ brew install woff2
 
 # Install other useful binaries.
 brew install ack
+brew install asciinema
+brew install brotli
 brew install ccat
+brew install certbot
+brew install exiftool
 brew install git
 brew install git-lfs
+brew install guetzli
 brew install diff-so-fancy
 brew install flow
 brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools
 brew install imagemagick --with-webp
+brew install ios-webkit-debug-proxy
+brew install httpie
+brew install lepton
 brew install lua
 brew install lynx
+brew install mitmproxy
+brew install mozjpeg
+brew install neovim
+brew install nmap
 brew install p7zip
 brew install rename
 brew install speedtest_cli
@@ -45,6 +57,7 @@ brew install jq
 brew install imagemagick
 brew install youtube-dl
 brew install httpie
+brew install shellcheck
 brew install noti
 brew install android-platform-tools
 brew install yarn
@@ -52,6 +65,10 @@ brew install hub
 brew install nvim
 # https://the.exa.website/
 brew install exa
+
+# Install fun stuff
+brew install cowsay
+brew install gource
 
 # Remove outdated versions from the cellar.
 brew cleanup
