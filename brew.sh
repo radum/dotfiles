@@ -6,16 +6,30 @@
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
+
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+
+# Install some other useful utilities like `sponge`.
+brew install moreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install more recent versions of some OS X tools.
+# Install GnuPG to enable PGP-signing commits.
+brew install gnupg
+
+# Install more recent versions of some macOS tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep
+brew install openssh
+brew install screen
 brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
@@ -63,7 +77,8 @@ brew install android-platform-tools
 brew install yarn
 brew install hub
 brew install nvim
-# https://the.exa.website/
+
+# Replaces LS - https://the.exa.website/
 brew install exa
 
 # Install fun stuff
