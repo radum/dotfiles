@@ -125,6 +125,7 @@ Dev software that I install and keep updated manually on every machine
 * Fluor (Auto change the behaviour of the keyboard's fn keys depending on the active application) - https://github.com/Pyroh/Fluor
 * HandBrake (HandBrake is a tool for converting videos) - https://handbrake.fr/
 * SecurityGrowler - https://github.com/pirate/security-growler
+* PrivateEye - https://radiosilenceapp.com/private-eye
 
 #### Paid apps
 
