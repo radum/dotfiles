@@ -80,6 +80,9 @@ brew install heroku
 # Replaces LS - https://the.exa.website/
 brew install exa
 
+# Simplified and community-driven man pages - https://github.com/tldr-pages/tldr
+brew install tldr
+
 # Install fun stuff
 brew install cowsay
 brew install gource
