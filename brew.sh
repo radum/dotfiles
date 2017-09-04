@@ -83,6 +83,9 @@ brew install exa
 # Simplified and community-driven man pages - https://github.com/tldr-pages/tldr
 brew install tldr
 
+# ripgrep combines the usability of The Silver Searcher with the raw speed of grep - https://github.com/BurntSushi/ripgrep
+brew install ripgrep
+
 # Install fun stuff
 brew install cowsay
 brew install gource
