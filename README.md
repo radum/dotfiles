@@ -193,6 +193,15 @@ Articles:
 - http://daverupert.com/2017/03/my-bash-on-windows-developer-environment/
 - https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/
 
+```
+# Setup bash common stuff to begin with
+
+cp /path/to/my/key/id_rsa ~/.ssh/id_rsa
+cp /path/to/my/key/id_rsa.pub ~/.ssh/id_rsa.pub
+
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+```
+
 #### Visual C++ Build Tools
 * **Visual C++ Build Tools** - http://landinghub.visualstudio.com/visual-cpp-build-tools
 
