@@ -43,6 +43,7 @@ npm install -g eslint-config-airbnb-base;
 npm install -g eslint-plugin-import;
 npm install -g eslint-plugin-jsx-a11y;
 npm install -g eslint-plugin-react;
+npm install -g eslint-plugin-compat;
 npm install -g express-generator;
 npm install -g fast-cli;
 npm install -g firebase-tools;
