@@ -76,6 +76,7 @@ brew install noti
 brew install yarn
 brew install hub
 brew install heroku
+brew install watchman
 
 # Replaces LS - https://the.exa.website/
 brew install exa
