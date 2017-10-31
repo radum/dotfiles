@@ -192,6 +192,8 @@ Articles:
 
 - http://daverupert.com/2017/03/my-bash-on-windows-developer-environment/
 - https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/
+- https://github.com/Microsoft/WSL/issues/1890#issuecomment-339952407 (Remove windows path. NPM clashes with Win NPM)
+- https://msdn.microsoft.com/en-us/commandline/wsl/wsl-config
 
 ```
 # Setup bash common stuff to begin with
