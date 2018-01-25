@@ -27,7 +27,6 @@ npm install -g cross-env;
 npm install -g csslint;
 npm install -g diffchecker;
 npm install -g dist-size;
-npm install -g doiuse;
 npm install -g ember-cli;
 npm install -g emoj;
 npm install -g eslint;
@@ -66,7 +65,6 @@ npm install -g np;
 npm install -g npc;
 npm install -g optimize-js;
 npm install -g pa11y;
-npm install -g pagexray;
 npm install -g parker;
 npm install -g plato;
 npm install -g pm2;
@@ -100,3 +98,6 @@ npm install -g webpack-dev-server;
 npm install -g webpagetest;
 npm install -g xo;
 npm install -g yo;
+
+# NPX tools
+npx cloc node_modules/
