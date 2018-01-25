@@ -101,3 +101,4 @@ npm install -g yo;
 
 # NPX tools
 npx cloc node_modules/
+npx depcheck
