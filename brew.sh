@@ -78,6 +78,7 @@ brew install yarn
 brew install hub
 brew install heroku
 brew install watchman
+brew install fzf
 
 # Replaces LS - https://the.exa.website/
 brew install exa
