@@ -78,6 +78,7 @@ brew install hub
 brew install heroku
 brew install watchman
 brew install fzf
+brew install the_silver_searcher
 
 # Replaces LS - https://the.exa.website/
 brew install exa
