@@ -98,7 +98,12 @@ npm install -g webpack-dev-server;
 npm install -g webpagetest;
 npm install -g xo;
 npm install -g yo;
+npm install -g fkill-cli
 
 # NPX tools
 npx cloc node_modules/
 npx depcheck
+npx opn-cli
+npx get-port-cli
+npx public-ip-cli
+npx internal-ip-cli
