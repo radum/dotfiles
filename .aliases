@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # alias ..="cd .."
@@ -32,3 +32,25 @@ alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --arg
 
 # Pretty json files
 alias 'prettyjson=python -m json.tool'
+
+# System
+# exa is a better ls tool
+if which exa >/dev/null 2>&1; then
+	alias ls='exa'
+	alias l='exa -la --git'
+	alias la='exa -laa --git'
+	alias ll='exa -l --git'
+else
+	if [ "$(uname -s)" = "Darwin" ]; then
+		alias ls="ls -FG"
+	else
+		alias ls="ls -F --color"
+	fi
+	alias l="ls -lAh"
+	alias la="ls -A"
+	alias ll="ls -l"
+fi
+
+alias grep="grep --color=auto"
+alias duf="du -sh * | sort -hr"
+alias less="less -r"
