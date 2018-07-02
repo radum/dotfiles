@@ -83,6 +83,7 @@ npm install -g serve;
 npm install -g sitespeed.io;
 npm install -g speedracer;
 npm install -g stylelint;
+npm install -g terser;
 npm install -g textlint;
 npm install -g timee;
 npm install -g tmi;
