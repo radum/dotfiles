@@ -38,6 +38,7 @@ antigen bundles <<EOBUNDLES
     git
     git-extras
     brew
+    brew-cask
     docker
     gem
 
@@ -64,6 +65,9 @@ antigen apply
 
 # Other configuration details
 # ---------------------------
+
+# Change History size
+SAVEHIST=100000
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
