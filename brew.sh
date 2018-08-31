@@ -83,6 +83,7 @@ brew install pwgen
 brew install ctop
 brew install htop
 brew install prettyping
+brew install ncdu
 
 # Replaces LS - https://the.exa.website/
 brew install exa
