@@ -81,6 +81,7 @@ brew install fzf
 brew install the_silver_searcher
 brew install pwgen
 brew install ctop
+brew install prettyping
 
 # Replaces LS - https://the.exa.website/
 brew install exa
