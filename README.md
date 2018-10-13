@@ -227,3 +227,7 @@ GYP_MSVS_VERSION = 2015
 MSVS_VERSION = 2015
 PYTHON = c:\Python27\python.exe
 ```
+
+### Linux
+
+* https://nixos.org/nix/
