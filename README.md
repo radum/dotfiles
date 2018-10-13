@@ -196,6 +196,8 @@ Articles:
 - https://github.com/Microsoft/WSL/issues/1890#issuecomment-339952407 (Remove windows path. NPM clashes with Win NPM)
 - https://msdn.microsoft.com/en-us/commandline/wsl/wsl-config
 
+- https://evalcode.com/zsh-default-wsl-windows-10/
+
 ```
 # Setup bash common stuff to begin with
 
