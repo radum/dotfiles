@@ -53,12 +53,16 @@ antigen bundles <<EOBUNDLES
 
     # https://github.com/sindresorhus/pure
     # Comment theme bellow if this is used
-    mafredri/zsh-async
-    sindresorhus/pure
+    # mafredri/zsh-async
+    # sindresorhus/pure
 EOBUNDLES
 
 # Load the theme.
 # antigen theme ys
+# SPACESHIP_CHAR_SYMBOL=➜
+SPACESHIP_CHAR_SYMBOL=❯
+SPACESHIP_CHAR_SUFFIX=" "
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 # Tell antigen that you're done
 antigen apply
@@ -86,6 +90,3 @@ setopt share_history
 
 # Anything bellow this line is most likely appended automatically by some script.
 # ---------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
