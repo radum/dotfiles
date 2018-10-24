@@ -30,6 +30,9 @@ alias 'chrome-canary=/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Goo
 alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
 alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
 
+# Brew
+# alias brew-deps=brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+
 # Pretty json files
 alias 'prettyjson=python -m json.tool'
 
