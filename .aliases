@@ -61,3 +61,4 @@ alias cat='bat'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="sudo htop"
+alias cheat="curl cht.sh/$1"
