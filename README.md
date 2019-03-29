@@ -176,7 +176,7 @@ Complete list in [brew.sh](brew.sh)
 
 * **Microsoft Visual C++ Compiler for Python 2.7** - http://aka.ms/vcpython27
 * **Ruby** - http://rubyinstaller.org/ (Ruby gems [ruby-gems.sh](ruby-gems.sh))
-* **Git** - https://git-scm.com/ / https://github.com/git-for-windows/git
+* **Git** - https://git-scm.com/ / https://github.com/git-for-windows/git https://github.com/Microsoft/Git-Credential-Manager-for-Windows
 * **Conemu** - http://conemu.github.io/ or Cmder http://cmder.net/
 * **Clink** - http://mridgers.github.io/clink/
 * **Rapidee** Rapid Environment Editor - http://www.rapidee.com/en/download
