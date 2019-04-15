@@ -9,4 +9,4 @@ if test ! "$(command -v node)"; then
 fi
 
 # Install global npm modules
-source npm-global-modules.sh
+source ~/.dotfiles/node/npm-global-modules.sh
