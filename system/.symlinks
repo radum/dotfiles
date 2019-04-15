@@ -7,6 +7,8 @@
 # .zshrc
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/zsh/.zshrc $HOME/.zshrc
+# Create logs folder and don't error if it exists, it will be needed by zsh to save log files
+mkdir -p $HOME/.logs
 
 # tmux
 rm -rf $HOME/.tmux.conf
