@@ -17,4 +17,4 @@ brew update
 # brew bundle
 
 # Install all dependencies
-source Brewfile.sh
+source ~/.dotfiles/homebrew/Brewfile.sh
