@@ -14,5 +14,5 @@
 . ~/.dotfiles/nvm/init.zsh
 . ~/.dotfiles/thefuck/init.zsh
 . ~/.dotfiles/z/init.zsh
- ~/.dotfiles/editorconfig/init.zsh
+. ~/.dotfiles/editorconfig/init.zsh
 . ~/.dotfiles/rust/init.zsh
