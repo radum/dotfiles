@@ -36,8 +36,11 @@ alias zshrc="code ~/.dotfiles/.zshrc"
 ###############################################################################
 
 # Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
+# Open chrome with files access for testing purposes
+alias 'chrome=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias 'chrome-canary=/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
+alias 'chrome-wafiles=open /Applications/Google\ Chrome.app --args --allow-file-access-from-files'
+alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --args --allow-file-access-from-files'
 
 ###############################################################################
 # Helpers                                                                     #
@@ -71,7 +74,22 @@ alias bedtime="pmset sleepnow"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # List all files colorized in long format
-alias l="exa -l"
+if which exa >/dev/null 2>&1; then
+	alias ls='exa'
+	alias l='exa -la --git'
+	alias la='exa -laa --git'
+	alias ll='exa -l --git'
+else
+	if [ "$(uname -s)" = "Darwin" ]; then
+		alias ls="ls -FG"
+	else
+		alias ls="ls -F --color"
+	fi
+	alias l="ls -lAh"
+	alias la="ls -A"
+	alias ll="ls -l"
+fi
+
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # List only hidden files
@@ -131,3 +149,17 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Brew
+# Show all installs and their dependencies
+alias brew-deps=brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+
+# TODO: Document these
+alias duf="du -sh * | sort -hr"
+alias less="less -r"
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop"
+alias cheat="curl cht.sh/$1"
+alias 'prettyjson=python -m json.tool'
+# alias ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
