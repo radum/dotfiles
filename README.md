@@ -74,10 +74,10 @@ Install zsh manually first and make sure its the default shell, then run the ins
 I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script.
 
 
-And run `scripts/install.sh`:
+And run `scripts/bootstrap.sh`:
 
 ```
-source ~/.dotfiles/scripts/install.sh
+source ~/.dotfiles/scripts/bootstrap.sh
 ```
 
 ### Fonts
