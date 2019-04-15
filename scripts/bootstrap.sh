@@ -17,16 +17,20 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Install all the things
+source ~/.dotfiles/antigen/install.sh
 source ~/.dotfiles/homebrew/install.sh
-source ~/.dotfiles/node/install.sh
 source ~/.dotfiles/nvm/install.sh
+source ~/.dotfiles/node/install.sh
 source ~/.dotfiles/rust/install.sh
-source ~/.dotfiles/oh-my-zsh/install.sh
+
+# Do this manually for now, check out the readme file for details
+# source ~/.dotfiles/zsh/install.sh
 
 ###############################################################################
 # Symlinks                                                                    #
 ###############################################################################
 
+# This will set all symlinks from `.dotfiles` to the root / home folder, like .zshrc
 source ~/.dotfiles/system/.symlinks
 
 ###############################################################################

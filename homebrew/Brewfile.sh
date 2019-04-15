@@ -1,3 +1,9 @@
+#!/bin/sh
+
+# UNIX shell (command interpreter)
+# This is done manually for now, check out the readme file for details.
+# brew install zsh
+
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -21,8 +27,9 @@ brew install diff-so-fancy
 # Simple, fast and user-friendly alternative to find
 brew install fd
 brew install ffmpeg --with-fdk-aac --with-sdl2 --with-freetype --with-frei0r --with-libass --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools
-brew install imagemagick --with-webp
+brew install imagemagick --with-webp --with-libheif --with-librsvg
 brew install ios-webkit-debug-proxy
+# Tool and file format for losslessly compressing JPEGs
 brew install lepton
 brew install mitmproxy
 brew install mozjpeg
@@ -60,9 +67,18 @@ brew install hyperfine
 # Simplistic interactive filtering tool
 brew install peco
 brew install tmux
+# Program that allows you to count code, quickly
 brew install tokei
+# CLI tool that moves files or folder to the trash
 brew install trash
+# Display directories as trees (with optional color/HTML output)
 brew install tree
+# Show the current WiFi network password
 brew install wifi-password
+# Fast CSV toolkit written in Rust
 brew install xsv
-brew zsh
+# Install GnuPG to enable PGP-signing commits.
+brew install gnupg
+brew install yarn
+brew install ncdu
+brew install thefuck

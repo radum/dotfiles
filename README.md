@@ -38,7 +38,7 @@ A big **thank you** to the dotfiles community and all aforementioned people.
 
 These are **my** dotfiles, so please feel free to take anything you want but do so **at your own risk**. 🙂 You should first fork this repository, review the code, and remove the things you don’t want or need. Don’t blindly use stuff unless you know what that entails.
 
-#### Clone with Git
+### Clone with Git
 
 On a fresh install of macOS, run:
 
@@ -67,8 +67,23 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
+#### ⚠️ Temporary step ZSH install
+
+Install zsh manually first and make sure its the default shell, then run the install script.
+
+I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script.
+
+
 And run `scripts/install.sh`:
 
 ```
 source ~/.dotfiles/scripts/install.sh
 ```
+
+### Fonts
+
+To be able to see al glyphs and still use the font we like we need to patch the font and add the missing glyphs.
+
+This can be done with [Nerd fonts](https://github.com/ryanoasis/nerd-fonts). Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as Font Awesome ➶, Devicons ➶, Octicons ➶, and others.
+
+Pick the one you like and use it in your terminal.

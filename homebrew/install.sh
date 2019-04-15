@@ -12,6 +12,9 @@ fi
 # Update Homebrew recipes
 brew update
 
-# Install all dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew bundle
+# # Install all dependencies with bundle (See Brewfile)
+# brew tap homebrew/bundle
+# brew bundle
+
+# Install all dependencies
+source Brewfile.sh

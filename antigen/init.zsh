@@ -1,3 +1,7 @@
+###############################################################################
+# Antigen                                                                     #
+###############################################################################
+
 # Useful information
 # ---------------------------
 # https://github.com/zsh-users/antigen
@@ -40,7 +44,7 @@ antigen bundles <<EOBUNDLES
     brew
     brew-cask
     docker
-    gem
+	npm
 
     # Syntax highlighting bundle.
     zsh-users/zsh-syntax-highlighting
@@ -72,14 +76,6 @@ antigen apply
 
 # Change History size
 SAVEHIST=100000
-
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,exports,aliases,functions,extra}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
 
 # Log bash history. Save commands run in a file for posterity
 # ---------------------------
