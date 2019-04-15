@@ -5,7 +5,7 @@
 ###############################################################################
 
 # Check for Homebrew and install if needed
-if test ! $(which brew); then
+if test ! $(command -v brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
