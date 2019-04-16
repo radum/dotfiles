@@ -26,8 +26,8 @@ brew install exiftool
 brew install diff-so-fancy
 # Simple, fast and user-friendly alternative to find
 brew install fd
-brew install ffmpeg --with-fdk-aac --with-sdl2 --with-freetype --with-frei0r --with-libass --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools
-brew install imagemagick --with-webp --with-libheif --with-librsvg
+brew install ffmpeg
+brew install imagemagick
 brew install ios-webkit-debug-proxy
 # Tool and file format for losslessly compressing JPEGs
 brew install lepton
