@@ -55,6 +55,12 @@ antigen bundles <<EOBUNDLES
     # Extra zsh completions
     zsh-users/zsh-completions
 
+    # Show execution time for long commands in zsh
+    popstas/zsh-command-time
+
+    # Zsh plugin for nice git completions using fzf
+    hschne/fzf-git
+
     # https://github.com/sindresorhus/pure
     # Comment theme bellow if this is used
     # mafredri/zsh-async
@@ -65,9 +71,13 @@ EOBUNDLES
 # antigen theme ys
 # SPACESHIP_CHAR_SYMBOL=➜
 # SPACESHIP_CHAR_SYMBOL=❯
+# SPACESHIP_CHAR_SYMBOL=λ
 SPACESHIP_CHAR_SYMBOL=»
 SPACESHIP_CHAR_SUFFIX=" "
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+
+# If command execution time above min. time, plugins will not output time.
+ZSH_COMMAND_TIME_MIN_SECONDS=120
 
 # Tell antigen that you're done
 antigen apply

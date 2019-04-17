@@ -10,7 +10,15 @@ ln -s $HOME/.dotfiles/zsh/.zshrc $HOME/.zshrc
 # Create logs folder and don't error if it exists, it will be needed by zsh to save log files
 mkdir -p $HOME/.logs
 
-# tmux
+# .gitconfig
+rm -rf $HOME/.gitconfig
+rm -rf $HOME/.gitattributes
+rm -rf $HOME/.gitignore_global
+ln -s $HOME/.dotfiles/git/.gitconfig $HOME/.gitconfig
+ln -s $HOME/.dotfiles/git/.gitattributes $HOME/.gitattributes
+ln -s $HOME/.dotfiles/git/.gitignore_global $HOME/.gitignore_global
+
+# tmux configs
 rm -rf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 
@@ -26,13 +34,9 @@ mkdir $HOME/.vim/backups
 mkdir $HOME/.vim/swaps
 mkdir $HOME/.vim/undo
 
-# .gitconfig
-rm -rf $HOME/.gitconfig
-rm -rf $HOME/.gitattributes
-rm -rf $HOME/.gitignore_global
-ln -s $HOME/.dotfiles/git/.gitconfig $HOME/.gitconfig
-ln -s $HOME/.dotfiles/git/.gitattributes $HOME/.gitattributes
-ln -s $HOME/.dotfiles/git/.gitignore_global $HOME/.gitignore_global
+# ack
+rm -rf $HOME/.ackrc
+ln -s $HOME/.dotfiles/ack/.ackrc $HOME/.ackrc
 
 # bin/
 # battery-status
