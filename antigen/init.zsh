@@ -65,6 +65,7 @@ EOBUNDLES
 # antigen theme ys
 # SPACESHIP_CHAR_SYMBOL=➜
 # SPACESHIP_CHAR_SYMBOL=❯
+# SPACESHIP_CHAR_SYMBOL=λ
 SPACESHIP_CHAR_SYMBOL=»
 SPACESHIP_CHAR_SUFFIX=" "
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship

@@ -41,14 +41,19 @@ brew install jq
 brew install youtube-dl
 brew install httpie
 brew install shellcheck
+# Trigger notifications when a process completes
 brew install noti
+# Watch files and take action when they change
 brew install watchman
 # Command-line fuzzy finder written in Go
 brew install fzf
 # CLI program that accepts piped input and presents files for selection
 brew install fpp
+# Top-like interface for container metrics
 brew install ctop
+# Improved top (interactive process viewer)
 brew install htop
+# Wrapper to colorize and simplify ping's output
 brew install prettyping
 # Clone of cat(1) with syntax highlighting and Git integration
 brew install bat
@@ -66,6 +71,7 @@ brew install ffsend
 brew install hyperfine
 # Simplistic interactive filtering tool
 brew install peco
+# Terminal multiplexer
 brew install tmux
 # Program that allows you to count code, quickly
 brew install tokei
@@ -79,6 +85,9 @@ brew install wifi-password
 brew install xsv
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
+# NPM alternative
 brew install yarn
+# NCurses Disk Usage
 brew install ncdu
+# Programatically correct mistyped console commands
 brew install thefuck
