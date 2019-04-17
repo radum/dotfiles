@@ -56,7 +56,10 @@ antigen bundles <<EOBUNDLES
     zsh-users/zsh-completions
 
     # Show execution time for long commands in zsh
-	popstas/zsh-command-time
+    popstas/zsh-command-time
+
+    # Zsh plugin for nice git completions using fzf
+    hschne/fzf-git
 
     # https://github.com/sindresorhus/pure
     # Comment theme bellow if this is used
