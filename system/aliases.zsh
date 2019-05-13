@@ -2,6 +2,15 @@
 # Aliases                                                                     #
 ###############################################################################
 
+###############################################################################
+# UNALIAS                                                                     #
+###############################################################################
+
+# TODO: Fix default alias like `fd` that points to the oh-my-zsh version even if that is disabled.
+
+# Unalias FD from oh-my-zsh to be able to use the brew installed fd version
+unalias fd
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"

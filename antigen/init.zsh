@@ -14,12 +14,23 @@
 # Fixes: -zcache-generate-cache:78: nice(5) failed: operation not permitted
 # unsetopt BG_NICE
 
+# Uncomment this if you need to perf test zsh
+# zmodload zsh/zprof
+
 source $HOME/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
 antigen bundles <<EOBUNDLES
+	# Bundles from the default repo (robbyrussell's oh-my-zsh)
+    git
+    git-extras
+    brew
+    brew-cask
+    docker
+    npm
+
     # Guess what to install when running an unknown command.
     command-not-found
 
@@ -38,14 +49,6 @@ antigen bundles <<EOBUNDLES
     # Tracks your most used directories, based on 'frecency'.
     rupa/z
 
-    # Bundles from the default repo (robbyrussell's oh-my-zsh)
-    git
-    git-extras
-    brew
-    brew-cask
-    docker
-    npm
-
     # Syntax highlighting bundle.
     zsh-users/zsh-syntax-highlighting
 
@@ -60,6 +63,9 @@ antigen bundles <<EOBUNDLES
 
     # Zsh plugin for nice git completions using fzf
     hschne/fzf-git
+
+	# With zsh-async you can run multiple asynchronous jobs
+	mafredri/zsh-async
 
     # https://github.com/sindresorhus/pure
     # Comment theme bellow if this is used
