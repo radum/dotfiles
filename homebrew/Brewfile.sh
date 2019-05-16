@@ -91,3 +91,5 @@ brew install yarn
 brew install ncdu
 # Programatically correct mistyped console commands
 brew install thefuck
+# mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.
+brew install mkcert
