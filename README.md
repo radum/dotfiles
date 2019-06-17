@@ -29,6 +29,7 @@ Other inspiring and quite helpful articles, repos, tools, etc.:
 - [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
 - [Awesome Shell](https://github.com/alebcay/awesome-shell)
 - [Awesome UNIX®](https://github.com/sirredbeard/Awesome-UNIX)
+- [Faster ZSH](https://htr3n.github.io/2018/07/faster-zsh/)
 
 A big **thank you** to the dotfiles community and all aforementioned people.
 
