@@ -32,3 +32,6 @@ export LC_ALL='en_US.UTF-8';
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Used by lukechilds/zsh-nvm plugin to auto load NVM
+NVM_AUTO_USE=true

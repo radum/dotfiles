@@ -33,6 +33,10 @@
     le = log --oneline --decorate
     # List all your Aliases (la)
     la = "!git config -l | grep alias | cut -c 7-"
+	# Dismiss all local changes
+	forget = checkout .
+	# Unde last git commit
+	undo = reset HEAD~
 
     # Useful commands
 

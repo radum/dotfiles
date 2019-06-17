@@ -67,6 +67,9 @@ antigen bundles <<EOBUNDLES
 	# With zsh-async you can run multiple asynchronous jobs
 	mafredri/zsh-async
 
+	# Zsh plugin for installing, updating and loading nvm
+	lukechilds/zsh-nvm
+
     # https://github.com/sindresorhus/pure
     # Comment theme bellow if this is used
     # mafredri/zsh-async
