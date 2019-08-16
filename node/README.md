@@ -28,3 +28,4 @@ npx opn-cli
 npx get-port-cli
 npx public-ip-cli
 npx internal-ip-cli
+npx npkill
