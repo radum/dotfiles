@@ -84,10 +84,17 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # List all files colorized in long format
 if which exa >/dev/null 2>&1; then
-	alias ls='exa'
-	alias l='exa -la --git'
-	alias la='exa -laa --git'
-	alias ll='exa -l --git'
+	# general use
+	alias ls='exa'                                                         # ls
+	alias l='exa -la --git'                                                # list, size, type, git
+	alias ll='exa -lbGF --git'                                             # long list
+	alias llm='exa -lbGF --git --sort=modified'                            # long list, modified date sort
+	alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+
+	# speciality views
+	alias lS='exa -1'                                                      # one column, just names
+	alias lt='exa --tree --level=2'                                        # tree
 else
 	if [ "$(uname -s)" = "Darwin" ]; then
 		alias ls="ls -FG"
