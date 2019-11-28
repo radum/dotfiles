@@ -95,3 +95,6 @@ brew install thefuck
 brew install mkcert
 # An interactive cheatsheet tool for the command-line
 brew install denisidoro/tools/navi
+# A syntax-highlighting pager for git
+brew tap dandavison/delta https://github.com/dandavison/delta
+brew install dandavison/delta/git-delta
