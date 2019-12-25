@@ -98,3 +98,5 @@ brew install denisidoro/tools/navi
 # A syntax-highlighting pager for git
 brew tap dandavison/delta https://github.com/dandavison/delta
 brew install dandavison/delta/git-delta
+# Render markdown on the CLI, with pizzazz! 💅🏻
+brew install charmbracelet/homebrew-tap/glow
