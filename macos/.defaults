@@ -753,7 +753,7 @@ for app in "Activity Monitor" \
 	"Opera" \
 	"Photos" \
 	"Safari" \
-	"Spectacle" \
+	"Rectangle" \
 	"SystemUIServer" \
 	"Terminal" \
 	"iCal"; do
