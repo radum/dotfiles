@@ -16,3 +16,7 @@ du + rust = dust. Like du but more intuitive. https://github.com/bootandy/dust
 
 Starship is the minimal, blazing fast, and extremely customizable prompt for any shell!
 The prompt shows information you need while you're working, while staying sleek and out of the way. https://github.com/starship/starship
+
+## broot
+
+A new way to see and navigate directory trees. https://dystroy.org/broot https://github.com/Canop/broot
