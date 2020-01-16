@@ -39,6 +39,7 @@ brew install p7zip
 brew install rename
 brew install jq
 brew install youtube-dl
+# Modern command line HTTP client – user-friendly curl alternative with intuitive UI, etc.
 brew install httpie
 brew install shellcheck
 # Trigger notifications when a process completes
