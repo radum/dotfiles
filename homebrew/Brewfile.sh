@@ -101,3 +101,6 @@ brew tap dandavison/delta https://github.com/dandavison/delta
 brew install dandavison/delta/git-delta
 # Render markdown on the CLI, with pizzazz! 💅🏻
 brew install charmbracelet/homebrew-tap/glow
+# The cmatrix command is based off the digital rain animation from the opening scenes of Matrix movie series.
+# I use it mostly for a cool clear replacement command
+brew install cmatrix
