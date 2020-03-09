@@ -179,3 +179,4 @@ alias top="sudo htop"
 alias cheat="curl cht.sh/$1"
 alias 'prettyjson=python -m json.tool'
 # alias ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
+# alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 3 cmatrix; clear || clear'
