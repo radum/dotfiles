@@ -1,0 +1,60 @@
+# this block is in alphabetic order
+caarlos0/ports kind:path
+# caarlos0/zsh-git-fetch-merge kind:path
+# caarlos0/zsh-git-sync kind:path
+# caarlos0/zsh-mkc
+# caarlos0/zsh-open-pr kind:path
+# caarlos0/jvm
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh)
+# robbyrussell/oh-my-zsh path:plugins/git
+# robbyrussell/oh-my-zsh path:plugins/git-extras
+# robbyrussell/oh-my-zsh path:plugins/brew
+# robbyrussell/oh-my-zsh path:plugins/brew-cask
+# robbyrussell/oh-my-zsh path:plugins/docker
+# robbyrussell/oh-my-zsh path:plugins/npm
+
+# Guess what to install when running an unknown command.
+robbyrussell/oh-my-zsh path:plugins/command-not-found
+
+# Helper for extracting different types of archives.
+robbyrussell/oh-my-zsh path:plugins/extract
+
+# Add some color to our man pages
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+
+# Common aliases like ll and la
+robbyrussell/oh-my-zsh path:plugins/common-aliases
+
+# An oh-my-zsh plugin to help remembering those aliases you defined once
+djui/alias-tips
+
+# Syntax highlighting bundle.
+# zsh-users/zsh-syntax-highlighting
+zdharma/fast-syntax-highlighting
+
+# Fish-like auto suggestions
+zsh-users/zsh-autosuggestions
+
+# Extra zsh completions
+zsh-users/zsh-completions
+
+# Show execution time for long commands in zsh
+popstas/zsh-command-time
+
+# Zsh plugin for nice git completions using fzf
+hschne/fzf-git
+
+# With zsh-async you can run multiple asynchronous jobs
+mafredri/zsh-async
+
+# Zsh plugin for installing, updating and loading nvm
+lukechilds/zsh-nvm
+
+# these should be at last!
+
+# Themes
+denysdovhan/spaceship-prompt
+# romkatv/powerlevel10k
+
+zsh-users/zsh-history-substring-search

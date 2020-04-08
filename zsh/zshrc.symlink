@@ -1,0 +1,66 @@
+#!/bin/zsh
+# uncomment this and the last line for zprof info
+# zmodload zsh/zprof
+
+###############################################################################
+# Zsh                                                                         #
+###############################################################################
+
+# Shortcut to this dotfiles path is $DOTFILES
+export DOTFILES="$HOME/.dotfiles"
+
+# Your project folder that we can `c [tab]` to
+export PROJECTS="$HOME/personal/projects"
+
+# Your default editor
+export EDITOR='vim'
+export VEDITOR='code'
+
+# All of our zsh files
+typeset -U config_files
+config_files=($DOTFILES/*/*.zsh)
+
+# Load the path files
+for file in ${(M)config_files:#*/path.zsh}; do
+  source "$file"
+done
+
+# Load brew shell env on Linux
+# (Homebrew install script generates this file)
+if [ "$(uname -s)" = "Linux" ]; then
+ source ~/.path_linux_brew.zsh
+fi
+
+# Load antibody plugins
+# (Antibody install script generates this file)
+source ~/.zsh_plugins.sh
+
+# Load everything but the path and completion files
+# (This are mainly the init/aliases/completion/fpath/prompt .zsh files or any other modules specific config file)
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
+  source "$file"
+done
+
+# TODO: Document this
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
+# load every completion after autocomplete loads
+for file in ${(M)config_files:#*/completion.zsh}; do
+  source "$file"
+done
+
+unset config_files updated_at
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+# shellcheck disable=SC1090
+[ -f ~/.localrc ] && . ~/.localrc
+
+# zprof
+
+# Anything bellow this line is most likely appended automatically by some script.
+# ---------------------------

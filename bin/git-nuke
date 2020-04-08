@@ -1,8 +1,13 @@
-#!/bin/sh
+#!/bin/bash
+#
+# Nukes a branch or tag locally and on the origin remote.
+#
+# $1 - Branch name.
+#
+# Examples
+#
+#   git nuke add-git-nuke
 
-# Nukes a branch locally and on the origin remote.
-# $1 - Branch name
-# git nuke add-git-nuke
-
-git branch -D $1
-git push origin :$1
+git show-ref --verify refs/tags/"$1" && git tag -d "$1"
+git show-ref --verify refs/heads/"$1" && git branch -D "$1"
+git push origin :"$1"

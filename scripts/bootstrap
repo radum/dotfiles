@@ -1,0 +1,113 @@
+#!/bin/bash
+
+###############################################################################
+# Install                                                                     #
+###############################################################################
+
+DOTFILES_ROOT=$(pwd -P)
+
+# Tells the shell script to exit if it encounters an error
+set -e
+
+echo ''
+
+# Load UTILS
+. "$DOTFILES_ROOT/scripts/utils.sh"
+
+# Bootstrap functions
+setup_gitconfig() {
+	print_headline "Setup gitconfig links"
+
+	# if there is no user.email, we'll assume it's a new machine/setup and ask it
+	if [ -z "$(git config --global --get user.email)" ]; then
+		user ' - What is your github author name?'
+		read -r user_name
+		user ' - What is your github author email?'
+		read -r user_email
+
+		git config --global user.name "$user_name"
+		git config --global user.email "$user_email"
+	elif [ "$(git config --global --get dotfiles.managed)" != "true" ]; then
+		# if user.email exists, let's check for dotfiles.managed config. If it is
+		# not true, we'll backup the gitconfig file and set previous user.email and
+		# user.name in the new one
+		user_name="$(git config --global --get user.name)"
+		user_email="$(git config --global --get user.email)"
+		mv ~/.gitconfig ~/.gitconfig.backup
+		success "moved ~/.gitconfig to ~/.gitconfig.backup"
+		git config --global user.name "$user_name"
+		git config --global user.email "$user_email"
+	else
+		# otherwise this gitconfig was already made by the dotfiles
+		info "already managed by dotfiles"
+	fi
+	# include the gitconfig.local file
+	git config --global include.path ~/.gitconfig.local
+	# finally make git knows this is a managed config already, preventing later
+	# overrides by this script
+	git config --global dotfiles.managed true
+	success 'gitconfig'
+}
+
+link_file() {
+	if [ -e "$2" ]; then
+		if [ "$(readlink "$2")" = "$1" ]; then
+			success "skipped $1"
+			return 0
+		else
+			mv "$2" "$2.backup"
+			success "moved $2 to $2.backup"
+		fi
+	fi
+	ln -sf "$1" "$2"
+	success "linked $1 to $2"
+}
+
+# TODO: Perhaps we should use `create_symbolic_links.sh`
+install_dotfiles() {
+	print_headline "Installing dotfiles symlinks"
+
+	find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*' |
+		while read -r src; do
+			dst="$HOME/.$(basename "${src%.*}")"
+			link_file "$src" "$dst"
+		done
+}
+
+print_headline "Setting up dotfiles …"
+
+###############################################################################
+# Setup                                                                       #
+###############################################################################
+
+ask_for_sudo
+
+. "$DOTFILES_ROOT"/scripts/create_directories.sh
+
+setup_gitconfig
+
+. "$DOTFILES_ROOT"/scripts/create_symbolic_links.sh "-y"
+
+install_dotfiles
+
+###############################################################################
+# Dependencies                                                                #
+###############################################################################
+
+print_headline "Installing dependencies"
+if ./bin/dot_update; then
+	print_success "dependencies installed"
+else
+	print_error "error installing dependencies"
+fi
+
+###############################################################################
+# macOS                                                                       #
+###############################################################################
+
+# Set macOS preferences
+# Run last because this will reload the shell
+# TODO: This should only run on a Mac
+# source ~/.dotfiles/macos/.defaults
+
+print_in_green "\n  All installed!\n\n"

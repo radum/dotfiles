@@ -1,0 +1,47 @@
+#!/bin/bash
+#
+# dot_update
+#
+# `dot_update` handles installation, updates, things like that. Run it
+# periodically to make sure you're on the latest and greatest.
+export DOTFILES="$HOME/.dotfiles"
+cd "$DOTFILES" || exit 1
+
+# Load UTILS
+. "$DOTFILES/scripts/utils.sh"
+
+# fixes PATH (we could be running from the crontab)
+PATH="$(command -p getconf PATH):/usr/local/bin"
+
+# load custom config if any
+# shellcheck disable=SC1090
+[ -f ~/.localrc ] && . ~/.localrc
+
+print_sub_heading "Setting up update"
+
+# ssh would not work under cron, add a https one
+print_task "setting up update channel"
+git remote add updates https://github.com/radum/dotfiles.git 2>/dev/null
+
+# Update repo
+print_task "git update"
+git pull --rebase --stat updates "$(git rev-parse --abbrev-ref HEAD)"
+
+# Update submodules
+print_task "submodules update"
+git submodule update --init --recursive --remote --merge --quiet
+
+# Run all installs
+# print_task "run all installs\n"
+print_sub_heading "Run all installs"
+print_task "$DOTFILES/scripts/install"
+"$DOTFILES/scripts/install"
+
+if command -v antibody >/dev/null 2>&1; then
+	print_task "antibody update\n"
+	# print_sub_heading "Antibody update"
+	antibody update
+fi
+
+print_task "registering last update\n"
+git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"

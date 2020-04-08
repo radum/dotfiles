@@ -7,6 +7,8 @@ Global apps, modules, packages, .files, sensible hacker defaults for macOS and W
 This repo is inspired and influenced by
 
 - Miloš Sutanovac [dotfiles](https://github.com/mixn/dotfiles)
+- Carlos Alexandro Becker [dotfiles](https://github.com/caarlos0/dotfiles)
+
 - Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles)
 - Zach Holman’s [dotfiles](https://github.com/holman/dotfiles)
 - Dries Vints’ [dotfiles](https://github.com/driesvints/dotfiles)
@@ -39,7 +41,19 @@ A big **thank you** to the dotfiles community and all aforementioned people.
 
 These are **my** dotfiles, so please feel free to take anything you want but do so **at your own risk**. 🙂 You should first fork this repository, review the code, and remove the things you don’t want or need. Don’t blindly use stuff unless you know what that entails.
 
+### Dependencies
+
+First, make sure you have all those things installed:
+
+* `git`: to clone the repo
+* `curl`: to download some stuff
+* `tar`: to extract downloaded stuff
+* `zsh`: to actually run the dotfiles
+* `sudo`: some configs may need that
+
 ### Clone with Git
+
+#### Mac OS dependency
 
 On a fresh install of macOS, run:
 
@@ -49,36 +63,27 @@ sudo softwareupdate -i -a
 xcode-select --install
 ```
 
-Then clone the repo:
-
-```
-# Clone in a `.dotfiles` folder as all scripts will reference it
-git clone https://github.com/radum/dotfiles.git ~/.dotfiles
-```
-
-Update the `git/extra.sh` file that looks like this:
-
-```
-# Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="Radu Micu"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="radu.micu@gmail.com"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-```
-
 #### ⚠️ Temporary step ZSH install
 
 Install zsh manually first and make sure its the default shell, then run the install script.
 
 I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script.
 
+---
 
-And run `scripts/bootstrap.sh`:
+Clone the repo:
 
 ```
-source ~/.dotfiles/scripts/bootstrap.sh
+# Clone in a `.dotfiles` folder as all scripts will reference it
+git clone https://github.com/radum/dotfiles.git ~/.dotfiles
+```
+
+Then, run these steps:
+
+```
+cd ~/.dotfiles
+./scripts/bootstrap
+zsh # or just close and open your terminal again.
 ```
 
 ### Fonts
@@ -88,6 +93,13 @@ To be able to see al glyphs and still use the font we like we need to patch the 
 This can be done with [Nerd fonts](https://github.com/ryanoasis/nerd-fonts). Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as Font Awesome ➶, Devicons ➶, Octicons ➶, and others.
 
 Pick the one you like and use it in your terminal.
+
+## Further help
+
+* [Personalize your configs](docs/configuration.md)
+* [Understand how it works](docs/philosophy.md)
+* [Known bugs](docs/bugs.md)
+* [License](LICENSE.md)
 
 ## Applications
 

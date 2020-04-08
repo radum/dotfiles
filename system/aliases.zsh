@@ -1,3 +1,4 @@
+#!/bin/bash
 ###############################################################################
 # Aliases                                                                     #
 ###############################################################################
@@ -12,7 +13,7 @@
 unalias fd
 
 # Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
+if ls --color >/dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
 	export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
 else # macOS `ls`
@@ -64,12 +65,14 @@ alias bs="battery-status"
 alias alz="alias | fzf"
 
 # Copy ssh key
+# shellcheck disable=SC2139
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 
 # Copy wifi password
 alias copywifipw="wifi-password | pbcopy"
 
 # Re-source .zshrc after changes
+# shellcheck disable=SC2139
 alias rlcli="source $HOME/.zshrc"
 
 # Kill all tmux processes simultaneously, leveraging fkill-cli,
@@ -83,7 +86,7 @@ alias bedtime="pmset sleepnow"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # List all files colorized in long format
-if which exa >/dev/null 2>&1; then
+if test "$(command -v exa)"; then
 	# general use
 	alias ls='exa'                                                         # ls
 	alias l='exa -la --git'                                                # list, size, type, git
@@ -93,8 +96,8 @@ if which exa >/dev/null 2>&1; then
 	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 
 	# speciality views
-	alias lS='exa -1'                                                      # one column, just names
-	alias lt='exa --tree --level=2'                                        # tree
+	alias lS='exa -1'               # one column, just names
+	alias lt='exa --tree --level=2' # tree
 else
 	if [ "$(uname -s)" = "Darwin" ]; then
 		alias ls="ls -FG"
@@ -107,6 +110,7 @@ else
 fi
 
 # List only directories
+# shellcheck disable=SC2139
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # List only hidden files
 alias lsh="ls -ld .?*"
@@ -145,7 +149,7 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode='python3 -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
@@ -168,7 +172,12 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Brew
 # Show all installs and their dependencies
-alias brew-deps=brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+alias brew-deps=brew list | while read -r cask; do
+	# shellcheck disable=SC2039,SC1087,SC2154,SC2086
+	echo -n $fg[blue] $cask $fg[white]
+	brew deps "$cask" | awk '{printf(" %s ", $0)}'
+	echo ""
+done
 
 # TODO: Document these
 alias duf="du -sh * | sort -hr"
@@ -176,7 +185,8 @@ alias less="less -r"
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="sudo htop"
+# shellcheck disable=SC2139
 alias cheat="curl cht.sh/$1"
-alias 'prettyjson=python -m json.tool'
+alias 'prettyjson=python3 -m json.tool'
 # alias ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
 # alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 3 cmatrix; clear || clear'
