@@ -8,9 +8,10 @@
 #  vim **<TAB>
 #  Directories under current directory (single-selection)
 #  cd **<TAB>
-test -d $(brew --prefix)/opt/fzf/shell || return 0
+# shellcheck disable=SC1090
+test -d "$(brew --prefix)"/opt/fzf/shell || return 0
 
 export FZF_COMPLETION_TRIGGER='**'
 
-# shellcheck disable=SC1091,SC1094
-. $(brew --prefix)/opt/fzf/shell/completion.zsh
+# shellcheck disable=SC1091,SC1094,SC1090
+. "$(brew --prefix)"/opt/fzf/shell/completion.zsh
