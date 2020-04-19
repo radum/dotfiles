@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# shellcheck disable=SC1091
+cd "$(dirname "${BASH_SOURCE[0]}")" &&
+	. "../scripts/utils.sh"
+
 print_sub_heading "Docker"
 
 print_task "Add Docker ZSH completion files to 'HOME/.docker/completions'"
