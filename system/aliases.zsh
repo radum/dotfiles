@@ -3,15 +3,6 @@
 # Aliases                                                                     #
 ###############################################################################
 
-###############################################################################
-# UNALIAS                                                                     #
-###############################################################################
-
-# TODO: Fix default alias like `fd` that points to the oh-my-zsh version even if that is disabled.
-
-# Unalias FD from oh-my-zsh to be able to use the brew installed fd version
-unalias fd
-
 # Detect which `ls` flavor is in use
 if ls --color >/dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -58,9 +49,6 @@ alias 'chrome-canary-wafiles=open /Applications/Google\ Chrome\ Canary.app --arg
 
 alias c="clear"
 
-# Faster battery-status
-alias bs="battery-status"
-
 # Whenever I forget one of many zsh aliases (, I wonder what “alz” stands for… 🤔)
 alias alz="alias | fzf"
 
@@ -83,6 +71,7 @@ alias tmuxkill="fkill tmux"
 alias bedtime="pmset sleepnow"
 
 # Reload dns
+# TODO: How does this realate to `fix-internet` bin?
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # List all files colorized in long format
@@ -188,5 +177,6 @@ alias top="sudo htop"
 # shellcheck disable=SC2139
 alias cheat="curl cht.sh/$1"
 alias 'prettyjson=python3 -m json.tool'
+alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 3 cmatrix; clear || clear'
+# TODO: I also have a function called `server()`, perhaps this should move over there
 # alias ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
-# alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 3 cmatrix; clear || clear'

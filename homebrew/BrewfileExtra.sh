@@ -28,10 +28,6 @@ brew install watchman
 brew install fpp
 # Top-like interface for container metrics
 brew install ctop
-# Improved top (interactive process viewer)
-brew install htop
-# Wrapper to colorize and simplify ping's output
-brew install prettyping
 # Install fun stuff
 brew install cowsay
 # Fully featured Firefox Send client
@@ -64,6 +60,3 @@ brew install mkcert
 brew install denisidoro/tools/navi
 # Render markdown on the CLI, with pizzazz! 💅🏻
 brew install charmbracelet/homebrew-tap/glow
-# The cmatrix command is based off the digital rain animation from the opening scenes of Matrix movie series.
-# I use it mostly for a cool clear replacement command
-brew install cmatrix

@@ -25,3 +25,10 @@ brew install ripgrep
 brew install thefuck
 # A syntax-highlighting pager for git - https://github.com/dandavison/delta
 brew install git-delta
+# Wrapper to colorize and simplify ping's output
+brew install prettyping
+# Improved top (interactive process viewer)
+brew install htop
+# The cmatrix command is based off the digital rain animation from the opening scenes of Matrix movie series.
+# I use it mostly for a cool clear replacement command
+brew install cmatrix

@@ -9,7 +9,8 @@
 # Shortcut to this dotfiles path is $DOTFILES
 export DOTFILES="$HOME/.dotfiles"
 
-# Your project folder that we can `c [tab]` to
+# Your project folder that we can `cd [tab]` to
+# TODO: implement cd function
 export PROJECTS="$HOME/personal/projects"
 
 # Your default editor
