@@ -16,6 +16,8 @@ fi
 print_success "Git credential helper"
 
 # better diffs
+# TODO: This will not run on a fresh machinne, as homebrew / rust is not done yet.
+# We should find a way to do these stuff as last instance.
 if command -v delta >/dev/null 2>&1; then
 	git config --global core.pager "delta --dark"
 elif command -v diff-so-fancy >/dev/null 2>&1; then
