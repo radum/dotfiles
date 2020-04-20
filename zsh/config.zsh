@@ -13,7 +13,7 @@ autoload -U edit-command-line
 # Fixes: -zcache-generate-cache:78: nice(5) failed: operation not permitted
 # unsetopt BG_NICE
 
-# If command execution time above min. time, plugins will not output time.
+# If command execution time above min. time, plugins will not output time (uses `popstas/zsh-command-time`).
 ZSH_COMMAND_TIME_MIN_SECONDS=120
 
 # Other configuration details
@@ -37,8 +37,9 @@ LC_ALL='en_US.UTF-8'
 # Don’t clear the screen after quitting a manual page.
 MANPAGER='less -X'
 
-# Used by lukechilds/zsh-nvm plugin to auto load NVM
+# Used by lukechilds/zsh-nvm plugin to auto load NVM / lazy load NVM
 NVM_AUTO_USE=true
+# NVM_LAZY_LOAD=true
 
 # Log bash history. Save commands run in a file for posterity
 # ---------------------------

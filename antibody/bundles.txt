@@ -24,7 +24,7 @@ robbyrussell/oh-my-zsh path:plugins/extract
 robbyrussell/oh-my-zsh path:plugins/colored-man-pages
 
 # Common aliases like ll and la
-robbyrussell/oh-my-zsh path:plugins/common-aliases
+# robbyrussell/oh-my-zsh path:plugins/common-aliases
 
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 djui/alias-tips
