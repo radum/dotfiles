@@ -56,5 +56,6 @@ lukechilds/zsh-nvm
 # Themes
 denysdovhan/spaceship-prompt
 # romkatv/powerlevel10k
+# sindresorhus/pure
 
 zsh-users/zsh-history-substring-search
