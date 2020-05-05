@@ -36,7 +36,6 @@ npm i -g \
 	rollup \
 	sassdoc \
 	terser \
-	tslint \
 	typescript \
 	webpack \
 	webpack-dev-server \
