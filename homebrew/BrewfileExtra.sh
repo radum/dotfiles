@@ -60,3 +60,5 @@ brew install mkcert
 brew install denisidoro/tools/navi
 # Render markdown on the CLI, with pizzazz! 💅🏻
 brew install charmbracelet/homebrew-tap/glow
+# Library for encoding and decoding .avif files
+brew install joedrago/repo/avifenc
