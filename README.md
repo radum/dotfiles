@@ -63,6 +63,8 @@ sudo softwareupdate -i -a
 xcode-select --install
 ```
 
+or if that doesn't work download them from here https://developer.apple.com/download/more/ (Command line tools)
+
 #### ⚠️ Temporary step ZSH install
 
 Install zsh manually first and make sure its the default shell, then run the install script.
