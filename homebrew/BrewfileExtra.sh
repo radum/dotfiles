@@ -30,8 +30,6 @@ brew install fpp
 brew install ctop
 # Install fun stuff
 brew install cowsay
-# Fully featured Firefox Send client
-brew install ffsend
 # Command-line benchmarking tool
 brew install hyperfine
 # Simplistic interactive filtering tool
