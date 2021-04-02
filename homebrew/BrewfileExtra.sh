@@ -60,3 +60,5 @@ brew install denisidoro/tools/navi
 brew install charmbracelet/homebrew-tap/glow
 # Library for encoding and decoding .avif files
 brew install joedrago/repo/avifenc
+# up is the Ultimate Plumber, a tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results.
+brew install up
