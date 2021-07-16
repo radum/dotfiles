@@ -67,6 +67,8 @@ or if that doesn't work download them from here https://developer.apple.com/down
 
 #### ⚠️ Temporary step ZSH install
 
+This is not needed with the latest Macs, as ZSH is the default shell. You can check in System settings / Users / right click on the user and advanced options.
+
 Install zsh manually first and make sure its the default shell, then run the install script.
 
 I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script.
