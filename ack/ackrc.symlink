@@ -4,9 +4,8 @@
 # Follow symlinks
 --follow
 
---ignore-directory=.idea
+--ignore-directory=.vscode
 --ignore-directory=is:node_modules
---ignore-directory=is:bower_components
 
 # Make sure ack knows how to search common filetypes used in rails projects
 --type-set=sass:ext:scss,sass
