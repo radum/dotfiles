@@ -6,3 +6,5 @@ cargo install du-dust
 cargo install hyperfine
 # An interactive cheatsheet tool for the command-line - https://github.com/denisidoro/navi
 cargo install navi
+# Batch rename utility for developers - https://github.com/yaa110/nomino
+cargo install nomino

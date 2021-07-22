@@ -12,7 +12,7 @@ print_sub_heading "Homebrew"
 
 install_homebrew() {
 	if ! cmd_exists "brew"; then
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &>/dev/null
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &>/dev/null
 	fi
 
 	print_result $? "homebrew installed"

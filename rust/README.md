@@ -27,3 +27,7 @@ Fuzzy Finder in rust! https://github.com/lotabout/skim#difference-to-fzf
 ## navi
 
 An interactive cheatsheet tool for the command-line. https://github.com/denisidoro/navi#installation
+
+## nomino
+
+Batch rename utility for developers. https://github.com/yaa110/nomino
