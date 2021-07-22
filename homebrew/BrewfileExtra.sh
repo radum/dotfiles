@@ -30,8 +30,6 @@ brew install fpp
 brew install ctop
 # Install fun stuff
 brew install cowsay
-# Fully featured Firefox Send client
-brew install ffsend
 # Command-line benchmarking tool
 brew install hyperfine
 # Simplistic interactive filtering tool
@@ -60,3 +58,7 @@ brew install mkcert
 brew install denisidoro/tools/navi
 # Render markdown on the CLI, with pizzazz! 💅🏻
 brew install charmbracelet/homebrew-tap/glow
+# Library for encoding and decoding .avif files
+brew install joedrago/repo/avifenc
+# up is the Ultimate Plumber, a tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results.
+brew install up
