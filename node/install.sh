@@ -13,7 +13,7 @@ print_sub_heading "Node & NVM"
 # Check for nvm and install if needed
 if test ! "$(command -v nvm)"; then
 	print_task "Install NVM"
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 fi
 
 ###############################################################################
@@ -30,8 +30,10 @@ fi
 print_success "nvm version: $(nvm --version)"
 
 if test ! "$(command -v node)" && test "$(command -v nvm)"; then
-	print_task "Install node v12 via nvm"
-	nvm install v12
+	print_task "Install node v14 via nvm"
+	nvm install v14
+	print_task "Install node v16 via nvm"
+	nvm install v16
 fi
 
 if test "$(command -v node)"; then

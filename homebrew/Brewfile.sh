@@ -31,3 +31,5 @@ brew install htop
 # The cmatrix command is based off the digital rain animation from the opening scenes of Matrix movie series.
 # I use it mostly for a cool clear replacement command
 brew install cmatrix
+# du + rust = dust. Like du but more intuitive. (folder size)
+brew install dust

@@ -62,3 +62,7 @@ brew install charmbracelet/homebrew-tap/glow
 brew install joedrago/repo/avifenc
 # up is the Ultimate Plumber, a tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results.
 brew install up
+# A command-line benchmarking tool - https://github.com/sharkdp/hyperfine
+brew install hyperfine
+# An interactive cheatsheet tool for the command-line - https://github.com/denisidoro/navi
+brew install navi

@@ -71,7 +71,7 @@ This is not needed with the latest Macs, as ZSH is the default shell. You can ch
 
 Install zsh manually first and make sure its the default shell, then run the install script.
 
-I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script.
+I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script on those machines that don't have it by default.
 
 ---
 
@@ -100,8 +100,8 @@ Pick the one you like and use it in your terminal.
 
 ## Further help
 
-* [Personalize your configs](docs/configuration.md)
-* [Understand how it works](docs/philosophy.md)
-* [Known bugs](docs/bugs.md)
-* [License](LICENSE.md)
-* [Apps](docs/apps.md)
+- [Personalize your configs](docs/configuration.md)
+- [Understand how it works](docs/philosophy.md)
+- [Known bugs](docs/bugs.md)
+- [License](LICENSE.md)
+- [Apps](docs/apps.md)

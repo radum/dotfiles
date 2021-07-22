@@ -22,6 +22,7 @@ if you don't run this:
 ```
 
 ## NPX tools
+
 npx cloc node_modules/
 npx depcheck
 npx opn-cli
