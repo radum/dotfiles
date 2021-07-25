@@ -53,6 +53,8 @@ brew install yarn
 # NCurses Disk Usage
 brew install ncdu
 # mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.
+# nss is required to make FF work with the new CA
+brew install nss
 brew install mkcert
 # An interactive cheatsheet tool for the command-line
 brew install denisidoro/tools/navi
