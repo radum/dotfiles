@@ -2,7 +2,17 @@
 
 npm i -g \
 	node-gyp \
+	@11ty/eleventy \
+	@lhci/cli \
+	@radum/eslint-config \
+	@sitespeed.io/throttle \
+	@squoosh/cli \
 	@vue/cli \
+	alfred-emoj \
+	commitizen \
+	cross-env \
+	doctoc \
+	emoj \
 	eslint \
 	eslint-config-airbnb \
 	eslint-plugin-jsx-a11y \
@@ -18,25 +28,27 @@ npm i -g \
 	eslint-plugin-unicorn \
 	stylelint \
 	ndb \
-	updtr \
 	tldr \
 	np \
 	jsonlint \
-	alfred-emoj \
+	rollup \
 	sitespeed.io \
-	cross-env \
-	emoj \
 	git-stats \
 	gulp-cli \
+	lerna \
 	lighthouse \
 	local-web-server \
 	nodemon \
+	npm-check-updates \
 	pm2 \
 	prettier \
 	rollup \
 	sassdoc \
+	sitespeed.io \
 	terser \
 	typescript \
+	updtr \
+	webpack-cli \
 	webpack \
 	webpack-dev-server \
 	webpagetest
