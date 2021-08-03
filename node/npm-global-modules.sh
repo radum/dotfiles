@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 npm i -g \
 	node-gyp \

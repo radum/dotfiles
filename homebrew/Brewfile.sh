@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # This is done manually for now, check out the readme file for details.
 # brew install zsh

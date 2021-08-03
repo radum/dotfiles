@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 create_symlinks() {
 

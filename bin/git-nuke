@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 #
 # Nukes a branch or tag locally and on the origin remote.
 #

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # Deleting git branches with the power of fzf
 # From here: https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/
 
@@ -6,8 +6,8 @@
 # delete-branches() {
 #  local branches_to_delete
 #   branches_to_delete=$(git branch | fzf --multi)
-# 
-#   if [ -n "$branches_to_delete" ]; then 
+#
+#   if [ -n "$branches_to_delete" ]; then
 #     git branch --delete --force $branches_to_delete
 #   fi
 # }

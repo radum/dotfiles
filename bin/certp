@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 #
 # Prints cert certificate for a given domain using openssl
 #

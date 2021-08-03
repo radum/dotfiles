@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Fuzzy completion for bash and zsh
 # https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh

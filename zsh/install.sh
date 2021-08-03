@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # shellcheck disable=SC1091
 cd "$(dirname "${BASH_SOURCE[0]}")" &&
 	. "../scripts/utils.sh"

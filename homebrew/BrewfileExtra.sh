@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 brew install shellcheck
 brew install openssh

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 export NVM_DIR="$HOME/.nvm"
 
 # Enable persistent REPL history for `node`.
