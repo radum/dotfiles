@@ -19,9 +19,10 @@ ZSH_COMMAND_TIME_MIN_SECONDS=120
 # Other configuration details
 # ---------------------------
 
-# Increase Bash history size. Allow 32³ entries; the default is 500.
-HISTSIZE='32768'
+# Increase Bash history size. Allow 40³ entries; the default is 500.
+HISTSIZE='64000'
 HISTFILESIZE="${HISTSIZE}"
+SAVEHIST="${HISTSIZE}"
 HISTFILE=~/.zsh_history
 
 # Omit duplicates and commands that begin with a space from history.
@@ -64,14 +65,23 @@ setopt COMPLETE_IN_WORD
 setopt APPEND_HISTORY
 # adds history incrementally and share it across sessions
 setopt INC_APPEND_HISTORY
+# share command history data
 setopt SHARE_HISTORY
-# don't record dupes in history
+# do not put duplicated command into history list
 setopt HIST_IGNORE_ALL_DUPS
+# do not save duplicated command
+# setopt HIST_SAVE_NO_DUPS
+# remove unnecessary blanks
 setopt HIST_REDUCE_BLANKS
+# ignore duplicated commands history list
 setopt HIST_IGNORE_DUPS
+# ignore commands that start with space
 setopt HIST_IGNORE_SPACE
+# show command with history expansion to user before running it
 setopt HIST_VERIFY
 setopt HIST_EXPIRE_DUPS_FIRST
+# append command to history file immediately after execution
+# setopt INC_APPEND_HISTORY_TIME
 # dont ask for confirmation in rm globs*
 setopt RM_STAR_SILENT
 

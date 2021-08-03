@@ -54,7 +54,7 @@ lukechilds/zsh-nvm
 # these should be at last!
 
 # Themes
-denysdovhan/spaceship-prompt
+spaceship-prompt/spaceship-prompt
 # romkatv/powerlevel10k
 # sindresorhus/pure
 
