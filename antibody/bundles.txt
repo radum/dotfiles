@@ -42,14 +42,12 @@ zsh-users/zsh-completions
 # Show execution time for long commands in zsh
 popstas/zsh-command-time
 
-# Zsh plugin for nice git completions using fzf
-hschne/fzf-git
-
 # With zsh-async you can run multiple asynchronous jobs
-mafredri/zsh-async
+# mafredri/zsh-async
 
 # Zsh plugin for installing, updating and loading nvm
 lukechilds/zsh-nvm
+lukechilds/zsh-better-npm-completion
 
 # these should be at last!
 
