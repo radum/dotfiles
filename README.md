@@ -13,7 +13,6 @@ This repo is inspired and influenced by
 - Zach Holman’s [dotfiles](https://github.com/holman/dotfiles)
 - Dries Vints’ [dotfiles](https://github.com/driesvints/dotfiles)
 - Lars Kappert’s [dotfiles](https://github.com/webpro/dotfiles)
-- Carlos Alexandro Becker’s [dotfiles](https://github.com/caarlos0/dotfiles)
 - Paul Irish’s [dotfiles](https://github.com/paulirish/dotfiles)
 - Ivan Santos’s [dotfiles](https://github.com/pragmaticivan/dotfiles)
 - Alexander Myshov’s [dotfiles](https://github.com/myshov/dotfiles)

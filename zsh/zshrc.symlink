@@ -27,7 +27,7 @@ for file in ${(M)config_files:#*/path.zsh}; do
 done
 
 # Load brew shell env on Linux
-# (Homebrew install script generates this file)
+# * (Homebrew install script generates this file)
 if [ "$(uname -s)" = "Linux" ]; then
  source ~/.path_linux_brew.zsh
 fi
@@ -40,7 +40,10 @@ done
 compinit -C
 
 # Load antibody plugins
-# (Antibody install script generates this file)
+# * (Antibody install script generates this file)
+# * Should alwyas be loaded after `compinit` to make sure completions work properly
+export NVM_LAZY_LOAD=true # Specific to `lukechilds/zsh-nvm` plugin
+
 source ~/.zsh_plugins.sh
 
 # Load everything but the path and completion files
@@ -64,4 +67,6 @@ unset config_files updated_at
 # zprof
 
 # Anything bellow this line is most likely appended automatically by some script.
+#
+# ! If you find the NVM autoload scripts here remove them as they override the `zsh-nvm` `zsh-better-npm-completion` plugins
 # ---------------------------
