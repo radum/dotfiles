@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # shellcheck disable=SC2164,SC2039,SC2155,SC1087,SC2154,SC2162,SC2086,SC2199
 
 # Create a new directory and enter it

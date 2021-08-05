@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 #
 # Run all dotfiles installers.
 set -e

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 set -e
 
 TAR_FILE="/tmp/shcheck.tar.gz"

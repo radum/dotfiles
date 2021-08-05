@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 loadnvm() {
 	if [ "$(uname -s)" = "Linux" ]; then
 		export NVM_DIR="$HOME/.config/nvm"
