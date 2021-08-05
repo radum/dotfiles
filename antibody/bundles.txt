@@ -6,27 +6,27 @@ caarlos0/ports kind:path
 # caarlos0/zsh-open-pr kind:path
 # caarlos0/jvm
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh)
-# robbyrussell/oh-my-zsh path:plugins/git
-# robbyrussell/oh-my-zsh path:plugins/git-extras
-# robbyrussell/oh-my-zsh path:plugins/brew
-# robbyrussell/oh-my-zsh path:plugins/brew-cask
-# robbyrussell/oh-my-zsh path:plugins/docker
-# robbyrussell/oh-my-zsh path:plugins/npm
+# Bundles from the default repo (ohmyzsh's ohmyzsh)
+# ohmyzsh/ohmyzsh path:plugins/git
+# ohmyzsh/ohmyzsh path:plugins/git-extras
+# ohmyzsh/ohmyzsh path:plugins/brew
+# ohmyzsh/ohmyzsh path:plugins/brew-cask
+# ohmyzsh/ohmyzsh path:plugins/docker
+# ohmyzsh/ohmyzsh path:plugins/npm
 
 # Guess what to install when running an unknown command.
-robbyrussell/oh-my-zsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/command-not-found
 
 # Helper for extracting different types of archives.
-robbyrussell/oh-my-zsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/extract
 
 # Add some color to our man pages
-robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 
 # Common aliases like ll and la
-# robbyrussell/oh-my-zsh path:plugins/common-aliases
+# ohmyzsh/ohmyzsh path:plugins/common-aliases
 
-# An oh-my-zsh plugin to help remembering those aliases you defined once
+# An ohmyzsh plugin to help remembering those aliases you defined once
 djui/alias-tips
 
 # Syntax highlighting bundle.
@@ -49,11 +49,12 @@ popstas/zsh-command-time
 lukechilds/zsh-nvm
 lukechilds/zsh-better-npm-completion
 
+# ZSH port of Fish history search (up arrow)
+zsh-users/zsh-history-substring-search
+
 # these should be at last!
 
 # Themes
 spaceship-prompt/spaceship-prompt
 # romkatv/powerlevel10k
 # sindresorhus/pure
-
-zsh-users/zsh-history-substring-search
