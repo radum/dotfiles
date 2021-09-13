@@ -2,6 +2,8 @@
 
 Global apps, modules, packages, .files, sensible hacker defaults for macOS and Windows (WIP)
 
+![image](https://user-images.githubusercontent.com/46779/133124073-b13f2779-dc1b-433a-a53e-6db6e105fe29.png)
+
 ## Inspiration ❤️🌎
 
 This repo is inspired and influenced by
