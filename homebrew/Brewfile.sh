@@ -33,5 +33,5 @@ brew install htop
 brew install cmatrix
 # du + rust = dust. Like du but more intuitive. (folder size)
 brew install dust
-# mprocs runs multiple commands in parallel and shows output of each command separately.
+# mprocs runs multiple commands in parallel and shows output of each command separately. https://github.com/pvolok/mprocs
 brew install mprocs
