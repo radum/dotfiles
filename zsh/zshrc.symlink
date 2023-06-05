@@ -64,6 +64,8 @@ unset config_files updated_at
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
 
+eval "$(starship init zsh)"
+
 # zprof
 
 # Anything bellow this line is most likely appended automatically by some script.

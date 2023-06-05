@@ -90,10 +90,13 @@ zle -N down-line-or-beginning-search
 zle -N edit-command-line
 
 # fuzzy find: start to type
-bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
-bindkey "$terminfo[kcud1]" down-line-or-beginning-search
-bindkey "$terminfo[cuu1]" up-line-or-beginning-search
-bindkey "$terminfo[cud1]" down-line-or-beginning-search
+# ! These break Warp for some reason. It makes each cmd to require double ENTER
+# ! Not sure if I need them. Comment out for now.
+# bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
+# bindkey "$terminfo[kcud1]" down-line-or-beginning-search
+# bindkey "$terminfo[cuu1]" up-line-or-beginning-search
+# ! This is the main culprit
+# bindkey "$terminfo[cud1]" down-line-or-beginning-search
 
 # backward and forward word with option+left/right
 bindkey '^[^[[D' backward-word

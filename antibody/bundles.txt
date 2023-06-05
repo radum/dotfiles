@@ -56,6 +56,6 @@ zsh-users/zsh-history-substring-search
 # these should be at last!
 
 # Themes
-spaceship-prompt/spaceship-prompt
+# spaceship-prompt/spaceship-prompt
 # romkatv/powerlevel10k
 # sindresorhus/pure
