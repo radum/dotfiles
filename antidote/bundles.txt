@@ -52,7 +52,7 @@ djui/alias-tips
 # Syntax highlighting bundle.
 # zsh-users/zsh-syntax-highlighting
 # zdharma/fast-syntax-highlighting
-z-shell/F-Sy-H
+z-shell/F-Sy-H branch:main
 
 # Fish-like auto suggestions
 zsh-users/zsh-autosuggestions
