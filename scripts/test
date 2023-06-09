@@ -15,14 +15,14 @@ git config --global user.email "dotfiles@demo.com"
 echo "boostraping..."
 ./scripts/bootstrap
 
-# load zshrc and check if antibody is working
+# load zshrc and check if antidote is working
 # TODO: This should be removed after the issue of running the install scripts is fixed
 mkdir -p "$HOME"/.logs
 echo "sourcing ~/.zshrc"
 # shellcheck disable=SC1090
 source ~/.zshrc || true
 
-test "$(antibody list | wc -l)" -gt 10 || {
+test "$(antidote list | wc -l)" -gt 10 || {
 	echo "expecting 10+ bundles loaded" >&2
 	exit 1
 }

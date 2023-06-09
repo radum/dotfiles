@@ -1,3 +1,23 @@
+#!/bin/zsh
+# bundles.txt - this file will be copied under the filename bellow
+# .zsh_plugins.txt - antidote plugins file
+#
+
+### Overview
+#
+# The `.zsh_plugins.txt` file is used by antidote to configure Zsh bundles. Bundles are
+# just a fancy way of referring to Zsh utilities, frameworks, prompts, or plugins.
+# `.zsh_plugins.txt` is used by antidote to generate a static `.zsh_plugins.zsh` file,
+# which can then be sourced in your `.zshrc`. You can use this file as a starting point
+# for your own config. Strip out instructional comments (ie: lines beginning with a '#')
+# and any plugins you don't need, then add what you like and make it yours!
+#
+# NOTE: Order matters in this file! Some bundles need to be last, and others are
+# prerequisites. Read the documentation for the plugins you use to ensure proper
+# configuration.
+#
+###
+
 # this block is in alphabetic order
 caarlos0/ports kind:path
 # caarlos0/zsh-git-fetch-merge kind:path
@@ -32,7 +52,7 @@ djui/alias-tips
 # Syntax highlighting bundle.
 # zsh-users/zsh-syntax-highlighting
 # zdharma/fast-syntax-highlighting
-z-shell/F-Sy-H --branch=main
+z-shell/F-Sy-H
 
 # Fish-like auto suggestions
 zsh-users/zsh-autosuggestions

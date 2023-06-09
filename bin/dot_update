@@ -37,10 +37,10 @@ print_sub_heading "Run all installs"
 print_task "$DOTFILES/scripts/install"
 "$DOTFILES/scripts/install"
 
-if command -v antibody >/dev/null 2>&1; then
-	print_task "antibody update\n"
-	# print_sub_heading "Antibody update"
-	antibody update
+if command -v antidote >/dev/null 2>&1; then
+	print_task "antidote update\n"
+	# print_sub_heading "Antidote update"
+	antidote update
 fi
 
 print_task "registering last update\n"

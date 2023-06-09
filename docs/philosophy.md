@@ -63,11 +63,11 @@ and stuff like that.
 ### ZSH plugins
 
 This project uses the [pure][pure] prompt (which is awesome!) and some other
-[zsh plugins](/antibody/bundles.txt). All of them managed by [Antibody][antibody],
+[zsh plugins](/antidote/bundles.txt). All of them managed by [Antidote][antidote],
 a faster and simpler Antigen-like program written in Go.
 
 [pure]: https://github.com/sindresorhus/pure
-[antibody]: https://github.com/caarlos0/antibody
+[antidote]: https://github.com/mattmc3/antidote
 
 ### Compatibility
 

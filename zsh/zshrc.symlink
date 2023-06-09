@@ -39,12 +39,14 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-# Load antibody plugins
-# * (Antibody install script generates this file)
+# Load antidote plugins
+# * (Antidote install script generates this file)
 # * Should alwyas be loaded after `compinit` to make sure completions work properly
 export NVM_LAZY_LOAD=true # Specific to `lukechilds/zsh-nvm` plugin
-
-source ~/.zsh_plugins.sh
+# Source antidote
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+# Initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
 # Load everything but the path and completion files
 # (This are mainly the init/aliases/completion/fpath/prompt .zsh files or any other modules specific config file)
