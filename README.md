@@ -1,6 +1,6 @@
 # Radu's dotfiles
 
-Global apps, modules, packages, .files, sensible hacker defaults for macOS and Windows (WIP)
+Global apps, modules, packages, .files, sensible hacker defaults for macOS, Linux and Windows WSL (WIP)
 
 ![image](https://user-images.githubusercontent.com/46779/133124073-b13f2779-dc1b-433a-a53e-6db6e105fe29.png)
 
@@ -106,3 +106,7 @@ Pick the one you like and use it in your terminal.
 - [Known bugs](docs/bugs.md)
 - [License](LICENSE.md)
 - [Apps](docs/apps.md)
+
+## TODO
+
+- [ ] Explore these plugins https://github.com/getantidote/zdotdir/blob/advanced/.zsh_plugins.txt
