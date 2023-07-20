@@ -68,3 +68,5 @@ brew install up
 brew install hyperfine
 # An interactive cheatsheet tool for the command-line - https://github.com/denisidoro/navi
 brew install navi
+# Custom local domain aliases for local dev servers 
+brew install peterldowns/tap/localias
