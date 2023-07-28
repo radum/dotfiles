@@ -34,6 +34,8 @@ caarlos0/ports kind:path
 djui/alias-tips
 # Show execution time for long commands in zsh
 popstas/zsh-command-time
+# Zsh plugin for installing, updating and loading nvm
+lukechilds/zsh-nvm
 ellie/atuin branch:main
 
 ### Local Plugins
@@ -237,7 +239,3 @@ zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-history-substring-search
 # ZSH port of Fish history search (up arrow)
 zsh-users/zsh-history-substring-search
-
-# Zsh plugin for installing, updating and loading nvm
-lukechilds/zsh-nvm
-lukechilds/zsh-better-npm-completion

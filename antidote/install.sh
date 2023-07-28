@@ -16,7 +16,4 @@ else
 	git clone --depth=1 https://github.com/mattmc3/antidote.git "${ZDOTDIR:-~}"/.antidote
 fi
 
-antidote bundle < "$DOTFILES/antidote/bundles.txt" > ~/.zsh_plugins.txt
-# TODO: This should not be needed but antidote on my Mac generated an empty one
-antidote bundle <"$DOTFILES/antidote/bundles.txt" >~/.zsh_plugins.zsh
-antidote update
+cat "$DOTFILES/antidote/bundles.txt" > ~/.zsh_plugins.txt

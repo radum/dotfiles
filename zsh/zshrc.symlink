@@ -65,5 +65,5 @@ eval "$(starship init zsh)"
 
 # Anything bellow this line is most likely appended automatically by some script.
 #
-# ! If you find the NVM autoload scripts here remove them as they override the `zsh-nvm` `zsh-better-npm-completion` plugins
+# ! If you find the NVM autoload scripts here remove them as they override the `zsh-nvm` plugins
 # ---------------------------
