@@ -35,6 +35,9 @@ brew install cmatrix
 brew install dust
 # mprocs runs multiple commands in parallel and shows output of each command separately. https://github.com/pvolok/mprocs
 brew install mprocs
+# Custom local domain aliases for local dev servers
+brew install peterldowns/tap/localias
+
 # Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands.
 brew install atuin
 echo "Atuin has been installed, you need to configure and migrate the history - https://atuin.sh/docs/"
