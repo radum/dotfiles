@@ -70,3 +70,5 @@ brew install hyperfine
 brew install navi
 # Custom local domain aliases for local dev servers 
 brew install peterldowns/tap/localias
+# A log file highlighter
+brew install tailspin
