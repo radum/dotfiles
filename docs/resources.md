@@ -1,6 +1,6 @@
 # Resources
 
-## Aawesome lists
+## Awesome lists
 
 - https://github.com/alebcay/awesome-shell
 - https://github.com/unixorn/awesome-zsh-plugins

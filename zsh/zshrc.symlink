@@ -21,7 +21,8 @@ export VEDITOR='code'
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
 
-# Load the path files
+# Load the path files (they add to he main PATH any executable we have defined)
+# Mostly used for the custom bin files (example: restart-audio, git-nuke, tre, up, etc.)
 for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
