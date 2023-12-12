@@ -3,7 +3,17 @@
 create_symlinks() {
 
 	declare -a FILES_TO_SYMLINK=(
-		"shell/curlrc"
+		"curl/curlrc"
+		"ack/ackrc"
+		"git/gitattributes"
+		"git/gitconfig.local"
+		"git/gitignore_global"
+		"prezto/runcoms/zlogin"
+		"prezto/runcoms/zlogout"
+		"prezto/runcoms/zpreztorc"
+		"prezto/runcoms/zprofile"
+		"prezto/runcoms/zshenv"
+		"zsh/zshrc"
 	)
 
 	local i=""

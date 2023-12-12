@@ -13,7 +13,7 @@ print_sub_heading "Node & NVM"
 # Check for nvm and install if needed
 if test ! "$(command -v nvm)"; then
 	print_task "Install NVM"
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 fi
 
 ###############################################################################

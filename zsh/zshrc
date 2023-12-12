@@ -1,0 +1,85 @@
+#!/bin/zsh
+
+###############################################################################
+# Zsh                                                                         #
+###############################################################################
+
+# Shortcut to this dotfiles path is $DOTFILES
+export DOTFILES="$HOME/.dotfiles"
+
+# Your default editor
+export EDITOR='vim'
+export VISUAL='code'
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Prezto Customize to your needs...
+# ...
+
+# Source zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Because we source zinit.zsh after compinit (prezto does it in the completeions module) we need this:
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# zinit plugins
+# ----------------
+# Order matters for Syntax Highlighting, history-substring-search, autosuggestions
+# To elaborate, the relative order of loading the modules would be syntax-highlighting, history-substring-search, autosuggestions and prompt.
+zinit light z-shell/F-Sy-H
+# zinit light zsh-users/zsh-history-substring-search	# Already loaded by prezto/modules/history-substring-search
+# zinit light zsh-users/zsh-autosuggestions				# Already loaded by prezto/modules/autosuggestions
+# zinit light zsh-users/zsh-completions					# Already loaded by prezto/modules/completion
+
+export NVM_LAZY_LOAD=true
+zinit light lukechilds/zsh-nvm
+
+zinit snippet OMZP::extract
+# ----------------
+
+# All of our zsh files
+typeset -U config_files
+config_files=($DOTFILES/*/*.zsh)
+
+# Load the path files (they add to he main PATH any executable we have defined)
+# Mostly used for the custom bin files (example: restart-audio, git-nuke, tre, up, etc.)
+for file in ${(M)config_files:#*/path.zsh}; do
+  source "$file"
+done
+
+# Load everything but the path and completion files
+# (This are mainly the init/aliases/completion/fpath/prompt/config .zsh files or any other modules specific config file)
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
+  if [[ $file != *"/prezto/"* ]]; then
+  	source "$file"
+  fi
+done
+
+# Load brew shell env on Linux
+# * (Homebrew install script generates this file)
+if [ "$(uname -s)" = "Linux" ]; then
+ source ~/.path_linux_brew.zsh
+fi
+
+unset config_files updated_at
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+# shellcheck disable=SC1090
+[ -f ~/.localrc ] && . ~/.localrc
+
+# Load Starship prompt
+eval "$(starship init zsh)"
+
+# # Anything bellow this line is most likely appended automatically by some script.
+# # ---------------------------
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

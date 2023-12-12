@@ -63,15 +63,16 @@ link_file() {
 	success "linked $1 to $2"
 }
 
-# TODO: Perhaps we should use `create_symbolic_links.sh`
 install_dotfiles() {
 	print_headline "Installing dotfiles symlinks"
 
-	find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*' |
-		while read -r src; do
-			dst="$HOME/.$(basename "${src%.*}")"
-			link_file "$src" "$dst"
-		done
+	./create_symbolic_links.sh
+
+	# find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*' |
+	# 	while read -r src; do
+	# 		dst="$HOME/.$(basename "${src%.*}")"
+	# 		link_file "$src" "$dst"
+	# 	done
 }
 
 print_headline "Setting up dotfiles …"

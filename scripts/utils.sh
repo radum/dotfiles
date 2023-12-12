@@ -3,6 +3,12 @@
 ###############################################################################
 # Functions used during bootstraping                                          #
 ###############################################################################
+
+# This function prints a formatted information message to the console.
+# Arguments:
+# * \$1: A message to be printed.
+# The function will print a message to the console with a trailing ellipsis (...).
+# The message will be preceded by a blue ellipsis (‥) to improve readability.
 info() {
 	# shellcheck disable=SC2059
 	printf "\r  [ \033[00;34m‥\033[0m ] $1\n"
@@ -113,6 +119,18 @@ ask_for_sudo() {
 		sleep 60
 		kill -0 "$$" || exit
 	done &>/dev/null &
+}
+
+answer_is_yes() {
+	[[ "$REPLY" =~ ^[Yy]$ ]] &&
+		return 0 ||
+		return 1
+}
+
+ask_for_confirmation() {
+	print_question "$1 (y/n) "
+	read -r -n 1
+	printf "\n"
 }
 
 # Usage:
