@@ -33,15 +33,24 @@ autoload -Uz _zinit
 # ----------------
 # Order matters for Syntax Highlighting, history-substring-search, autosuggestions
 # To elaborate, the relative order of loading the modules would be syntax-highlighting, history-substring-search, autosuggestions and prompt.
-zinit light z-shell/F-Sy-H
-# zinit light zsh-users/zsh-history-substring-search	# Already loaded by prezto/modules/history-substring-search
-# zinit light zsh-users/zsh-autosuggestions				# Already loaded by prezto/modules/autosuggestions
-# zinit light zsh-users/zsh-completions					# Already loaded by prezto/modules/completion
+zinit ice depth"1"; zinit light z-shell/F-Sy-H
+# zinit ice depth"1"; zinit light zsh-users/zsh-history-substring-search	# Already loaded by prezto/modules/history-substring-search
+# zinit ice depth"1"; zinit light zsh-users/zsh-autosuggestions				# Already loaded by prezto/modules/autosuggestions
+# zinit ice depth"1"; zinit light zsh-users/zsh-completions					# Already loaded by prezto/modules/completion
 
 export NVM_LAZY_LOAD=true
-zinit light lukechilds/zsh-nvm
+zinit ice depth"1"; zinit light lukechilds/zsh-nvm
 
 zinit snippet OMZP::extract
+
+# # Load starship theme
+# # line 1: `starship` binary as command, from github release
+# # line 2: starship setup at clone(create init.zsh, completion)
+# # line 3: pull behavior same as clone, source init.zsh
+# zinit ice as"command" from"gh-r" \
+#           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+#           atpull"%atclone" src"init.zsh"
+# zinit light starship/starship
 # ----------------
 
 # All of our zsh files
@@ -76,6 +85,7 @@ unset config_files updated_at
 [ -f ~/.localrc ] && . ~/.localrc
 
 # Load Starship prompt
+export STARSHIP_CONFIG=~/.dotfiles/zsh/prompt/starship.toml
 eval "$(starship init zsh)"
 
 # # Anything bellow this line is most likely appended automatically by some script.

@@ -77,12 +77,12 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 # List all files colorized in long format
 if test "$(command -v exa)"; then
 	# general use
-	alias ls='exa'                                                         # ls
-	alias l='exa -la --git'                                                # list, size, type, git
-	alias ll='exa -lbGF --git'                                             # long list
-	alias llm='exa -lbGF --git --sort=modified'                            # long list, modified date sort
-	alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
-	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+	alias ls='exa --icons --group-directories-first'						# ls
+	alias l='exa -la --git --icons --group-directories-first'				# list, size, type, git
+	alias ll='exa -lbGF --git'												# long list
+	alias llm='exa -lbGF --git --sort=modified'								# long list, modified date sort
+	alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'	# all list
+	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'	# all + extended list
 
 	# speciality views
 	alias lS='exa -1'               # one column, just names

@@ -1,4 +1,3 @@
-# TODO: Symlink this to ~/.config/starship.toml
 # Get editor completions based on the config schema
 # "$schema" = 'https://starship.rs/config-schema.json'
 
@@ -12,5 +11,26 @@ command_timeout = 650
 [character] # The name of the module we are configuring is "character"
 success_symbol = "[»](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
 
-# A continuation prompt that displays two filled in arrows
-continuation_prompt = '▶▶ '
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = false
+
+[os]
+format = "on [($name )]($style)"
+style = "bold blue"
+disabled = true
+
+[status]
+style = 'bg:blue'
+symbol = '🔴 '
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = true
+
+[time]
+disabled = true
+format = '🕙[\[ $time \]]($style) '
+time_format = '%T'
+utc_time_offset = '-5'
+time_range = '10:00:00-14:00:00'

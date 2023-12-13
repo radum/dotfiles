@@ -1,0 +1,18 @@
+[user]
+	name = radum
+	email = radu.micu@gmail.com
+[include]
+	path = /Users/radu.micu/.gitconfig.local
+[dotfiles]
+	managed = true
+	lastupdate = 202312121700
+[credential]
+	helper = osxkeychain
+[core]
+	pager = delta --dark
+[init]
+	defaultBranch = main
+[includeIf "gitdir:/Users/radu.micu/work/projects/toolstation/repos/"]
+	path = /Users/radu.micu/work/projects/toolstation/repos/.gitconfig-toolstation
+[pull]
+	rebase = true
