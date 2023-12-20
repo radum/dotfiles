@@ -3,14 +3,18 @@
 # Aliases                                                                     #
 ###############################################################################
 
-# Detect which `ls` flavor is in use
-if ls --color >/dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-	export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
-else # macOS `ls`
-	colorflag="-G"
-	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
-fi
+# TODO: Document these
+alias duf="du -sh * | sort -hr"
+alias less="less -r"
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop"
+# shellcheck disable=SC2139
+alias cheat="curl cht.sh/$1"
+alias 'prettyjson=python3 -m json.tool'
+alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 3 cmatrix; clear || clear'
+# TODO: I also have a function called `server()`, perhaps this should move over there
+# alias ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
 
 ###############################################################################
 # Shortcuts                                                                   #
@@ -75,18 +79,14 @@ alias bedtime="pmset sleepnow"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # List all files colorized in long format
-if test "$(command -v exa)"; then
+if test "$(command -v lsd)"; then
 	# general use
-	alias ls='exa --icons --group-directories-first'						# ls
-	alias l='exa -la --git --icons --group-directories-first'				# list, size, type, git
-	alias ll='exa -lbGF --git'												# long list
-	alias llm='exa -lbGF --git --sort=modified'								# long list, modified date sort
-	alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'	# all list
-	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'	# all + extended list
+	alias ls='lsd --group-dirs first'				# ls
+	alias l='lsd -la --git --group-dirs first'		# list, size, type, git
 
 	# speciality views
-	alias lS='exa -1'               # one column, just names
-	alias lt='exa --tree --level=2' # tree
+	alias lS='lsd -1  --group-dirs first'			# one column, just names
+	alias lt='lsd --tree --depth 2' 				# tree
 else
 	if [ "$(uname -s)" = "Darwin" ]; then
 		alias ls="ls -FG"
@@ -100,9 +100,9 @@ fi
 
 # List only directories
 # shellcheck disable=SC2139
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+# alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # List only hidden files
-alias lsh="ls -ld .?*"
+# alias lsh="ls -ld .?*"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -168,15 +168,5 @@ alias brew-deps=brew list | while read -r cask; do
 	echo ""
 done
 
-# TODO: Document these
-alias duf="du -sh * | sort -hr"
-alias less="less -r"
-alias ping='prettyping --nolegend'
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias top="sudo htop"
-# shellcheck disable=SC2139
-alias cheat="curl cht.sh/$1"
-alias 'prettyjson=python3 -m json.tool'
-alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 3 cmatrix; clear || clear'
-# TODO: I also have a function called `server()`, perhaps this should move over there
-# alias ws -p 4243 -c --key ~/personal/ssl/local.dev.key --cert ~/personal/ssl/local.dev.crt'
+# Get all ENV vars
+alias get-env='print -lio $(env)'

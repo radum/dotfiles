@@ -68,7 +68,10 @@ brew install up
 brew install hyperfine
 # An interactive cheatsheet tool for the command-line - https://github.com/denisidoro/navi
 brew install navi
-# Custom local domain aliases for local dev servers 
+# Custom local domain aliases for local dev servers
 brew install peterldowns/tap/localias
 # A log file highlighter
 brew install tailspin
+# Fast disk usage analyzer with console interface written in Go
+# gdu will be installed as `gdu-go` to avoid conflicts with coreutils
+brew install gdu

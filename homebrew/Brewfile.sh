@@ -14,8 +14,10 @@ brew install p7zip
 brew install fzf
 # Clone of cat(1) with syntax highlighting and Git integration
 brew install bat
-# Replaces LS - https://the.exa.website/
-brew install exa
+# Replaces LS - https://the.exa.website/ NO LONGER MAINTAINED
+# brew install exa
+# The next gen ls command
+brew install lsd
 # Simplified and community-driven man pages - https://github.com/tldr-pages/tldr
 brew install tldr
 # ripgrep combines the usability of The Silver Searcher with the raw speed of grep - https://github.com/BurntSushi/ripgrep

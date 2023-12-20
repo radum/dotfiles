@@ -83,6 +83,10 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Git
 #
 
+# Ignore git aliases (there is to much conflict with other tools)
+# Instead copy the ones you need and source them.
+zstyle ':prezto:module:git:alias' skip true
+
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
 

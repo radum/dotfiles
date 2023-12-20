@@ -38,6 +38,12 @@ zinit ice depth"1"; zinit light z-shell/F-Sy-H
 # zinit ice depth"1"; zinit light zsh-users/zsh-autosuggestions				# Already loaded by prezto/modules/autosuggestions
 # zinit ice depth"1"; zinit light zsh-users/zsh-completions					# Already loaded by prezto/modules/completion
 
+# https://zdharma-continuum.github.io/zinit/wiki/LS_COLORS-explanation/
+zinit ice atclone"dircolors -b LS_COLORS > lscolors.sh" \
+    atpull'%atclone' pick"lscolors.sh" nocompile'!' \
+    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zinit light trapd00r/LS_COLORS
+
 export NVM_LAZY_LOAD=true
 zinit ice depth"1"; zinit light lukechilds/zsh-nvm
 
