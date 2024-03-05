@@ -10,8 +10,6 @@ brew install exiftool
 brew install fd
 brew install ffmpeg
 brew install imagemagick
-# Tool and file format for losslessly compressing JPEGs
-brew install lepton
 brew install mitmproxy
 brew install mozjpeg
 brew install nmap
