@@ -99,6 +99,11 @@ This can be done with [Nerd fonts](https://github.com/ryanoasis/nerd-fonts). Ner
 
 Pick the one you like and use it in your terminal.
 
+My current pick:
+
+- Github Monospace https://monaspace.githubnext.com/
+- JetBrains Mono https://www.jetbrains.com/lp/mono/
+
 ## Further help
 
 - [Personalize your configs](docs/configuration.md)
