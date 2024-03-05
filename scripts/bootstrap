@@ -66,7 +66,7 @@ link_file() {
 install_dotfiles() {
 	print_headline "Installing dotfiles symlinks"
 
-	./create_symbolic_links.sh
+	. "$DOTFILES_ROOT"/scripts/create_symbolic_links.sh
 
 	# find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*' |
 	# 	while read -r src; do
