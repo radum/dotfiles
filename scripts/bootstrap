@@ -96,7 +96,7 @@ install_dotfiles
 ###############################################################################
 
 print_headline "Installing dependencies"
-if ./bin/dot_update; then
+if ./scripts/dot_update; then
 	print_success "dependencies installed"
 else
 	print_error "error installing dependencies"

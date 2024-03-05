@@ -22,10 +22,10 @@ echo "sourcing ~/.zshrc"
 # shellcheck disable=SC1090
 source ~/.zshrc || true
 
-test "$(antidote list | wc -l)" -gt 10 || {
-	echo "expecting 10+ bundles loaded" >&2
-	exit 1
-}
+# test "$(antidote list | wc -l)" -gt 10 || {
+# 	echo "expecting 10+ bundles loaded" >&2
+# 	exit 1
+# }
 
 test -s ~/.zcompdump || {
 	echo "zcompdump file is empty" >&2

@@ -34,14 +34,23 @@ git submodule update --init --recursive --remote --merge --quiet
 # Run all installs
 # print_task "run all installs\n"
 print_sub_heading "Run all installs"
-print_task "$DOTFILES/scripts/install"
-"$DOTFILES/scripts/install"
 
-if command -v antidote >/dev/null 2>&1; then
-	print_task "antidote update\n"
-	# print_sub_heading "Antidote update"
-	antidote update
-fi
+info "> going back to root folder from $(dirname "$0")"
+cd "$(dirname "$0")"/..
+
+# find the installers and run them iteratively
+info "> find the installers and run them iteratively"
+git ls-tree --name-only -r HEAD | grep install.sh | while read -r installer; do
+	echo ""
+	info "› ${installer}..."
+	sh -c "$installer"
+done
+
+# if command -v antidote >/dev/null 2>&1; then
+# 	print_task "antidote update\n"
+# 	# print_sub_heading "Antidote update"
+# 	antidote update
+# fi
 
 print_task "registering last update\n"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"

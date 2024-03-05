@@ -111,7 +111,3 @@ My current pick:
 - [Known bugs](docs/bugs.md)
 - [License](LICENSE.md)
 - [Apps](docs/apps.md)
-
-## TODO
-
-- [ ] Explore these plugins https://github.com/getantidote/zdotdir/blob/advanced/.zsh_plugins.txt

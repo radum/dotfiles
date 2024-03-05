@@ -62,6 +62,7 @@ and stuff like that.
 
 ### ZSH plugins
 
+TODO: Update docs as we are not using Antidote anymore
 This project uses the [pure][pure] prompt (which is awesome!) and some other
 [zsh plugins](/antidote/bundles.txt). All of them managed by [Antidote][antidote],
 a faster and simpler Antigen-like program written in Go.
