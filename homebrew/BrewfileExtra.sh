@@ -73,3 +73,6 @@ brew install tailspin
 # Fast disk usage analyzer with console interface written in Go
 # gdu will be installed as `gdu-go` to avoid conflicts with coreutils
 brew install gdu
+# Install and Run Python Applications in Isolated Environments
+brew install pipx
+pipx ensurepath
