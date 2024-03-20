@@ -76,3 +76,5 @@ brew install gdu
 # Install and Run Python Applications in Isolated Environments
 brew install pipx
 pipx ensurepath
+# Interactive JSON filter using jq
+brew install ynqa/tap/jnv
