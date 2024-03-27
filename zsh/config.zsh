@@ -46,7 +46,10 @@ ZSH_COMMAND_TIME_MIN_SECONDS=120
 
 # Log bash history. Save commands run in a file for posterity
 # ---------------------------
-if [ ! -f ~/.logs/bash-history-$(date "+%Y-%m-%d").log ]; then touch ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi
+LOG_FILE=~/.logs/bash-history-$(date +%Y-%m-%d).log
+if [[ ! -f "$LOG_FILE" ]]; then
+    touch "$LOG_FILE"
+fi
 preexec() { echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $1" >>~/.logs/bash-history-$(date "+%Y-%m-%d").log; }
 
 # # don't nice background tasks
