@@ -15,7 +15,7 @@ brew install mozjpeg
 brew install nmap
 brew install rename
 brew install jq
-brew install youtube-dl
+brew install yt-dlp
 # Modern command line HTTP client – user-friendly curl alternative with intuitive UI, etc.
 brew install httpie
 # Trigger notifications when a process completes
