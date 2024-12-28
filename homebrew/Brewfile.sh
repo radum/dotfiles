@@ -39,6 +39,8 @@ brew install dust
 brew install mprocs
 # Custom local domain aliases for local dev servers
 brew install peterldowns/tap/localias
+# An extremely fast Python package and project manager, written in Rust.
+brew install uv
 
 # Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands.
 brew install atuin
