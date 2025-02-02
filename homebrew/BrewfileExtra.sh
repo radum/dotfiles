@@ -78,3 +78,5 @@ brew install pipx
 pipx ensurepath
 # Interactive JSON filter using jq
 brew install ynqa/tap/jnv
+# Onefetch is a command-line Git information tool written in Rust that displays project information and code statistics for a local Git repository
+brew install onefetch
