@@ -80,3 +80,5 @@ pipx ensurepath
 brew install ynqa/tap/jnv
 # Onefetch is a command-line Git information tool written in Rust that displays project information and code statistics for a local Git repository
 brew install onefetch
+# Television is a fast and versatile fuzzy finder TUI
+brew install television
