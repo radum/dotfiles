@@ -82,6 +82,11 @@
     precomposeunicode = false
     editor = subl -n -w
 
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+
 [color]
     # Use colors in Git commands that are capable of colored output when
     # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
@@ -105,6 +110,13 @@
     changed = green
     untracked = cyan
 
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+
 [diff]
     # Detect copies as well as renames
     renames = copies
@@ -123,8 +135,14 @@
 
 [push]
     default = simple
+    autoSetupRemote = true
     # Make `git push` push relevant annotated tags when pushing branches out.
     followTags = true
+
+[fetch]
+    # prune = true
+    # pruneTags = true
+    # all = true
 
 # [init]
 # 	templatedir = ~/.git-templates
@@ -146,3 +164,4 @@
 
 [rerere]
 	enabled = true
+    autoupdate = true
