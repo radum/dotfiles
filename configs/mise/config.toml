@@ -3,7 +3,8 @@
 [tools]
 # Cargo augmenting tools
 cargo-binstall = "latest"
-cargo-insta = "latest"
+# Failed to install aqua:mitsuhiko/insta@latest: unsupported env: linux/arm64 (supported: ["darwin", "windows", "amd64"])
+# cargo-insta = "latest"
 "cargo:cargo-nextest" = "latest"
 "cargo:cargo-edit" = "latest"
 
@@ -17,11 +18,11 @@ usage = "latest"
 
 # Core tools
 go = "latest"
-node = "latest"
+node = "v24"
 python = "latest"
 rust = { version = "latest", components = "rust-analyzer,clippy" }
 uv = "latest"
 bun = "latest"
-# This will fail to install on Linux as supported platforms are darwin, windows and amd64. But do I need it?
+
 # ruby = "latest"
 # zig = "latest"

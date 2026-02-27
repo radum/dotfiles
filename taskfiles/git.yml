@@ -10,8 +10,6 @@ tasks:
 
   setup:git:
     internal: true
-    status:
-      - which git
     cmds:
       - cmd: |
           # If there is no user.email, we'll assume it's a new machine/setup and ask it
