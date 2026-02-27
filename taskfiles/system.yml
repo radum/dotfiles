@@ -33,6 +33,6 @@ tasks:
     desc: Create personal personal, work and useful directories
     internal: true
     cmds:
-      - mkdir "$HOME/.logs"
-      - mkdir "$HOME/personal"
-      - mkdir "$HOME/work"
+      - mkdir -p "$HOME/.logs"
+      - mkdir -p "$HOME/personal"
+      - mkdir -p "$HOME/work"

@@ -14,9 +14,9 @@ tasks:
       - cmd: |
           # If there is no user.email, we'll assume it's a new machine/setup and ask it
           if [ -z "$(git config --global --get user.email)" ]; then
-            printf '\r  [ \033[0;33m??\033[0m ] $1 - What is your git author name?\n'
+            printf '\r  [ \033[0;33m??\033[0m ] - What is your git author name?\n'
             read -r user_name
-            printf '\r  [ \033[0;33m??\033[0m ] $1 - What is your git author email?\n'
+            printf '\r  [ \033[0;33m??\033[0m ] - What is your git author email?\n'
             read -r user_email
 
             git config --global user.name "$user_name"
