@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+includes:
+  brew:
+    internal: true
+    taskfile: ./brew.yml
+
+tasks:
+  install:
+    desc: Install all system dependencies
+    summary: |
+      Install all system dependencies
+
+      This task will install all required system tools and dependencies
+      for both macOS and Linux platforms.
+    cmds:
+      - task: brew:install

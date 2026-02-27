@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+tasks:
+  install:
+    desc: Install Homebrew and tools defined in Brewfile
+    platforms: [darwin]
+    cmds:
+      - task: install:homebrew
+      - task: install:tools
+
+  install:homebrew:
+    internal: true
+    platforms: [darwin]
+    status:
+      - which brew
+    cmds:
+      - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  install:tools:
+    internal: true
+    platforms: [darwin]
+    deps:
+      - install:homebrew
+    cmds:
+      - brew bundle
