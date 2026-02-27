@@ -4,6 +4,10 @@ version: 3
 includes:
   system:
     taskfile: ./taskfiles/system.yml
+  dotfiles:
+    aliases:
+      - dot
+    taskfile: ./taskfiles/dotfiles.yml
 
 tasks:
   default:
@@ -20,5 +24,5 @@ tasks:
     cmds:
       - task: system:install
       # - task: binutils:install
-      # - task: dot:install
+      - task: dot:install
       # - task: nvim:restore

@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+vars:
+  # Get FORCE from environment or default to false
+  FORCE: '{{env "FORCE"}}'
+
+tasks:
+  install:
+    desc: Install dotfiles
+    summary: |
+      Install dotfiles
+
+      This task will install and configure all dotfiles (this includes creating symlinks, setting up configurations, and applying custom settings).
+    cmds:
+      - task: utils:ensure_dirs
+      - task: utils:link_dotfiles
+
+  # Step 1: Ensure necessary directories exist before creating symlinks or applying configurations
+  utils:ensure_dirs:
+    internal: true
+    cmds:
+      - mkdir -p ~/bin
+      - mkdir -p ~/.ssh
+      - mkdir -p ~/.cargo
+
+  # Step 2: Link dotfiles based on the platform (macOS or Linux)
+  utils:link_dotfiles:
+    internal: true
+    # deps:
+    #   - task: utils:link_macos_dotfiles
+    #   - task: utils:link_linux_dotfiles
+    vars:
+      DOTFILES:
+        - "configs/mise/|$HOME/.config/mise"
+    cmds:
+      - for:
+          var: DOTFILES
+          as: DOTFILE
+        task: link_dotfile
+        vars:
+          SRC: '{{splitList "|" .DOTFILE | first}}'
+          DEST: '{{splitList "|" .DOTFILE | last}}'
+
+  # This is a reusable task that creates a symlink from a source file/directory to a destination path.
+  # It handles existing files, directories, and symlinks gracefully, and can forcefully replace them if needed.
+  link_dotfile:
+    internal: true
+    silent: true
+    vars:
+      SRC: "{{.SRC}}"
+      DEST: "{{.DEST}}"
+    cmds:
+      - |
+        SRC_PATH="{{.ROOT_DIR}}/{{.SRC}}"
+        DEST_PATH="{{.DEST}}"
+
+        # Create parent directory if it doesn't exist
+        mkdir -p "$(dirname "$DEST_PATH")"
+
+        # If FORCE is true, remove the target
+        if [ "{{.FORCE}}" = "true" ]; then
+          rm -rf "$DEST_PATH"
+        fi
+
+        if [ -L "$DEST_PATH" ]; then
+          current=$(readlink "$DEST_PATH")
+
+          # Check if it's a broken symlink
+          if [ ! -e "$current" ]; then
+            echo "$DEST_PATH is a broken symlink, replacing it"
+            rm "$DEST_PATH"
+            ln -s "$SRC_PATH" "$DEST_PATH"
+          elif [ "$current" != "$SRC_PATH" ]; then
+            echo "$DEST_PATH already exists and is symlinked to $current"
+          fi
+        elif [ -e "$DEST_PATH" ]; then
+          echo "$DEST_PATH already exists and is not a symlink"
+        else
+          echo "creating link for $DEST_PATH"
+          ln -s "$SRC_PATH" "$DEST_PATH"
+        fi
+
