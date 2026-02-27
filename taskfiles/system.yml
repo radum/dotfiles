@@ -8,6 +8,9 @@ includes:
   mise:
     internal: true
     taskfile: ./mise.yml
+  git:
+    internal: true
+    taskfile: ./git.yml
 
 tasks:
   install:
@@ -23,3 +26,13 @@ tasks:
       # The rest of the installation tasks can be added here as needed.
       - task: mise:install
       - task: mise:update
+      - task: git:install
+      - task: make_dirs
+
+  make_dirs:
+    desc: Create personal personal, work and useful directories
+    internal: true
+    cmds:
+      - mkdir "$HOME/.logs"
+      - mkdir "$HOME/personal"
+      - mkdir "$HOME/work"

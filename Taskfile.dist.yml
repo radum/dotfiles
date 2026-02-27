@@ -23,6 +23,4 @@ tasks:
       3. Installing and configuring all dotfiles
     cmds:
       - task: system:install
-      # - task: binutils:install
       - task: dot:install
-      # - task: nvim:restore

@@ -13,11 +13,11 @@ tasks:
 
       This task will install and configure all dotfiles (this includes creating symlinks, setting up configurations, and applying custom settings).
     cmds:
-      - task: utils:ensure_dirs
-      - task: utils:link_dotfiles
+      - task: ensure_dirs
+      - task: link_dotfiles
 
   # Step 1: Ensure necessary directories exist before creating symlinks or applying configurations
-  utils:ensure_dirs:
+  ensure_dirs:
     internal: true
     cmds:
       - mkdir -p ~/bin
@@ -25,26 +25,31 @@ tasks:
       - mkdir -p ~/.cargo
 
   # Step 2: Link dotfiles based on the platform (macOS or Linux)
-  utils:link_dotfiles:
+  link_dotfiles:
     internal: true
     # deps:
-    #   - task: utils:link_macos_dotfiles
-    #   - task: utils:link_linux_dotfiles
+    #   - task: link_macos_dotfiles
+    #   - task: link_linux_dotfiles
     vars:
       DOTFILES:
+        - "configs/curl/.curlrc|$HOME/.curlrc"
+        - "configs/editorconfig/.editorconfig|$HOME/.editorconfig"
+        - "configs/git/.gitattributes|$HOME/.gitattributes"
+        - "configs/git/.gitconfig.local|$HOME/.gitconfig.local"
+        - "configs/git/.gitignore_global|$HOME/.gitignore_global"
         - "configs/mise/|$HOME/.config/mise"
     cmds:
       - for:
           var: DOTFILES
           as: DOTFILE
-        task: link_dotfile
+        task: util:link_dotfile
         vars:
           SRC: '{{splitList "|" .DOTFILE | first}}'
           DEST: '{{splitList "|" .DOTFILE | last}}'
 
   # This is a reusable task that creates a symlink from a source file/directory to a destination path.
   # It handles existing files, directories, and symlinks gracefully, and can forcefully replace them if needed.
-  link_dotfile:
+  util:link_dotfile:
     internal: true
     silent: true
     vars:

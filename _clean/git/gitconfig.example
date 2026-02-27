@@ -10,5 +10,9 @@
 	helper = osxkeychain
 [core]
 	pager = delta --dark
+[init]
+	defaultBranch = main
 [includeIf "gitdir:/Users/radu.micu/work/projects/toolstation/repos/"]
 	path = /Users/radu.micu/work/projects/toolstation/repos/.gitconfig-toolstation
+[pull]
+	rebase = true

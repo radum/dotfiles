@@ -19,8 +19,9 @@ usage = "latest"
 go = "latest"
 node = "latest"
 python = "latest"
-ruby = "latest"
 rust = { version = "latest", components = "rust-analyzer,clippy" }
 uv = "latest"
-zig = "latest"
 bun = "latest"
+# This will fail to install on Linux as supported platforms are darwin, windows and amd64. But do I need it?
+# ruby = "latest"
+# zig = "latest"

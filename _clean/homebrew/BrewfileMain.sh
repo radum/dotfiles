@@ -6,8 +6,7 @@
 brew install git
 brew install git-lfs
 brew install git-recent
-brew install ack
-brew install diff-so-fancy
+
 brew install neovim
 brew install p7zip
 # Command-line fuzzy finder written in Go

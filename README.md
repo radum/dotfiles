@@ -1,6 +1,6 @@
 # Radu's dotfiles
 
-Global apps, modules, packages, .files, sensible hacker defaults for macOS, Linux and Windows WSL (WIP)
+Global apps, modules, packages, .dotfiles, sensible hacker defaults for macOS, Linux and Windows WSL
 
 ![image](https://user-images.githubusercontent.com/46779/133124073-b13f2779-dc1b-433a-a53e-6db6e105fe29.png)
 
@@ -8,6 +8,8 @@ Global apps, modules, packages, .files, sensible hacker defaults for macOS, Linu
 
 This repo is inspired and influenced by
 
+- rwjblue [dotfiles](https://github.com/rwjblue/dotfiles/)
+- dkarter [dotfiles](https://github.com/dkarter/dotfiles/)
 - Miloš Sutanovac [dotfiles](https://github.com/mixn/dotfiles)
 - Carlos Alexandro Becker [dotfiles](https://github.com/caarlos0/dotfiles)
 
@@ -87,7 +89,7 @@ Then, run these steps:
 
 ```
 cd ~/.dotfiles
-./scripts/bootstrap
+./setup.sh
 zsh # or just close and open your terminal again.
 ```
 
