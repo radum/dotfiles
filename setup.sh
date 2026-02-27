@@ -39,7 +39,7 @@ fi
 echo
 echo "==========================================="
 echo -e OS "\t\t$OS"
-echo -e DISTRO_BASE "\t\t$DISTRO_BASE"
+echo -e DISTRO_BASE "\t$DISTRO_BASE"
 echo -e DIST "\t\t$DIST"
 echo -e KERNEL "\t\t$KERNEL"
 echo -e MACH "\t\t$MACH"

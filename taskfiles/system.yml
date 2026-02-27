@@ -20,5 +20,6 @@ tasks:
     cmds:
       # This should run before any other task as it installs tools that are used by other tasks
       - task: brew:install
+      # The rest of the installation tasks can be added here as needed.
       - task: mise:install
       - task: mise:update
