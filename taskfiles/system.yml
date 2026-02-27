@@ -5,6 +5,9 @@ includes:
   brew:
     internal: true
     taskfile: ./brew.yml
+  mise:
+    internal: true
+    taskfile: ./mise.yml
 
 tasks:
   install:
@@ -15,4 +18,7 @@ tasks:
       This task will install all required system tools and dependencies
       for both macOS and Linux platforms.
     cmds:
+      # This should run before any other task as it installs tools that are used by other tasks
       - task: brew:install
+      - task: mise:install
+      - task: mise:update

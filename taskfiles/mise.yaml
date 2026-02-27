@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+tasks:
+  install:
+    desc: Installs all mise based tools
+    summary: mise-en-place, as a tool, is already installed via brew.
+    cmds:
+      - cmd: mise install
+
+  update:
+    aliases:
+      - up
+    desc: Updates all mise based tools
+    cmds:
+      - cmd: mise up
+        silent: true
+
+  outdated:
+    desc: List all outdated tools, including major bumps
+    cmds:
+      - cmd: mise outdated -l
+        silent: true

@@ -22,5 +22,7 @@ tasks:
     platforms: [darwin]
     deps:
       - install:homebrew
+    dir: "/{{.ROOT_DIR}}/configs/homebrew"
     cmds:
-      - brew bundle
+      # https://docs.brew.sh/Manpage#bundle-subcommand
+      - brew bundle --file=Brewfile
