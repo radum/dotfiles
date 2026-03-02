@@ -64,11 +64,6 @@ v() {
 # 	fi
 # }
 
-# Find and fetch weather for any given location, defaulting to Munich, Germany
-wttr() {
-	curl -4 wttr.in/${1:-london}
-}
-
 # A quick approximation of self-written LOC in a directory across languages,
 # ignoring things like node_modules, .nuxt, package-lock.json, etc. by default
 loc() {

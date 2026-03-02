@@ -23,14 +23,14 @@ tasks:
     cmds:
       # This should run before any other task as it installs tools that are used by other tasks
       - task: brew:install
-      # The rest of the installation tasks can be added here as needed.
+
       - task: mise:install
       - task: mise:update
       - task: git:install
       - task: make_dirs
 
   make_dirs:
-    desc: Create personal personal, work and useful directories
+    desc: Create personal, work and useful directories
     internal: true
     cmds:
       - mkdir -p "$HOME/.logs"

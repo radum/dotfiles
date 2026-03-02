@@ -2,7 +2,7 @@
 version: 3
 
 vars:
-  # Get FORCE from environment or default to false
+  # Get FORCE from environment or default to false.
   FORCE: '{{env "FORCE"}}'
 
 tasks:
@@ -11,12 +11,12 @@ tasks:
     summary: |
       Install dotfiles
 
-      This task will install and configure all dotfiles (this includes creating symlinks, setting up configurations, and applying custom settings).
+      This task will install and configure all dotfiles (this includes creating symlinks and setting simple configurations).
     cmds:
       - task: ensure_dirs
       - task: link_dotfiles
 
-  # Step 1: Ensure necessary directories exist before creating symlinks or applying configurations
+  # Step 1: Ensure necessary directories exist before creating symlinks or applying configurations.
   ensure_dirs:
     internal: true
     cmds:
@@ -24,7 +24,7 @@ tasks:
       - mkdir -p ~/.ssh
       - mkdir -p ~/.cargo
 
-  # Step 2: Link dotfiles based on the platform (macOS or Linux)
+  # Step 2: Link dotfiles based on the platform (macOS or Linux).
   link_dotfiles:
     internal: true
     # deps:
@@ -32,12 +32,25 @@ tasks:
     #   - task: link_linux_dotfiles
     vars:
       DOTFILES:
+        # CURL specific dotfiles.
         - "configs/curl/.curlrc|$HOME/.curlrc"
+        # EditorConfig specific dotfiles.
         - "configs/editorconfig/.editorconfig|$HOME/.editorconfig"
+        # GIT specific dotfiles.
         - "configs/git/.gitattributes|$HOME/.gitattributes"
         - "configs/git/.gitconfig.local|$HOME/.gitconfig.local"
         - "configs/git/.gitignore_global|$HOME/.gitignore_global"
+        # Mise specific dotfiles.
         - "configs/mise/|$HOME/.config/mise"
+        # ZSH specific dotfiles.
+        - "configs/starship/starship.toml|$HOME/.config/starship.toml"
+        ## These symlinks are needed by the zsh.yml tasks.
+        - "configs/zsh/zlogin|$HOME/.zlogin"
+        - "configs/zsh/zlogout|$HOME/.zlogout"
+        - "configs/zsh/zprofile|$HOME/.zprofile"
+        - "configs/zsh/zshenv|$HOME/.zshenv"
+        - "configs/zsh/zpreztorc|$HOME/.zpreztorc"
+        - "configs/zsh/.zshrc|$HOME/.zshrc"
     cmds:
       - for:
           var: DOTFILES

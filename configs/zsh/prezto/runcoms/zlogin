@@ -3,7 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#   https://github.com/sorin-ionescu/prezto/blob/master/runcoms/zlogin
+#
 
 # Execute code that does not affect the current session in the background.
 {

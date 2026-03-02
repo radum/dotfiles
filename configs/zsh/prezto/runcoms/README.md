@@ -12,8 +12,6 @@ but are prefixed with a dot (hidden). Zsh looks for these files in the path
 stored in the `$ZDOTDIR` environment variable. However, if said variable is
 not defined, Zsh will use the user's home directory.
 
-> The Zsh configuration is done by linking the Zsh configuration files provided in `zsh/runcoms/`
-
 ## File Descriptions
 
 The [configuration files][1] are read in the following order:
@@ -65,3 +63,15 @@ bindings. It should not change the shell environment.
 
 This file is sourced by login shells during logout. It should be used for
 displaying messages and for deletion of files.
+
+## Authors
+
+_The authors of these files should be contacted via the [issue tracker][5]._
+
+- [Sorin Ionescu](https://github.com/sorin-ionescu)
+
+[1]: http://zsh.sourceforge.net/Intro/intro_3.html#SEC3
+[2]: https://www.kornshell.com
+[3]: https://en.wikipedia.org/wiki/Fortune_(Unix)
+[4]: https://www.manpagez.com/man/1/msgs
+[5]: https://github.com/sorin-ionescu/prezto/issues

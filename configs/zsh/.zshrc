@@ -26,6 +26,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Because we source zinit.zsh after compinit (prezto does it in the completeions module) we need this:
+# (from https://github.com/zdharma-continuum/zinit docs)
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
@@ -44,8 +45,8 @@ zinit ice atclone"dircolors -b LS_COLORS > lscolors.sh" \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zinit light trapd00r/LS_COLORS
 
-export NVM_LAZY_LOAD=true
-zinit ice depth"1"; zinit light lukechilds/zsh-nvm
+# export NVM_LAZY_LOAD=true
+# zinit ice depth"1"; zinit light lukechilds/zsh-nvm
 
 zinit snippet OMZP::extract
 
@@ -63,27 +64,27 @@ zinit snippet OMZP::extract
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
 
-# Load the path files (they add to he main PATH any executable we have defined)
-# Mostly used for the custom bin files (example: restart-audio, git-nuke, tre, up, etc.)
-for file in ${(M)config_files:#*/path.zsh}; do
-  source "$file"
-done
+# # Load the path files (they add to he main PATH any executable we have defined)
+# # Mostly used for the custom bin files (example: restart-audio, git-nuke, tre, up, etc.)
+# for file in ${(M)config_files:#*/path.zsh}; do
+#   source "$file"
+# done
 
-# Load everything but the path and completion files
-# (This are mainly the init/aliases/completion/fpath/prompt/config .zsh files or any other modules specific config file)
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
-  if [[ $file != *"/prezto/"* ]]; then
-  	source "$file"
-  fi
-done
+# # Load everything but the path and completion files
+# # (This are mainly the init/aliases/completion/fpath/prompt/config .zsh files or any other modules specific config file)
+# for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
+#   if [[ $file != *"/prezto/"* ]]; then
+#   	source "$file"
+#   fi
+# done
 
-# Load brew shell env on Linux
-# * (Homebrew install script generates this file)
-if [ "$(uname -s)" = "Linux" ]; then
- source ~/.path_linux_brew.zsh
-fi
+# # Load brew shell env on Linux
+# # * (Homebrew install script generates this file)
+# if [ "$(uname -s)" = "Linux" ]; then
+#  source ~/.path_linux_brew.zsh
+# fi
 
-unset config_files updated_at
+# unset config_files updated_at
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -91,7 +92,7 @@ unset config_files updated_at
 [ -f ~/.localrc ] && . ~/.localrc
 
 # Load Starship prompt
-export STARSHIP_CONFIG=~/.dotfiles/zsh/prompt/starship.toml
+export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 
 # # Anything bellow this line is most likely appended automatically by some script.

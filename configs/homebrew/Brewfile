@@ -8,8 +8,12 @@ brew git-recent
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 
+# The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+brew install starship
+
 brew neovim
 brew p7zip
+
 # Command-line fuzzy finder written in Go
 brew fzf
 # Clone of cat(1) with syntax highlighting and Git integration

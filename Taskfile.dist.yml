@@ -8,6 +8,8 @@ includes:
     aliases:
       - dot
     taskfile: ./taskfiles/dotfiles.yml
+  zsh:
+    taskfile: ./taskfiles/zsh.yml
 
 tasks:
   default:
@@ -22,5 +24,9 @@ tasks:
       2. Building utilities and setting up symlinks
       3. Installing and configuring all dotfiles
     cmds:
+      # Install all system dependencies (brew, mise, git, dirs, etc.)
       - task: system:install
+      # Install dotfiles (symlinks, simple configurations, etc.)
       - task: dot:install
+      # Install zsh configurations and plugins
+      - task: zsh:install
