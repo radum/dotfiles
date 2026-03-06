@@ -45,11 +45,11 @@ tasks:
         # ZSH specific dotfiles.
         - "configs/starship/starship.toml|$HOME/.config/starship.toml"
         ## These symlinks are needed by the zsh.yml tasks.
-        - "configs/zsh/zlogin|$HOME/.zlogin"
-        - "configs/zsh/zlogout|$HOME/.zlogout"
-        - "configs/zsh/zprofile|$HOME/.zprofile"
-        - "configs/zsh/zshenv|$HOME/.zshenv"
-        - "configs/zsh/zpreztorc|$HOME/.zpreztorc"
+        - "configs/zsh/prezto/runcoms/zlogin|$HOME/.zlogin"
+        - "configs/zsh/prezto/runcoms/zlogout|$HOME/.zlogout"
+        - "configs/zsh/prezto/runcoms/zprofile|$HOME/.zprofile"
+        - "configs/zsh/prezto/runcoms/zshenv|$HOME/.zshenv"
+        - "configs/zsh/prezto/runcoms/zpreztorc|$HOME/.zpreztorc"
         - "configs/zsh/.zshrc|$HOME/.zshrc"
     cmds:
       - for:

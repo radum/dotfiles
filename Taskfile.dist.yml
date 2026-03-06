@@ -8,8 +8,8 @@ includes:
     aliases:
       - dot
     taskfile: ./taskfiles/dotfiles.yml
-  zsh:
-    taskfile: ./taskfiles/zsh.yml
+  shell:
+    taskfile: ./taskfiles/shell.yml
 
 tasks:
   default:
@@ -28,5 +28,5 @@ tasks:
       - task: system:install
       # Install dotfiles (symlinks, simple configurations, etc.)
       - task: dot:install
-      # Install zsh configurations and plugins
-      - task: zsh:install
+      # Install shell tools, configurations and plugins
+      - task: shell:install

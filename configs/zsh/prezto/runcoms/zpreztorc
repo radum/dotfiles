@@ -12,9 +12,9 @@
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
-# Add additional directories to load prezto modules from
+# Add additional directories to load prezto modules from:
 # zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
-zstyle ':prezto:load' pmodule-dirs $DOTFILES/prezto/modules
+zstyle ':prezto:load' pmodule-dirs $DOTFILES/configs/zsh/prezto/modules
 
 # Allow module overrides when pmodule-dirs causes module name collisions
 # zstyle ':prezto:load' pmodule-allow-overrides 'yes'

@@ -6,10 +6,13 @@ brew git-lfs
 brew git-recent
 
 # Polyglot runtime manager (asdf rust clone)
-brew "mise"
+brew mise
 
 # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 brew install starship
+
+# zoxide is a smarter cd command, inspired by z and autojump.
+brew install zoxide
 
 brew neovim
 brew p7zip

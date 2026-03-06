@@ -19,7 +19,20 @@ disabled = false
 [os]
 format = "on [($name )]($style)"
 style = "bold blue"
-disabled = true
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Macos = "󰀵"
+Linux = "󰌽"
+Android = ""
+Arch = "󰣇"
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [status]
 style = 'bg:blue'

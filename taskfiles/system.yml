@@ -25,11 +25,11 @@ tasks:
       - task: brew:install
 
       - task: mise:install
-      - task: mise:update
+      - task: mise:update # On first run this will not do much as the config is not yet symlinked, but on subsequent runs it will.
       - task: git:install
-      - task: make_dirs
+      - task: make:dirs
 
-  make_dirs:
+  make:dirs:
     desc: Create personal, work and useful directories
     internal: true
     cmds:

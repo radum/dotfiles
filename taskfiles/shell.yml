@@ -1,0 +1,107 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+tasks:
+  install:
+    desc: Install shell tools, configurations and plugins
+    summary: |
+      Install shell tools, configurations and plugins
+
+      This task will install and configure shell tools (starship, zoxide, etc.), including setting up `prezto`, `zinit` and any custom plugins or themes for zsh.
+
+      Symlinks for zsh configuration files are handled in the `dotfiles` task, so this task focuses on installing and configuring zsh itself and its plugins.
+    cmds:
+      - task: starship:install
+      - task: fzf:install
+      - task: zoxide:install
+      - task: prezto:install
+      - task: zinit:install
+
+  starship:install:
+    internal: true
+    desc: Install Starship, a cross-shell prompt
+    summary: |
+      Install Starship, a cross-shell prompt, using the official installation script.
+    status:
+      - which starship
+    cmds:
+      - curl -sS https://starship.rs/install.sh | sh
+    platforms: [linux] # Starship on macOS is installed via Homebrew.
+
+  fzf:install:
+    internal: true
+    desc: Install fzf, a command-line fuzzy finder
+    summary: |
+      Install fzf, a command-line fuzzy finder, using the official installation script.
+    status:
+      - which fzf
+    cmds:
+      - mise use -g fzf@latest
+    platforms: [linux] # fzf on macOS is installed via Homebrew.
+
+  zoxide:install:
+    internal: true
+    desc: Install zoxide, a smarter cd command
+    summary: |
+      Install zoxide, a smarter cd command, using the official installation script.
+    status:
+      - which zoxide
+    cmds:
+      - curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+    platforms: [linux] # zoxide on macOS is installed via Homebrew.
+
+  prezto:install:
+    internal: true
+    desc: Install prezto, a configuration framework for zsh
+    summary: |
+      Install prezto and let it use $HOME as the zdotdir. Also the `.zpreztorc` will be symlinked in the `dotfiles` task,
+      so no need to worry about that here. The location will be `${ZDOTDIR:-$HOME}/.zprezto`.
+    status:
+      - test -d "${ZDOTDIR:-$HOME}/.zprezto"
+    cmds:
+      - cmd: |
+          if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then
+            git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+          fi
+
+  prezto:update:
+    internal: true
+    desc: Update prezto to the latest version
+    summary: |
+      Update prezto to the latest version by pulling the latest changes from the repository.
+    cmds:
+      - cmd: |
+          if [ -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then
+            git -C "${ZDOTDIR:-$HOME}/.zprezto" pull --rebase
+          fi
+
+  zinit:install:
+    internal: true
+    desc: Install zinit, a zsh plugin manager
+    summary: |
+      Install zinit, a zsh plugin manager, by cloning the repository to the appropriate location.
+    status:
+      - test -d "${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+    cmds:
+      - cmd: |
+          ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+          [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+          [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+
+  zinit:update:
+    internal: true
+    desc: Update zinit, and all zinit plugins, to the latest version
+    summary: |
+      Update zinit to the latest version by pulling the latest changes from the repository. Also update all zinit plugins by running `zinit update` command.
+    cmds:
+      - cmd: |
+          # Self update
+          zinit self-update
+          # Plugin update
+          zinit update
+
+TODO: Do we need anything from here?
+# # prezto-contrib
+# # https://github.com/belak/prezto-contrib
+# cd $ZPREZTODIR
+# git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
