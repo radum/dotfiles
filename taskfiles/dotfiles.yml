@@ -27,6 +27,7 @@ tasks:
   # Step 2: Link dotfiles based on the platform (macOS or Linux).
   link_dotfiles:
     internal: true
+    # TODO: Not sure I need platform specific
     # deps:
     #   - task: link_macos_dotfiles
     #   - task: link_linux_dotfiles
@@ -98,4 +99,3 @@ tasks:
           echo "creating link for $DEST_PATH"
           ln -s "$SRC_PATH" "$DEST_PATH"
         fi
-

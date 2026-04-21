@@ -9,10 +9,10 @@ brew git-recent
 brew mise
 
 # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
-brew install starship
+brew starship
 
 # zoxide is a smarter cd command, inspired by z and autojump.
-brew install zoxide
+brew zoxide
 
 brew neovim
 brew p7zip
@@ -34,7 +34,8 @@ brew thefuck
 # A syntax-highlighting pager for git - https://github.com/dandavison/delta
 brew git-delta
 # Difftastic is a structural diff tool that understands syntax. It supports over 30 programming languages and when it works, it's fantastic. - https://github.com/wilfred/difftastic
-brew install difftastic
+# https://github.com/Wilfred/difftastic
+brew difftastic
 # Wrapper to colorize and simplify ping's output
 brew prettyping
 # Improved top (interactive process viewer)

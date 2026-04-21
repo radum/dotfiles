@@ -17,7 +17,7 @@ tasks:
     silent: true
 
   install:
-    desc: Complete system setup - installs dependencies, builds utilities, configures dotfiles, and sets up Neovim
+    desc: Complete system setup - installs dependencies, builds utilities, configures dotfiles
     summary: |
       Performs a full system setup by:
       1. Installing all system dependencies (tools, languages, and utilities)

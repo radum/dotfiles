@@ -26,7 +26,9 @@ tasks:
 
       - task: mise:install
       - task: mise:update # On first run this will not do much as the config is not yet symlinked, but on subsequent runs it will.
+
       - task: git:install
+
       - task: make:dirs
 
   make:dirs:

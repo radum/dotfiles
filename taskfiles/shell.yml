@@ -100,7 +100,7 @@ tasks:
           # Plugin update
           zinit update
 
-TODO: Do we need anything from here?
+# TODO: Do we need anything from here?
 # # prezto-contrib
 # # https://github.com/belak/prezto-contrib
 # cd $ZPREZTODIR

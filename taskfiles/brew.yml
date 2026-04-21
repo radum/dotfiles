@@ -15,6 +15,7 @@ tasks:
     status:
       - which brew
     cmds:
+      # Install instructions from https://brew.sh/
       - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   install:tools:
