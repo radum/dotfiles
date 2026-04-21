@@ -3,11 +3,10 @@ version: 3
 
 tasks:
   install:
-    desc: Installs all mise based tools
+    desc: Installs mise
     summary: mise-en-place, as a tool, is already installed via brew.
     cmds:
       - task: install:mise
-      - task: install:tools
 
   install:mise:
     internal: true
@@ -42,9 +41,9 @@ tasks:
   update:
     aliases:
       - up
-    desc: Updates all mise based tools
+    desc: Updates all mise based tools to the latest versions
     cmds:
-      - cmd: mise up
+      - cmd: mise upgrade
         silent: true
 
   outdated:

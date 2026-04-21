@@ -4,6 +4,9 @@ version: 3
 includes:
   system:
     taskfile: ./taskfiles/system.yml
+  mise:
+    taskfile: ./taskfiles/mise.yml
+    excludes: [install, update, outdated]
   dotfiles:
     aliases:
       - dot
@@ -28,5 +31,7 @@ tasks:
       - task: system:install
       # Install dotfiles (symlinks, simple configurations, etc.)
       - task: dot:install
+      # Install all tools defined in the global mise toml file (running after `dot:install` to make sure the toml file is symlinked)
+      - task: mise:install-tools
       # Install shell tools, configurations and plugins
       - task: shell:install
