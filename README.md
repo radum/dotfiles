@@ -110,6 +110,5 @@ My current pick:
 
 - [Personalize your configs](docs/configuration.md)
 - [Understand how it works](docs/philosophy.md)
-- [Known bugs](docs/bugs.md)
 - [License](LICENSE.md)
 - [Apps](docs/apps.md)
