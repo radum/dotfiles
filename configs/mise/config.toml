@@ -1,0 +1,26 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tools]
+# Cargo augmenting tools
+cargo-binstall = "latest"
+"cargo:cargo-nextest" = "latest"
+"cargo:cargo-edit" = "latest"
+
+# Software verification (see https://mise.jdx.dev/tips-and-tricks.html#software-verification)
+slsa-verifier = "latest"
+cosign = "latest"
+
+# Provides completion and parsing support for tasks see:
+# https://mise.jdx.dev/tasks/file-tasks.html#arguments
+usage = "latest"
+
+# Core tools
+go = "latest"
+node = "v24"
+python = "latest"
+rust = { version = "latest", components = "rust-analyzer,clippy" }
+uv = "latest"
+bun = "latest"
+
+# ruby = "latest"
+# zig = "latest"

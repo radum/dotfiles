@@ -1,0 +1,57 @@
+# This is done manually for now, check out the readme file for details.
+# brew zsh
+
+brew git
+brew git-lfs
+brew git-recent
+
+# Polyglot runtime manager (asdf rust clone)
+brew mise
+
+# The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+brew starship
+
+# zoxide is a smarter cd command, inspired by z and autojump.
+brew zoxide
+
+brew neovim
+brew p7zip
+
+# Command-line fuzzy finder written in Go
+brew fzf
+# Clone of cat(1) with syntax highlighting and Git integration
+brew bat
+# Replaces LS - https://the.exa.website/ NO LONGER MAINTAINED
+# brew exa
+# The next gen ls command
+brew lsd
+# Simplified and community-driven man pages - https://github.com/tldr-pages/tldr
+brew tldr
+# ripgrep combines the usability of The Silver Searcher with the raw speed of grep - https://github.com/BurntSushi/ripgrep
+brew ripgrep
+# Programatically correct mistyped console commands
+brew thefuck
+# A syntax-highlighting pager for git - https://github.com/dandavison/delta
+brew git-delta
+# Difftastic is a structural diff tool that understands syntax. It supports over 30 programming languages and when it works, it's fantastic. - https://github.com/wilfred/difftastic
+# https://github.com/Wilfred/difftastic
+brew difftastic
+# Wrapper to colorize and simplify ping's output
+brew prettyping
+# Improved top (interactive process viewer)
+brew htop
+# The cmatrix command is based off the digital rain animation from the opening scenes of Matrix movie series.
+# I use it mostly for a cool clear replacement command
+brew cmatrix
+# du + rust = dust. Like du but more intuitive. (folder size)
+brew dust
+# mprocs runs multiple commands in parallel and shows output of each command separately. https://github.com/pvolok/mprocs
+brew mprocs
+# Custom local domain aliases for local dev servers
+brew peterldowns/tap/localias
+# An extremely fast Python package and project manager, written in Rust.
+brew uv
+
+# Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands.
+brew atuin
+# "Atuin has been installed, you need to configure and migrate the history - https://atuin.sh/docs/"

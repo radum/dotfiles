@@ -1,25 +1,13 @@
 # Radu's dotfiles
 
-Global apps, modules, packages, .files, sensible hacker defaults for macOS, Linux and Windows WSL (WIP)
+Global apps, modules, packages, .dotfiles, sensible hacker defaults for macOS, Linux and Windows WSL
 
 ![image](https://user-images.githubusercontent.com/46779/133124073-b13f2779-dc1b-433a-a53e-6db6e105fe29.png)
 
 ## Inspiration ❤️🌎
 
-This repo is inspired and influenced by
-
-- Miloš Sutanovac [dotfiles](https://github.com/mixn/dotfiles)
-- Carlos Alexandro Becker [dotfiles](https://github.com/caarlos0/dotfiles)
-
-- Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles)
-- Zach Holman’s [dotfiles](https://github.com/holman/dotfiles)
-- Dries Vints’ [dotfiles](https://github.com/driesvints/dotfiles)
-- Lars Kappert’s [dotfiles](https://github.com/webpro/dotfiles)
-- Paul Irish’s [dotfiles](https://github.com/paulirish/dotfiles)
-- Ivan Santos’s [dotfiles](https://github.com/pragmaticivan/dotfiles)
-- Alexander Myshov’s [dotfiles](https://github.com/myshov/dotfiles)
-- Eduardo Rabelo’s [dotfiles](https://github.com/oieduardorabelo/dotfiles)
-- Ryan Tomayko’s [dotfiles](https://github.com/rtomayko/dotfiles)
+This repo is inspired and influenced by rwjblue [dotfiles](https://github.com/rwjblue/dotfiles/), dkarter [dotfiles](https://github.com/dkarter/dotfiles/), Miloš Sutanovac [dotfiles](https://github.com/mixn/dotfiles), Carlos Alexandro Becker [dotfiles](https://github.com/caarlos0/dotfiles)
+, Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles), Zach Holman’s [dotfiles](https://github.com/holman/dotfiles), Dries Vints’ [dotfiles](https://github.com/driesvints/dotfiles), Lars Kappert’s [dotfiles](https://github.com/webpro/dotfiles), Paul Irish’s [dotfiles](https://github.com/paulirish/dotfiles), Ivan Santos’s [dotfiles](https://github.com/pragmaticivan/dotfiles), Alexander Myshov’s [dotfiles](https://github.com/myshov/dotfiles), Eduardo Rabelo’s [dotfiles](https://github.com/oieduardorabelo/dotfiles), Ryan Tomayko’s [dotfiles](https://github.com/rtomayko/dotfiles)
 
 Other inspiring and quite helpful articles, repos, tools, etc.:
 
@@ -72,7 +60,7 @@ This is not needed with the latest Macs, as ZSH is the default shell. You can ch
 
 Install zsh manually first and make sure its the default shell, then run the install script.
 
-I think I need to make the setup a 2 step process to install zsh run it and the fire again the install script on those machines that don't have it by default.
+I think I need to make the setup a 2 step process to install zsh run it and then fire again the install script on those machines that don't have it by default.
 
 ---
 
@@ -87,7 +75,7 @@ Then, run these steps:
 
 ```
 cd ~/.dotfiles
-./scripts/bootstrap
+./setup.sh
 zsh # or just close and open your terminal again.
 ```
 
@@ -108,6 +96,5 @@ My current pick:
 
 - [Personalize your configs](docs/configuration.md)
 - [Understand how it works](docs/philosophy.md)
-- [Known bugs](docs/bugs.md)
 - [License](LICENSE.md)
 - [Apps](docs/apps.md)

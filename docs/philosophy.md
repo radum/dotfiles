@@ -16,7 +16,7 @@ At first, this repo contained the homebrew installation and other stuff like tha
 
 This is a WIP for now, but at least brew apps have been now separated into 3 files.
 
-* `Brewfile.sh` - Main dependencies for the good work of my dotfiles (bare minimum)
+* `Brewfile` - Main dependencies for the good work of my dotfiles (bare minimum)
 * `BrewfileExtra.sh` - Extra tools I use most times
 * `BrewfileMacOS.sh` - Only specific Mac tools
 

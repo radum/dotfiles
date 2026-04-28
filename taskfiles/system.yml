@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+includes:
+  brew:
+    internal: true
+    taskfile: ./brew.yml
+  mise:
+    internal: true
+    taskfile: ./mise.yml
+  git:
+    internal: true
+    taskfile: ./git.yml
+
+tasks:
+  install:
+    desc: Install all system dependencies
+    summary: |
+      Install all system dependencies
+
+      This task will install all required system tools and dependencies
+      for both macOS and Linux platforms.
+    cmds:
+      # This should run before any other task as it installs tools that are used by other tasks
+      - task: brew:install
+      # Only installs mise not the tools configured in the config.
+      - task: mise:install
+
+      - task: git:install
+
+      - task: make:dirs
+
+  make:dirs:
+    desc: Create personal, work and useful directories
+    internal: true
+    cmds:
+      - mkdir -p "$HOME/.logs"
+      - mkdir -p "$HOME/personal"
+      - mkdir -p "$HOME/work"

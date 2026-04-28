@@ -1,0 +1,10 @@
+[user]
+	name = radum
+	email = radu.micu@gmail.com
+[include]
+	path = /Users/radum/.gitconfig.local
+[dotfiles]
+	managed = true
+	lastupdate = 202312121700
+[includeIf "gitdir:/Users/radum/work/projects/acme/repos/"]
+	path = /Users/radum/work/projects/acme/repos/.gitconfig-acme

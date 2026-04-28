@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+includes:
+  system:
+    taskfile: ./taskfiles/system.yml
+  mise:
+    taskfile: ./taskfiles/mise.yml
+    excludes: [install, update, outdated]
+  dotfiles:
+    aliases:
+      - dot
+    taskfile: ./taskfiles/dotfiles.yml
+  shell:
+    taskfile: ./taskfiles/shell.yml
+
+tasks:
+  default:
+    cmd: task -l
+    silent: true
+
+  install:
+    desc: Complete system setup - installs dependencies, builds utilities, configures dotfiles
+    summary: |
+      Performs a full system setup by:
+      1. Installing all system dependencies (tools, languages, and utilities)
+      2. Building utilities and setting up symlinks
+      3. Installing and configuring all dotfiles
+    cmds:
+      # Install all system dependencies (brew, mise, git, dirs, etc.)
+      - task: system:install
+      # Install dotfiles (symlinks, simple configurations, etc.)
+      - task: dot:install
+      # Install all tools defined in the global mise toml file (running after `dot:install` to make sure the toml file is symlinked)
+      - task: mise:install:tools
+      # Install shell tools, configurations and plugins
+      - task: shell:install

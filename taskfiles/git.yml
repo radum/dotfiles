@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+tasks:
+  install:
+    desc: Installs and configure GIT
+    summary: git, as a tool, is already installed via brew.
+    cmds:
+      - task: setup:git
+
+  setup:git:
+    internal: true
+    cmds:
+      - cmd: |
+          # If there is no user.email, we'll assume it's a new machine/setup and ask it
+          if [ -z "$(git config --global --get user.email)" ]; then
+            printf '\r  [ \033[0;33m??\033[0m ] - What is your git author name?\n'
+            read -r user_name
+            printf '\r  [ \033[0;33m??\033[0m ] - What is your git author email?\n'
+            read -r user_email
+
+            git config --global user.name "$user_name"
+            git config --global user.email "$user_email"
+          elif [ "$(git config --global --get dotfiles.managed)" != "true" ]; then
+            # If user.email exists, let's check for dotfiles.managed config. If it is
+            # not true, we'll backup the gitconfig file and set previous user.email and
+            # user.name in the new one
+            user_name="$(git config --global --get user.name)"
+            user_email="$(git config --global --get user.email)"
+            mv ~/.gitconfig ~/.gitconfig.backup
+            echo "moved ~/.gitconfig to ~/.gitconfig.backup"
+            git config --global user.name "$user_name"
+            git config --global user.email "$user_email"
+          else
+            # otherwise this gitconfig was already made by the dotfiles
+            echo "already managed by dotfiles"
+          fi
+          # include the gitconfig.local file that will be symlinked from the `configs` folder
+          git config --global include.path ~/.gitconfig.local
+          # finally make git know this is a managed config already, preventing later
+          # overrides by this script
+          git config --global dotfiles.managed true
+          git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
+
+      # Don't ask ssh password all the time
+      - cmd: git config --global credential.helper osxkeychain
+        platforms: [darwin]
+      - cmd: git config --global credential.helper cache
+        platforms: [linux]
+
+# TODO: Maybe
+# # use vscode as mergetool
+# if command -v code >/dev/null 2>&1; then
+# 	git config --global merge.tool vscode
+# 	git config --global mergetool.vscode.cmd "code --wait $MERGED"
+# fi

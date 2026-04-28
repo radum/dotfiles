@@ -1,0 +1,40 @@
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+# Compiled Python files
+*.pyc
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Desktop.ini
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+build-storybook.log
+
+# Local env files
+.env*.local
+
+# Other version control systems
+.jj/
+
+# Mise Local Config Overrides
+.mise/config.local.toml
+.mise.local.toml
+mise.local.toml
+
+# Coding assistant related Hint files
+/CLAUDE.local.md

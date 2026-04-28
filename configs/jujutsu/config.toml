@@ -1,0 +1,23 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Radu Micu"
+email = "radu.micu@gmail.com"
+
+
+[core]
+# https://github.com/jj-vcs/jj/blob/v0.25.0/docs/config.md#watchman
+# NOTE: disabled due to issues with larger repos missing/losing filesystem events on macos
+# not sure exactly what is wrong and don't have time to debug :/
+# fsmonitor = "watchman"
+# watchman.register-snapshot-trigger = true
+
+[ui]
+bookmark-list-sort-keys = ["author-date-"]
+diff-editor = ":builtin"
+
+[git]
+# https://jj-vcs.github.io/jj/latest/config/#set-of-private-commits
+private-commits = 'description(glob:"private:*")'
+sign-on-push = true
+colocate = true
