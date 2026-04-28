@@ -1,4 +1,5 @@
 # Zsh aliases
+# > Most aliases here will use tools that will be installed via brew.
 
 ## Docker
 alias docker_prune="docker system prune --volumes -fa"
@@ -14,6 +15,9 @@ alias brew-deps=brew list | while read -r cask; do
 	brew deps "$cask" | awk '{printf(" %s ", $0)}'
 	echo ""
 done
+
+## Dev specific
+alias editorconfig="cp ~/.dotfiles/editorconfig/.editorconfig ."
 
 ## Shortcuts
 alias ~="cd ~"

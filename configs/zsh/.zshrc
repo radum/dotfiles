@@ -14,7 +14,8 @@ export EDITOR='vim'
 export VISUAL='code'
 
 # Load the main zsh config file, which contains the minimum defaults.
-# Most of the configs here are disabled because we are uzing prezto bellow.
+# Most of the configs in `zsh-config.zsh` are disabled because we are uzing prezto bellow.
+# But the modules folder `configs/zsh/prezto/modules` will be loaded.
 source "$DOTFILES/configs/zsh/zsh-config.zsh"
 
 # ❯ Source Prezto.

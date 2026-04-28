@@ -35,7 +35,7 @@ tasks:
             # otherwise this gitconfig was already made by the dotfiles
             echo "already managed by dotfiles"
           fi
-          # include the gitconfig.local file
+          # include the gitconfig.local file that will be symlinked from the `configs` folder
           git config --global include.path ~/.gitconfig.local
           # finally make git know this is a managed config already, preventing later
           # overrides by this script
