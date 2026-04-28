@@ -6,9 +6,7 @@ npm i -g \
 	@sitespeed.io/throttle \
 	cross-env \
 	doctoc \
-	tldr \
 	np \
 	git-stats \
 	local-web-server \
-	nodemon \
-	npm-check-updates
+	nodemon

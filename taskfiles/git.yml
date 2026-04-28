@@ -48,12 +48,6 @@ tasks:
       - cmd: git config --global credential.helper cache
         platforms: [linux]
 
-      # A syntax-highlighting pager for git, diff, grep, and blame output
-      - cmd: git config --global core.pager "delta --dark"
-
-      # A structural diff tool that understands syntax
-      - cmd: git config --global diff.tool "difftastic"
-
 # TODO: Maybe
 # # use vscode as mergetool
 # if command -v code >/dev/null 2>&1; then

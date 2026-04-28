@@ -81,6 +81,9 @@
     # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
     precomposeunicode = false
     editor = subl -n -w
+    
+    # A syntax-highlighting pager for git, diff, grep, and blame output
+    pager = delta --dark
 
 [rebase]
     autoSquash = true
@@ -120,6 +123,8 @@
 [diff]
     # Detect copies as well as renames
     renames = copies
+    # A structural diff tool that understands syntax
+    tool = difftastic
 
 [diff "bin"]
     # Use `hexdump` to diff binary files

@@ -2,13 +2,9 @@
 	name = radum
 	email = radu.micu@gmail.com
 [include]
-	path = /Users/radu.micu/.gitconfig.local
+	path = /Users/radum/.gitconfig.local
 [dotfiles]
 	managed = true
 	lastupdate = 202312121700
-[credential]
-	helper = osxkeychain
-[core]
-	pager = delta --dark
-[includeIf "gitdir:/Users/radu.micu/work/projects/toolstation/repos/"]
-	path = /Users/radu.micu/work/projects/toolstation/repos/.gitconfig-toolstation
+[includeIf "gitdir:/Users/radum/work/projects/acme/repos/"]
+	path = /Users/radum/work/projects/acme/repos/.gitconfig-acme
