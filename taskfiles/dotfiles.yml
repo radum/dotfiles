@@ -41,6 +41,8 @@ tasks:
         - "configs/git/.gitattributes|$HOME/.gitattributes"
         - "configs/git/.gitconfig.local|$HOME/.gitconfig.local"
         - "configs/git/.gitignore_global|$HOME/.gitignore_global"
+        # JJ / Jujutsu specific dotfiles.
+        - "configs/jujutsu/|$HOME/.config/jj"
         # Mise specific dotfiles.
         - "configs/mise/|$HOME/.config/mise"
         # ZSH specific dotfiles.

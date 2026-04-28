@@ -14,6 +14,7 @@ tasks:
       - task: starship:install
       - task: fzf:install
       - task: zoxide:install
+      - task: jujutsu:install
       - task: prezto:install
       - task: zinit:install
 
@@ -49,6 +50,16 @@ tasks:
     cmds:
       - curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
     platforms: [linux] # zoxide on macOS is installed via Homebrew.
+
+  jujutsu:install:
+    internal: true
+    desc: Install Jujutsu
+    summary: |
+      Jujutsu—a version control system
+    status:
+      - which jj
+    cmds:
+      - cargo binstall --strategies crate-meta-data jj-cli
 
   prezto:install:
     internal: true
