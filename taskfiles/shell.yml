@@ -59,7 +59,7 @@ tasks:
     status:
       - which jj
     cmds:
-      - cargo binstall --strategies crate-meta-data jj-cli
+      - msie exec cargo -- cargo binstall --strategies crate-meta-data jj-cli
 
   prezto:install:
     internal: true

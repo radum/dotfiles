@@ -3,8 +3,6 @@
 [tools]
 # Cargo augmenting tools
 cargo-binstall = "latest"
-# Failed to install aqua:mitsuhiko/insta@latest: unsupported env: linux/arm64 (supported: ["darwin", "windows", "amd64"])
-# cargo-insta = "latest"
 "cargo:cargo-nextest" = "latest"
 "cargo:cargo-edit" = "latest"
 
