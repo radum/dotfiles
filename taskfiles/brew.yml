@@ -25,5 +25,7 @@ tasks:
       - install:homebrew
     dir: "/{{.ROOT_DIR}}/configs/homebrew"
     cmds:
+      # This is needed here to make sure brew is in the path before the bundle bellow works
+      - eval "$(/opt/homebrew/bin/brew shellenv zsh)"
       # https://docs.brew.sh/Manpage#bundle-subcommand
       - brew bundle --file=Brewfile
