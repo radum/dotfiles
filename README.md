@@ -6,22 +6,8 @@ Global apps, modules, packages, .dotfiles, sensible hacker defaults for macOS, L
 
 ## Inspiration ❤️🌎
 
-This repo is inspired and influenced by
-
-- rwjblue [dotfiles](https://github.com/rwjblue/dotfiles/)
-- dkarter [dotfiles](https://github.com/dkarter/dotfiles/)
-- Miloš Sutanovac [dotfiles](https://github.com/mixn/dotfiles)
-- Carlos Alexandro Becker [dotfiles](https://github.com/caarlos0/dotfiles)
-
-- Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles)
-- Zach Holman’s [dotfiles](https://github.com/holman/dotfiles)
-- Dries Vints’ [dotfiles](https://github.com/driesvints/dotfiles)
-- Lars Kappert’s [dotfiles](https://github.com/webpro/dotfiles)
-- Paul Irish’s [dotfiles](https://github.com/paulirish/dotfiles)
-- Ivan Santos’s [dotfiles](https://github.com/pragmaticivan/dotfiles)
-- Alexander Myshov’s [dotfiles](https://github.com/myshov/dotfiles)
-- Eduardo Rabelo’s [dotfiles](https://github.com/oieduardorabelo/dotfiles)
-- Ryan Tomayko’s [dotfiles](https://github.com/rtomayko/dotfiles)
+This repo is inspired and influenced by rwjblue [dotfiles](https://github.com/rwjblue/dotfiles/), dkarter [dotfiles](https://github.com/dkarter/dotfiles/), Miloš Sutanovac [dotfiles](https://github.com/mixn/dotfiles), Carlos Alexandro Becker [dotfiles](https://github.com/caarlos0/dotfiles)
+, Mathias Bynens’ [dotfiles](https://github.com/mathiasbynens/dotfiles), Zach Holman’s [dotfiles](https://github.com/holman/dotfiles), Dries Vints’ [dotfiles](https://github.com/driesvints/dotfiles), Lars Kappert’s [dotfiles](https://github.com/webpro/dotfiles), Paul Irish’s [dotfiles](https://github.com/paulirish/dotfiles), Ivan Santos’s [dotfiles](https://github.com/pragmaticivan/dotfiles), Alexander Myshov’s [dotfiles](https://github.com/myshov/dotfiles), Eduardo Rabelo’s [dotfiles](https://github.com/oieduardorabelo/dotfiles), Ryan Tomayko’s [dotfiles](https://github.com/rtomayko/dotfiles)
 
 Other inspiring and quite helpful articles, repos, tools, etc.:
 
