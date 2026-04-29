@@ -50,7 +50,8 @@ brew "mprocs"
 # Custom local domain aliases for local dev servers
 brew "peterldowns/tap/localias"
 # An extremely fast Python package and project manager, written in Rust.
-brew "uv"
+# This will be installed via mise
+# brew "uv"
 
 # Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands.
 brew "atuin"
