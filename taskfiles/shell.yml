@@ -16,6 +16,7 @@ tasks:
       - task: zoxide:install
       - task: jujutsu:install
       - task: prezto:install
+      - task: zephyr:install
       - task: zinit:install
 
   starship:install:
@@ -84,6 +85,29 @@ tasks:
       - cmd: |
           if [ -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then
             git -C "${ZDOTDIR:-$HOME}/.zprezto" pull --rebase
+          fi
+
+  zephyr:install:
+    internal: true
+    desc: Install Zephyr, a Zsh framework as nice as a cool summer breeze
+    summary: |
+      Install zephyr, Zephyr combines some of the best parts from Prezto and other Zsh frameworks, removes bloat and dependencies, and prioritizes speed and simplicity.
+    status:
+      - test -d "${ZDOTDIR:-$HOME}/.zephyr"
+    cmds:
+      - cmd: |
+          [[ -d ${ZDOTDIR:-~}/.zephyr ]] ||
+            git clone --depth=1 https://github.com/mattmc3/zephyr ${ZDOTDIR:-~}/.zephyr
+
+  zephyr:update:
+    internal: true
+    desc: Update zephyr to the latest version
+    summary: |
+      Update zephyr to the latest version by pulling the latest changes from the repository.
+    cmds:
+      - cmd: |
+          if [ -d "${ZDOTDIR:-$HOME}/.zephyr" ]; then
+            git -C "${ZDOTDIR:-$HOME}/.zephyr" pull --rebase
           fi
 
   zinit:install:

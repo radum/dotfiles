@@ -48,11 +48,17 @@ tasks:
         # ZSH specific dotfiles.
         - "configs/starship/starship.toml|$HOME/.config/starship.toml"
         ## These symlinks are needed by the zsh.yml tasks.
-        - "configs/zsh/prezto/runcoms/zlogin|$HOME/.zlogin"
-        - "configs/zsh/prezto/runcoms/zlogout|$HOME/.zlogout"
-        - "configs/zsh/prezto/runcoms/zprofile|$HOME/.zprofile"
-        - "configs/zsh/prezto/runcoms/zshenv|$HOME/.zshenv"
-        - "configs/zsh/prezto/runcoms/zpreztorc|$HOME/.zpreztorc"
+        # Prezto symlinks (before I switched to zephyr)
+        # - "configs/zsh/prezto/runcoms/zlogin|$HOME/.zlogin"
+        # - "configs/zsh/prezto/runcoms/zlogout|$HOME/.zlogout"
+        # - "configs/zsh/prezto/runcoms/zprofile|$HOME/.zprofile"
+        # - "configs/zsh/prezto/runcoms/zshenv|$HOME/.zshenv"
+        # - "configs/zsh/prezto/runcoms/zpreztorc|$HOME/.zpreztorc"
+        - "configs/zsh/zephyr/runcoms/zlogin|$HOME/.zlogin"
+        - "configs/zsh/zephyr/runcoms/zlogout|$HOME/.zlogout"
+        - "configs/zsh/zephyr/runcoms/zprofile|$HOME/.zprofile"
+        - "configs/zsh/zephyr/runcoms/zshenv|$HOME/.zshenv"
+        # Main zshrc symlink (this is the main entry point for zsh configuration, and it sources the other runcoms).
         - "configs/zsh/.zshrc|$HOME/.zshrc"
     cmds:
       - for:

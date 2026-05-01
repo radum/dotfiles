@@ -98,3 +98,10 @@ My current pick:
 - [Understand how it works](docs/philosophy.md)
 - [License](LICENSE.md)
 - [Apps](docs/apps.md)
+
+## Resources
+
+- https://github.com/zdharma-continuum/zinit
+- https://github.com/mattmc3/zephyr
+- https://github.com/romkatv/zsh-bench
+- https://github.com/MenkeTechnologies/zpwr

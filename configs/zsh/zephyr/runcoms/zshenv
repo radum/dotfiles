@@ -1,0 +1,17 @@
+#!/bin/zsh
+#
+# .zshenv - Define Zsh environment variables.
+#
+
+# Set ZDOTDIR to move your Zsh config out of $HOME.
+# TODO: Is this worth it?
+# export ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+# TODO: Add this back if we need it, but I don't think we do.
+# export ZSH_PATHRC="$HOME/.dotfiles/configs/zsh/zsh-path.zsh"
+# source $ZSH_PATHRC

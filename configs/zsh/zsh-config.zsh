@@ -13,7 +13,7 @@
 
 # Your project folder that we can `cd [tab]` to
 # TODO: implement cd function
-export PROJECTS="$HOME/personal/projects"
+# export PROJECTS="$HOME/personal/projects"
 
 # If command execution time above min. time, plugins will not output time (uses `popstas/zsh-command-time`).
 ZSH_COMMAND_TIME_MIN_SECONDS=120

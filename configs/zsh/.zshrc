@@ -14,14 +14,40 @@ export EDITOR='vim'
 export VISUAL='code'
 
 # Load the main zsh config file, which contains the minimum defaults.
-# Most of the configs in `zsh-config.zsh` are disabled because we are uzing prezto bellow.
-# But the modules folder `configs/zsh/prezto/modules` will be loaded.
+# Most of the configs in `zsh-config.zsh` are disabled because we are uzing zephyr bellow.
+# But the plugins folder `configs/zsh/zephyr/plugins` will be loaded.
 source "$DOTFILES/configs/zsh/zsh-config.zsh"
 
-# ❯ Source Prezto.
+# ❯ Source Zephyr.
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# Use zstyle to specify which plugins you want. Order matters.
+export ZSH_CUSTOM="$DOTFILES/configs/zsh/zephyr"
+zephyr_plugins=(
+  local-environment \
+  homebrew \
+  color \
+  compstyle \
+  completion \
+  directory \
+  editor \
+  helper \
+  history \
+  zfunctions \
+  macos \
+  local-fzf \
+  local-thefuck \
+  local-command-time
+)
+zstyle ':zephyr:load' plugins $zephyr_plugins
+
+# Set the maximum number of history events to save in the history file.
+zstyle ':zephyr:plugin:history' 'savehist' '10000000'
+# Set the maximum  number  of  events  stored  in  the  internal history list.
+zstyle ':zephyr:plugin:history' 'histsize' '10000000'
+zstyle ':zephyr:plugin:history:aux:sqlite' enable yes
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zephyr/zephyr.zsh" ]]; then
+  source ${ZDOTDIR:-$HOME}/.zephyr/zephyr.zsh
 fi
 
 # ❯ Source zinit.
@@ -39,9 +65,10 @@ autoload -Uz _zinit
 # Order matters for Syntax Highlighting, history-substring-search, autosuggestions
 # To elaborate, the relative order of loading the modules would be syntax-highlighting, history-substring-search, autosuggestions and prompt.
 zinit ice depth"1"; zinit light z-shell/F-Sy-H
-# zinit ice depth"1"; zinit light zsh-users/zsh-history-substring-search	# Already loaded by prezto/modules/history-substring-search
-# zinit ice depth"1"; zinit light zsh-users/zsh-autosuggestions				# Already loaded by prezto/modules/autosuggestions
-# zinit ice depth"1"; zinit light zsh-users/zsh-completions					# Already loaded by prezto/modules/completion
+zinit ice depth"1"; zinit light zsh-users/zsh-history-substring-search
+zinit ice depth"1"; zinit light zsh-users/zsh-autosuggestions
+zinit ice depth"1"; zinit light zsh-users/zsh-completions
+zinit ice depth"1"; zinit light djui/alias-tips
 
 # https://zdharma-continuum.github.io/zinit/wiki/LS_COLORS-explanation/
 zinit ice atclone"dircolors -b LS_COLORS > lscolors.sh" \
