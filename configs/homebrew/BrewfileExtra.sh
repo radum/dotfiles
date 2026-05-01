@@ -6,8 +6,6 @@ brew install asciinema
 brew install brotli
 brew install certbot
 brew install exiftool
-# Simple, fast and user-friendly alternative to find - https://github.com/sharkdp/fd
-brew install fd
 brew install ffmpeg
 brew install imagemagick
 brew install mitmproxy

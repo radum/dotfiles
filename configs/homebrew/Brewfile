@@ -19,8 +19,12 @@ brew "p7zip"
 
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Television is a fast, portable fuzzy finder for the terminal. https://github.com/alexpasmantier/television
+brew "television"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Simple, fast and user-friendly alternative to find - https://github.com/sharkdp/fd
+brew "fd"
 # Replaces LS - https://the.exa.website/ NO LONGER MAINTAINED
 # brew "exa"
 # The next gen ls command
