@@ -41,11 +41,13 @@ zephyr_plugins=(
 )
 zstyle ':zephyr:load' plugins $zephyr_plugins
 
+# To use your home directory instead of using [XDG Base Directories](https://specifications.freedesktop.org/basedir-spec/latest/)
+# Zephyr sets XDG Base Directories by default.
+# zstyle ':zephyr:plugin:*' use-xdg-basedirs no
 # Set the maximum number of history events to save in the history file.
 zstyle ':zephyr:plugin:history' 'savehist' '10000000'
-# Set the maximum  number  of  events  stored  in  the  internal history list.
-zstyle ':zephyr:plugin:history' 'histsize' '10000000'
-zstyle ':zephyr:plugin:history:aux:sqlite' enable yes
+# Set the maximum number of events stored in memory in the internal history list.
+zstyle ':zephyr:plugin:history' 'histsize' '50000'
 
 if [[ -s "${ZDOTDIR:-$HOME}/.zephyr/zephyr.zsh" ]]; then
   source ${ZDOTDIR:-$HOME}/.zephyr/zephyr.zsh

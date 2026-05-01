@@ -20,6 +20,7 @@ https://www.flickr.com/photos/a_semenov/
 - https://github.com/tonsky/FiraCode
 - https://www.jetbrains.com/lp/mono/ / https://github.com/JetBrains/JetBrainsMono
 - https://www.nerdfonts.com/
+- https://monaspace.githubnext.com/ / https://github.com/githubnext/monaspace
 
 ## ZSH
 
