@@ -33,10 +33,15 @@ tasks:
     #   - task: link_linux_dotfiles
     vars:
       DOTFILES:
+        # Atuin specific dotfiles.
+        - "configs/atuin/config.toml|$HOME/.config/atuin/config.toml"
         # CURL specific dotfiles.
         - "configs/curl/.curlrc|$HOME/.curlrc"
         # EditorConfig specific dotfiles.
         - "configs/editorconfig/.editorconfig|$HOME/.editorconfig"
+        # Ghostty specific dotfiles.
+        # https://ghostty.org/docs/config#file-location
+        - "configs/ghostty/config.ghostty|$HOME/.config/ghostty/config.ghostty"
         # GIT specific dotfiles.
         - "configs/git/.gitattributes|$HOME/.gitattributes"
         - "configs/git/.gitconfig.local|$HOME/.gitconfig.local"
@@ -47,6 +52,9 @@ tasks:
         - "configs/mise/|$HOME/.config/mise"
         # ZSH specific dotfiles.
         - "configs/starship/starship.toml|$HOME/.config/starship.toml"
+        # Television specific dotfiles.
+        - "configs/television/config.toml|$HOME/.config/television/config.toml"
+        - "configs/television/cable|$HOME/.config/television/cable"
         ## These symlinks are needed by the zsh.yml tasks.
         # Prezto symlinks (before I switched to zephyr)
         # - "configs/zsh/prezto/runcoms/zlogin|$HOME/.zlogin"

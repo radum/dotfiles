@@ -12,6 +12,7 @@ tasks:
       Symlinks for zsh configuration files are handled in the `dotfiles` task, so this task focuses on installing and configuring zsh itself and its plugins.
     cmds:
       - task: starship:install
+      - task: atuin:install
       - task: fzf:install
       - task: zoxide:install
       - task: jujutsu:install
@@ -29,6 +30,17 @@ tasks:
     cmds:
       - curl -sS https://starship.rs/install.sh | sh
     platforms: [linux] # Starship on macOS is installed via Homebrew.
+
+  atuin:install:
+    internal: true
+    desc: Install Atuin, a next-generation shell history manager
+    summary: |
+      Sync, search and backup shell history with Atuin.
+    status:
+      - which atuin
+    cmds:
+      - curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+    platforms: [linux] # atuin on macOS is installed via Homebrew.
 
   fzf:install:
     internal: true

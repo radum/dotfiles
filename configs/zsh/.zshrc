@@ -34,7 +34,8 @@ zephyr_plugins=(
   history \
   zfunctions \
   macos \
-  local-fzf \
+  # [FZF-TV] Trying television for a while so FZF is disabled for now.
+  # local-fzf \
   local-thefuck \
   local-command-time
 )
@@ -108,10 +109,13 @@ source $DOTFILES/configs/zsh/zsh-aliases.zsh
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 
-# ❯ Load mise, fzf, zoxide and others.
+# ❯ Load mise, atuin, fzf, tv, zoxide and others.
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 eval "$(mise activate zsh)"
-source <(fzf --zsh)
+eval "$(atuin init zsh)"
+# [FZF-TV] Trying television for a while so FZF is disabled for now.
+# source <(fzf --zsh)
+eval "$(tv init zsh)"
 eval "$(zoxide init zsh)"
 
 # # Anything bellow this line is most likely appended automatically by some script.
