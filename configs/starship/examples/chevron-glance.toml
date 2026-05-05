@@ -1,0 +1,209 @@
+# Chevron Glance
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](fg:sec)\
+$sudo\
+$os\
+$jobs\
+$username\
+$hostname\
+$localip\
+$git_status\
+$directory\
+$git_commit$git_state$git_metrics\
+$git_branch\
+$memory_usage\
+$status\
+[ ](fg:prim)\
+$cmd_duration\
+$line_break$character
+"""
+
+add_newline = false
+
+palette = "chevron_glance"
+
+[palettes.chevron_glance]
+prim = '#333239' #Primary/Directory Background
+sec = '#4C4959' #Accents
+primt = '#989898' #Primary text color (non-glyphic)
+sudo = '#9c454e'
+user = '#3b5e3b'
+host = '#00556d'
+ip = '#2596be'
+duration = ''
+# Git Colors
+bbg = '#989898' #GitHub branch background.
+bfg = '#333239' #GitHub branch text.
+# Chevrons
+conflicted = 'red'
+ahead = 'cyan'
+behind = 'orange'
+diverged = 'blue'
+uptodate = 'green'
+untracked = 'purple'
+stashed =  '#6b84eb' #light blue
+modified = 'yellow'
+staged = '#c5e187' #sage
+renamed = '#ce63ff' #lilac
+deleted = '#f54caf' #pink
+
+[sudo]
+format = '[ ]($style)'
+style = 'fg:sudo bg:sec'
+disabled = false
+
+[os]
+format = "[$symbol ]($style)"
+style = "fg:primt bg:sec"
+disabled = false
+
+[os.symbols]
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = ""
+CentOS = ""
+Debian = ""
+DragonFly = "🐉" # ""
+Emscripten = "🔗"
+EndeavourOS = "" # ""
+Fedora = ""
+FreeBSD = ""
+Garuda = ""
+Gentoo = ""
+HardenedBSD = "聯"
+Illumos = "🐦"
+Linux = ""
+Macos = ""
+Manjaro = ""
+Mariner = ""
+MidnightBSD = "🌘"
+Mint = ""
+NetBSD = ""
+NixOS = ""
+Nobara = ""
+OpenBSD = "" # ""
+OpenCloudOS = "☁️"
+openEuler = ""
+openSUSE = ""
+OracleLinux = "⊂⊃"
+Pop = "" # ""
+Raspbian = ""
+Redhat = ""
+RedHatEnterprise = ""
+Redox = "🧪"
+Solus = "" # " "
+SUSE = ""
+Ubuntu = ""
+Unknown = ""
+Windows = ""
+
+[jobs]
+format = '[]($style)[$symbol$number](fg:primt bg:prim)[]($style)'
+style = 'fg:prim bg:sec'
+symbol = ' '
+symbol_threshold = 1
+number_threshold = 2
+disabled = false
+
+[username]
+format = '[](fg:sec bg:user)[ $user ]($style)[](fg:user bg:sec)'
+style_user = 'fg:primt bold bg:user'
+style_root = 'fg:primt bold bg:sudo'
+show_always = true
+disabled = false
+
+[hostname]
+format = '[](fg:sec bg:prim)[@](fg:primt bold bg:prim)[](fg:prim bg:sec)[](fg:sec bg:host)[$ssh_symbol](fg:primt bold bg:host)[ $hostname ](fg:primt bold bg:host)[](fg:host bg:sec)'
+ssh_only = false
+ssh_symbol = ' '
+#trim_at = '.companyname.com'
+disabled = false
+
+[localip]
+format = '[](fg:sec bg:ip)[ $localipv4 ](fg:primt bold bg:ip)[](fg:ip bg:sec)'
+ssh_only = true
+disabled = false
+
+[env_var.HTTP_PROXY]
+symbol = '🌐 '
+format = '[$symbol$env_value]($style) '
+style = 'green bold'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style))[](fg:sec bg:prim)'
+style = 'fg:prim bg:tert'
+conflicted = '[](fg:sec bg:conflicted)[](fg:conflicted bg:sec)'
+ahead = '[](fg:sec bg:ahead)[](fg:ahead bg:sec)'
+behind = '[](fg:sec bg:behind)[](fg:behind bg:behind)'
+diverged = '[](fg:sec bg:ahead)[](fg:ahead bg:sec)'
+up_to_date = '[](fg:sec bg:uptodate)[](fg:uptodate bg:sec)'
+untracked = '[](fg:sec bg:untracked)[](fg:untracked bg:sec)'
+stashed = '[](fg:sec bg:stashed)[](fg:stashed bg:sec)'
+modified = '[](fg:sec bg:modified)[](fg:modified bg:sec)'
+staged = '[](fg:sec bg:staged)[](fg:staged bg:sec)'
+renamed = '[](fg:sec bg:renamed)[](fg:renamed bg:sec)'
+deleted = '[](fg:sec bg:deleted)[](fg:deleted bg:sec)'
+disabled = false
+
+[directory]
+format = '[ ](fg:sec bg:prim)[$read_only](fg:primt bg:prim)[$repo_root]($repo_root_style)[$path](fg:primt bold bg:prim)'
+style = 'fg:primt bg:prim'
+home_symbol = ' ~'
+read_only = ' '
+#read_only_style = 'fg: bg:'
+truncation_length = 2
+truncation_symbol = '…/'
+truncate_to_repo = true
+repo_root_format = '[  ](fg:primt bg:prim)[$read_only]($read_only_style)[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)'
+repo_root_style  = 'fg:primt bold bg:prim'
+use_os_path_sep = true
+disabled = false
+
+[directory.substitutions]
+"Documents" = " 󱧶 "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+".config" = ". "
+
+[git_branch]
+format = '[](fg:bbg bg:bfg)[$symbol $branch(:$remote_branch)]($style)[](fg:bbg bg:bfg)'
+style = 'fg:bfg bold bg:bbg'
+symbol = ''
+#ignore_branches = ['master', 'main']
+
+[memory_usage]
+format = '[](fg:prim bg:sec)[$symbol]($style)[](fg:sec bg:prim)'
+style = 'fg:sudo bg:sec'
+symbol = '  !'
+threshold = 75
+disabled = false
+
+[cmd_duration]
+format = '[ $duration ]($style)'
+style = 'fg:duration'
+min_time = 500
+disabled = false
+
+
+[status]
+format = '[$symbol]($style)'
+style = 'fg:sudo bg:prim'
+symbol = '  '
+disabled = false
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[ 󱞪](bold fg:prim)'
+error_symbol = '[ 󱞪](bold fg:sudo)'
+vimcmd_symbol = '[ ](bold fg:prim)'
+vimcmd_replace_one_symbol = '[ ](bold fg:purple)'
+vimcmd_replace_symbol = '[ ](bold fg:purple)'
+vimcmd_visual_symbol = '[ ](bold fg:yellow)'
