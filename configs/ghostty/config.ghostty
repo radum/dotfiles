@@ -2,4 +2,5 @@ background-blur-radius = 20
 mouse-hide-while-typing = true
 # https://ghostty.org/docs/config/reference#custom-shader
 # https://github.com/0xhckr/ghostty-shaders
-custom-shader=~/.dotfiles/configs/ghostty/shaders/space.glsl
+# custom-shader=~/.dotfiles/configs/ghostty/shaders/space.glsl
+custom-shader=~/.dotfiles/configs/ghostty/shaders/cursor.glsl
