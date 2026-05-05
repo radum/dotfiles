@@ -13,9 +13,10 @@ tasks:
     cmds:
       - task: starship:install
       - task: atuin:install
-      - task: fzf:install
+      - task: fzf:install # [FZF-TV] Trying television for a while so FZF might be removed in the future.
       - task: zoxide:install
       - task: jujutsu:install
+      - task: zellij:install
       - task: prezto:install
       - task: zephyr:install
       - task: zinit:install
@@ -73,6 +74,16 @@ tasks:
       - which jj
     cmds:
       - mise exec cargo -- cargo binstall --strategies crate-meta-data jj-cli
+
+  zellij:install:
+    internal: true
+    desc: Install Zellij
+    summary: |
+      Zellij—a terminal multiplexer
+    status:
+      - which zellij
+    cmds:
+      - mise exec cargo -- cargo binstall zellij
 
   prezto:install:
     internal: true

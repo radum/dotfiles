@@ -55,6 +55,8 @@ tasks:
         # Television specific dotfiles.
         - "configs/television/config.toml|$HOME/.config/television/config.toml"
         - "configs/television/cable|$HOME/.config/television/cable"
+        # Zellij specific dotfiles.
+        - "configs/zellij/config.kdl|$HOME/.config/zellij/config.kdl"
         ## These symlinks are needed by the zsh.yml tasks.
         # Prezto symlinks (before I switched to zephyr)
         # - "configs/zsh/prezto/runcoms/zlogin|$HOME/.zlogin"
