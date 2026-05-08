@@ -81,9 +81,12 @@
     # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
     precomposeunicode = false
     editor = subl -n -w
-    
+
     # A syntax-highlighting pager for git, diff, grep, and blame output
-    pager = delta --dark
+	# The pager is a utility that handles how long outputs are displayed in your terminal.
+	# It intercepts the text output of almost any Git command (like git log, git diff, or git show) and makes it scrollable.
+    # pager = delta --dark # Using hunk for now.
+    pager = hunk pager
 
 [rebase]
     autoSquash = true
@@ -123,8 +126,18 @@
 [diff]
     # Detect copies as well as renames
     renames = copies
-    # A structural diff tool that understands syntax
+    # Using difftastic defined bellow
     tool = difftastic
+
+# The diff tool is an external application used specifically to compare files.
+# It is generally a GUI or a specialized terminal interface that shows side-by-side comparisons.
+# What it does: It defines which external program Git should launch when you run git difftool.
+# Trigger: It is not used by default when you run git diff. You must explicitly call git difftool.
+# We can use a tool like https://kaleidoscope.app/
+[difftool "difftastic"]
+	# A structural diff tool that understands syntax (difftastic)
+    # See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
+    cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
 
 [diff "bin"]
     # Use `hexdump` to diff binary files

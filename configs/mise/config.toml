@@ -24,3 +24,7 @@ bun = "latest"
 
 # ruby = "latest"
 # zig = "latest"
+
+# Gobal tools
+## Used for GIT diffs.
+"npm:hunkdiff" = "latest"
