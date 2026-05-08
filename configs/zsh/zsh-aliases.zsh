@@ -17,7 +17,7 @@ alias brew-deps=brew list | while read -r cask; do
 done
 
 ## Dev specific
-alias editorconfig="cp ~/.dotfiles/editorconfig/.editorconfig ."
+alias editorconfig="cp ~/.dotfiles/configs/editorconfig/.editorconfig ."
 
 ## Shortcuts
 alias ~="cd ~"
