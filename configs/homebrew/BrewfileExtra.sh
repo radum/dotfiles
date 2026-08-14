@@ -38,8 +38,6 @@ brew install tokei
 brew install trash
 # Display directories as trees (with optional color/HTML output)
 brew install tree
-# Show the current WiFi network password
-brew install wifi-password
 # Fast CSV toolkit written in Rust
 brew install xsv
 # Install GnuPG to enable PGP-signing commits.
