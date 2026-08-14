@@ -22,6 +22,7 @@ source "$DOTFILES/configs/zsh/zsh-config.zsh"
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # Use zstyle to specify which plugins you want. Order matters.
 export ZSH_CUSTOM="$DOTFILES/configs/zsh/zephyr"
+export ZFUNCDIR="$DOTFILES/configs/zsh/functions"
 zephyr_plugins=(
   local-environment \
   homebrew \
@@ -32,6 +33,7 @@ zephyr_plugins=(
   editor \
   helper \
   history \
+  # Use a $ZDOTDIR/functions directory to store lazy-loaded zsh function files.
   zfunctions \
   macos \
   # [FZF-TV] Trying television for a while so FZF is disabled for now.
