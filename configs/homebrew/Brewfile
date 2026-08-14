@@ -8,7 +8,8 @@ brew "git-recent"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Npm alternative.
-brew "pnpm"
+# The brew version is old, so I install it via [corepack](https://pnpm.io/installation#using-corepack), but I want to keep the brew line here for documentation purposes.
+# brew "pnpm"
 
 # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 brew "starship"
@@ -39,6 +40,8 @@ brew "ripgrep"
 brew "thefuck"
 # A syntax-highlighting pager for git - https://github.com/dandavison/delta
 brew "git-delta"
+# Review diffs, files, and documents right in your terminal
+brew "umputun/apps/revdiff"
 # Difftastic is a structural diff tool that understands syntax. It supports over 30 programming languages and when it works, it's fantastic. - https://github.com/wilfred/difftastic
 # https://github.com/Wilfred/difftastic
 brew "difftastic"
@@ -58,6 +61,11 @@ brew "peterldowns/tap/localias"
 # An extremely fast Python package and project manager, written in Rust.
 # This will be installed via mise
 # brew "uv"
+# A universal document converter, that can convert between a huge number of formats. https://pandoc.org/
+# I use this in Obsidian so it needs to be in the main path.
+brew "pandoc"
+# A better whois and domain intelligence toolkit. Interactive TUI with tabbed views for WHOIS, DNS, mail, SSL/TLS, HTTP headers, SEO analysis, and tech stack detection.
+brew "quien"
 
 # Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands.
 brew "atuin"
