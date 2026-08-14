@@ -5,6 +5,8 @@
 cargo-binstall = "latest"
 "cargo:cargo-nextest" = "latest"
 "cargo:cargo-edit" = "latest"
+# sd is an intuitive find & replace CLI that we need when zsh-path.zsh runs.
+"cargo:sd" = "latest"
 
 # Software verification (see https://mise.jdx.dev/tips-and-tricks.html#software-verification)
 slsa-verifier = "latest"

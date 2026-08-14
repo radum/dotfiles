@@ -5,6 +5,8 @@
 
 # Set ZDOTDIR to move your Zsh config out of $HOME.
 # TODO: Is this worth it?
+# We also have XDG_CONFIG_HOME and not sure how it relates to ZDOTDIR.
+# I think ZDOTDIR is more specific to Zsh, while XDG_CONFIG_HOME is more general for all applications.
 # export ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
