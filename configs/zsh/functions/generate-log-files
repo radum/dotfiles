@@ -1,0 +1,57 @@
+# Generate empty shell history log files for every day from a given start date
+# through December 31 of the same year, in ~/.logs/
+#
+# Usage: generate-log-files
+generate-log-files() {
+	local log_dir="$HOME/.logs"
+	local start_date year end_date current
+
+	# Prompt for start date
+	echo -n "Enter start date (YYYY-MM-DD): "
+	read start_date
+
+	# Validate format
+	if [[ ! "$start_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+		echo "Error: invalid date format. Expected YYYY-MM-DD." >&2
+		return 1
+	fi
+
+	# Validate the date is real (date -j is macOS; date -d is GNU/Linux)
+	if ! date -j -f "%Y-%m-%d" "$start_date" +"%Y-%m-%d" &>/dev/null 2>&1; then
+		if ! date -d "$start_date" +"%Y-%m-%d" &>/dev/null 2>&1; then
+			echo "Error: '$start_date' is not a valid calendar date." >&2
+			return 1
+		fi
+	fi
+
+	year="${start_date%%-*}"
+	end_date="${year}-12-31"
+
+	# Ensure the log directory exists
+	if [[ ! -d "$log_dir" ]]; then
+		mkdir -p "$log_dir"
+		echo "Created directory: $log_dir"
+	fi
+
+	local created=0 skipped=0
+	current="$start_date"
+
+	while [[ "$current" < "$end_date" || "$current" == "$end_date" ]]; do
+		local file="$log_dir/shell-history-${current}.log"
+
+		if [[ -e "$file" ]]; then
+			echo "Warning: '$file' already exists — skipping."
+			(( skipped++ ))
+		else
+			touch "$file"
+			(( created++ ))
+		fi
+
+		# Advance by one day (macOS date -j -v+1d; fall back to GNU date -d +1day)
+		if ! current=$(date -j -v+1d -f "%Y-%m-%d" "$current" +"%Y-%m-%d" 2>/dev/null); then
+			current=$(date -d "$current +1 day" +"%Y-%m-%d")
+		fi
+	done
+
+	echo "Done — created $created file(s), skipped $skipped file(s)."
+}
