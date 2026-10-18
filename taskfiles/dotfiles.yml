@@ -25,6 +25,7 @@ tasks:
       - mkdir -p ~/.cargo
 
   # Step 2: Link dotfiles based on the platform (macOS or Linux).
+  # TODO: If any of them exist it will fail, so I should ask the user for confirmation or handle existing files gracefully.
   link_dotfiles:
     internal: true
     # TODO: Not sure I need platform specific
