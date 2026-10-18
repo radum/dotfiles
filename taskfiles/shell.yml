@@ -16,7 +16,7 @@ tasks:
       - task: fzf:install # [FZF-TV] Trying television for a while so FZF might be removed in the future.
       - task: zoxide:install
       - task: jujutsu:install
-      - task: zellij:install
+      - task: zellij:install # Terminal multiplexer but very slow TODO: Consider alternatives, Hashimoto was working on one.
       - task: prezto:install
       - task: zephyr:install
       - task: zinit:install
