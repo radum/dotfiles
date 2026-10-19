@@ -1,0 +1,17 @@
+{
+	"name": ".pi",
+	"private": true,
+	"type": "module",
+	"packageManager": "npm@11.11.0",
+	"workspaces": [
+		"agent/extensions/*"
+	],
+	"scripts": {
+	},
+	"dependencies": {
+		"@earendil-works/pi-ai": "^1.3.0",
+		"@earendil-works/pi-coding-agent": "^1.3.0",
+		"@earendil-works/pi-tui": "^1.3.0",
+		"typebox": "^1.1.38"
+	}
+}
