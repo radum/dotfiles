@@ -25,7 +25,6 @@ tasks:
       - mkdir -p ~/.cargo
 
   # Step 2: Link dotfiles based on the platform (macOS or Linux).
-  # TODO: If any of them exist it will fail, so I should ask the user for confirmation or handle existing files gracefully.
   link_dotfiles:
     internal: true
     # TODO: Not sure I need platform specific
@@ -58,6 +57,9 @@ tasks:
         - "configs/television/cable|$HOME/.config/television/cable"
         # Zellij specific dotfiles.
         - "configs/zellij/config.kdl|$HOME/.config/zellij/config.kdl"
+        # Pi specific dotfiles.
+        - "configs/pi/agent/extensions|$HOME/.pi/agent/extensions"
+        - "configs/pi/agent/themes|$HOME/.pi/agent/themes"
         ## These symlinks are needed by the zsh.yml tasks.
         # Prezto symlinks (before I switched to zephyr)
         # - "configs/zsh/prezto/runcoms/zlogin|$HOME/.zlogin"
@@ -101,19 +103,51 @@ tasks:
           rm -rf "$DEST_PATH"
         fi
 
+        # Decide what to do when something else already lives at DEST_PATH.
+        # Set ON_EXISTING=replace|skip to avoid the prompt (default: ask when
+        # a terminal is available, otherwise skip and report).
+        resolve_conflict() {
+          case "${ON_EXISTING:-ask}" in
+            replace) return 0 ;;
+            skip) return 1 ;;
+          esac
+          if (: < /dev/tty) 2>/dev/null; then
+            printf '%s already exists (%s). Replace it? [y/N] ' "$DEST_PATH" "$1" > /dev/tty
+            read -r answer < /dev/tty || answer=""
+            case "$answer" in [yY]*) return 0 ;; esac
+          fi
+          return 1
+        }
+
+        skip_existing() {
+          echo "SKIPPED: $DEST_PATH already exists ($1), not linked to $SRC_PATH"
+          echo "         re-run with ON_EXISTING=replace to overwrite, or FORCE=true"
+        }
+
         if [ -L "$DEST_PATH" ]; then
           current=$(readlink "$DEST_PATH")
 
-          # Check if it's a broken symlink
-          if [ ! -e "$current" ]; then
+          if [ "$current" = "$SRC_PATH" ]; then
+            :  # already linked correctly
+          elif [ ! -e "$DEST_PATH" ]; then
             echo "$DEST_PATH is a broken symlink, replacing it"
             rm "$DEST_PATH"
             ln -s "$SRC_PATH" "$DEST_PATH"
-          elif [ "$current" != "$SRC_PATH" ]; then
-            echo "$DEST_PATH already exists and is symlinked to $current"
+          elif resolve_conflict "symlink to $current"; then
+            echo "replacing $DEST_PATH (was symlink to $current)"
+            rm "$DEST_PATH"
+            ln -s "$SRC_PATH" "$DEST_PATH"
+          else
+            skip_existing "symlink to $current"
           fi
         elif [ -e "$DEST_PATH" ]; then
-          echo "$DEST_PATH already exists and is not a symlink"
+          if resolve_conflict "not a symlink"; then
+            echo "replacing $DEST_PATH (was not a symlink)"
+            rm -rf "$DEST_PATH"
+            ln -s "$SRC_PATH" "$DEST_PATH"
+          else
+            skip_existing "not a symlink"
+          fi
         else
           echo "creating link for $DEST_PATH"
           ln -s "$SRC_PATH" "$DEST_PATH"
