@@ -69,4 +69,9 @@ brew "quien"
 
 # Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands.
 brew "atuin"
-# "Atuin has been installed, you need to configure and migrate the history - https://atuin.sh/docs/"
+# "TODO: Atuin has been installed, you need to configure and migrate the history - https://atuin.sh/docs/"
+
+# AI tools and utilities
+# Herdr is where your coding agents live. However many you run, across however many projects, each in its own terminal.
+# https://herdr.dev/
+brew "herdr"
